@@ -1,7 +1,7 @@
 ---
-title: "Figures"
+title: "Figures for dsRNA Survey Paper"
 author: "Angela Crabtree"
-date: "3/9/2022"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: html_document
 ---
 
@@ -44,6 +44,8 @@ killer_data_file = paste0(data_dir, "killer_assays.csv")
 
 #### **Prevalence of killer yeasts**
 
+### *Figure 1B* 
+
 This figure contains the killing patterns of four S. cerevisiae strains we've identified as being "canonical": BJH001 (K1 toxin), NCYC1001 (K2 toxin), MS300c (K28 toxin), and DSM 70459 (Klus toxin). 
 
 ```{r fig1b}
@@ -66,13 +68,28 @@ killerMatrix <- as.matrix(killer.df[, 9:20])
 rownames(killerMatrix) <- Toxin
 ```
 
-```{r, eval=FALSE}
+```{r fig1b_plot, fig.height=4, fig.width=6}
+# create heat map ("lhei" argument deleted to prevent margin error)
+myColors = c('oldlace','steelblue')
+canonical_heatmap = heatmap.2( 
+  killerMatrix, 
+  dendrogram = 'none', Rowv = TRUE, Colv = FALSE,
+  trace = 'none', margins = c(8, 6), lwid = c(0.2,5),
+  key = FALSE, col = myColors,
+  xlab='Lawns', ylab="Killers", colsep = 0:ncol(killerMatrix), 
+  rowsep=0:nrow(killerMatrix),
+  sepcolor='white', sepwidth=c(0.02, 0.02), 
+  main="Toxin Controls")
+```
+
+```{r fig1b_save_file, eval=FALSE}
+## MUST RUN IN RSTUDIO
 ## save heat map to file
 img_file = paste0(img_dir, "Fig1B_canonical_heatmap.svg") # filename
 svglite(filename=img_file, 
     width=9, 
     height=5)
-# create heat map (ignore error- it still prints to file anyway)
+# create heat map (ignore error- it still prints to file anyway if run in RStudio)
 myColors = c('oldlace','steelblue')
 canonical_heatmap = heatmap.2( 
   killerMatrix, 
@@ -85,9 +102,11 @@ canonical_heatmap = heatmap.2(
   main="Toxin Controls")
 ```
 
+### *Figure 1D* 
+
 This figure contains the killing patterns of all *S. cerevisiae* strains we screened in the collections which killed at least one lawn that was not Y2046 (because that lawn is hypersusceptible) or ATCC2001 (a lawn we screened but did not include since is not S. cerevisiae). 
 
-```{r fig1d}
+```{r fig1d_data}
 # import data
 killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
 # remove rows where yeast did not grow
@@ -146,13 +165,29 @@ killerMatrix <- as.matrix(killer.df.collapsed[,1:nlawns])
 rownames(killerMatrix) <- killer.df.collapsed$group
 ```
 
-```{r, eval=FALSE}
+```{r fig1d_plot, fig.height=18, fig.width=6}
+# create heat map ("lhei" argument deleted to prevent margin error)
+myColors = c('oldlace','steelblue')
+heatmap.2(
+  killerMatrix, 
+  dendrogram = 'row', Rowv = TRUE, Colv = FALSE,
+  trace = 'none', margins = c(8, 10), lwid = c(0.2,5),
+  key = FALSE, col = myColors,
+  xlab='Lawns', ylab="Killer Groups", colsep = 0:ncol(killerMatrix), 
+  rowsep=0:nrow(killerMatrix),
+  sepcolor='white', sepwidth=c(0.01, 0.01), 
+  main="")
+title("Collapsed Heatmap", line=-20)
+```
+
+```{r fig1d_save_file, eval=FALSE}
+## MUST RUN IN RSTUDIO
 ## save heat map to file
 img_file = paste0(img_dir, "Fig1D_collapsed_heatmap.svg") # filename
 svglite(filename=img_file, 
     width=6, 
     height=18)
-# create heat map (ignore error- it still prints to file anyway)
+# create heat map (ignore error- it still prints to file anyway if run in RStudio)
 myColors = c('oldlace','steelblue')
 heatmap.2(
   killerMatrix, 
@@ -165,9 +200,11 @@ heatmap.2(
   main="Collapsed Heatmap")
 ```
 
+### *Table 1* 
+
 This table does include Y2046 as a killer and only uses strains that we have gel data for from the collections, so we can say whether the strain appears to have dsRNAs. "NGS" strains are not included here. If bands on gels were considered to be narnavirus, they did not count as dsRNA since they are ssRNA and only transiently become dsRNA during replication. 
 
-```{r}
+```{r tbl1_data}
 # import data
 killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
 # remove rows where yeast did not grow
@@ -299,11 +336,9 @@ prevalence %>%
 
 #### **Identification of unknown toxins**
 
+### *Table 2* 
+
 The table shows a numerical comparison between the de novo assembled sequences from NGS with those of the canonical reference sequences. 
-
-```{r data_pt2}
-
-```
 
 ```{r tbl2}
 # Create empty data frame
@@ -331,6 +366,8 @@ ngs_summary %>%
   kbl(caption = "Table 2. Identification of dsRNA elements from NGS assembly") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 ```
+
+### *Figure 3* 
 
 The bubble plot compares PCA when excluding or including Y-2046, a hypersuceptible strain. There are 357 strains that kill this lawn and no others (largest bubble in panel A). 
 
@@ -511,8 +548,9 @@ p2 = ggplot(data=pcaDF.agg.combo, aes(x=PC1, y=PC2, size=num_strains, color=Toxi
   scale_x_continuous(expand = c(0.1, 0))
 ```
 
-```{r fig3ab_final_fig}
+```{r fig3ab_final_fig, fig.height=3, fig.width=11}
 p = plot_grid(p1, p2, labels = c("A", "B"), ncol=2)
+p
 ## save plot as SVG file
 img_file = paste0(img_dir, "Fig3ab_bubble_plots.svg") # filename
 ggsave(
@@ -524,6 +562,10 @@ ggsave(
 ## Results: Part 2
 
 #### **Genome-encoded toxins**
+
+### *Table 3* 
+
+This table summarizes the prevalence of KHR and KHS in relation to killing phenotype. 
 
 ```{r genomic_toxin_data}
 # import data
@@ -546,8 +588,6 @@ unique(killer.df.stats$Collection)
 # ensure total number of strains in collection subsets adds up correctly
 print(paste("Number of qualified strains:", nrow(killer.df.stats))) 
 ```
-
-This table summarizes the prevalence of KHR and KHS in relation to killing phenotype. 
 
 ```{r tbl3}
 ## KILLERS
@@ -678,6 +718,10 @@ prevalence %>%
   kbl(caption = "Table 3. The prevalence of KHR1 and KHS1 in S. cerevisiae") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 ```
+
+### *Table 4* 
+
+This table summarizes the prevalence of KHR and KHS in relation to killing satellite dsRNA presence.  
 
 ```{r tbl4}
 # Limit query to only those strains that have agarose gel data
@@ -893,7 +937,7 @@ prevalence %>%
 
 ```
 
-## R Session Info
+#### *R Session Info*
 
 ```{r}
 sessionInfo()

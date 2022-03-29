@@ -56,6 +56,8 @@ Discovered the numbers were off when recreating Table 1 (the summary of dsRNA/ki
 This is likely due to the fact that these exact permutations were not requested and instead 
 were summed post hoc. The data set has also been altered since the original numbers were calculated. 
 
+???   Do I need to investigate this, or trust the new results?
+
 **************** 2022-03-29 ****************
 
 #### Bubble Plots
@@ -79,11 +81,11 @@ when Y-2046 is included. This is presumably strains that only kill Y-2046, since
 
 #### Genome-encoded toxins
 
-??? in Table 3 including strains that have either KHR or KHS data (should this be BOTH?)
+???   in Table 3 including strains that have either KHR or KHS data (should this be BOTH?)
 
 - 1 strain off original on Table 3 -KHS1/-KHR1 killers (not too bad!)
 
-??? Do we need to update our raw data sheet for public use? (if so, I need to redo Rmd)
+???   Do we need to update our raw data sheet for public use? (if so, I need to redo Rmd)
 
 >> Next time: work on supplementary figures
 
