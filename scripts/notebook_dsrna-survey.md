@@ -12,7 +12,9 @@ Analysis of KHR and KHS Toxins in Liti & FGSC Collections (WGS)
 
 #### *Sequence Assembly of dsRNA Totiviruses & Satellites*
 
-Raw Illumina reads were cleaned and filtered with fastp (v. ___), genomic contaminants (NCBI accessions: ___ for S. cerevisiae, ___ for S. paradoxus, ___ for H. sapiens) were removed using bbsplit (samtools v. ____), and de novo contigs were assembled with SPAdes assembler (v. ____). The custom script is available on GitHub (insert github repo link). Resultant contigs were screened for totivirus and satellite sequences with local BLASTn (v. ____) using a database of published totiviruses and satellites (Table S___) downloaded from NCBI's nucleotide database (accessed on XX Month 202X). 
+Raw Illumina reads were cleaned and filtered with fastp (v. ___), genomic contaminants (RefSeq assembly accessions: GCF_000146045.2 for S. cerevisiae S288C, GCF_000001405.26 for H. sapiens GRCh38) were removed using bbsplit (samtools v. ____), and de novo contigs were assembled with SPAdes assembler (v. ____). The custom script is available on GitHub (insert github repo link). Resultant contigs were screened for totivirus and satellite sequences with local BLASTn (v. ____) using a database of published totiviruses and satellites (Table S___) downloaded from NCBI's nucleotide database (accessed on XX Month 202X). 
+
+To create consensus sequences, 
 
 #### *Comparative Analysis of dsRNA Totiviruses & Satellites among Sequenced Strains*
 

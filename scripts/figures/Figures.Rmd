@@ -1,0 +1,901 @@
+---
+title: "Figures"
+author: "Angela Crabtree"
+date: "3/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, 
+                      root.dir=dirname(rstudioapi::getSourceEditorContext()$path))
+```
+
+```{r libraries}
+library(RColorBrewer)
+library(gplots)
+library (ggplot2)
+library(cowplot)
+library (ggfortify)
+library(ggrepel)
+library(dplyr)
+library(svglite)
+library(kableExtra)
+```
+
+```{r import_custom_functions, eval=FALSE}
+# import custom functions
+source("dsrna-survey-functions.R")
+```
+
+
+```{r set_wd}
+## set working directory
+script_dir=dirname(rstudioapi::getSourceEditorContext()$path)
+data_dir=paste0(unlist(strsplit(script_dir, "/scripts"))[1], "/data/")
+setwd(data_dir)
+## set image output directory
+img_dir=paste0(unlist(strsplit(script_dir, "/scripts"))[1], "/img/")
+## data files
+killer_data_file = paste0(data_dir, "killer_assays.csv")
+```
+
+
+## Results: Part 1
+
+#### **Prevalence of killer yeasts**
+
+This figure contains the killing patterns of four S. cerevisiae strains we've identified as being "canonical": BJH001 (K1 toxin), NCYC1001 (K2 toxin), MS300c (K28 toxin), and DSM 70459 (Klus toxin). 
+
+```{r fig1b}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# only keep canonical killers
+killer.df <- killer.df[which(killer.df$strain_name=="BJH001" |    
+                               killer.df$strain_name=="NCYC1001" |    
+                               killer.df$strain_name=="MS300c" |    
+                               killer.df$strain_name=="DSM 70459" ),]
+# create matrix to use for heat map
+Toxin <- killer.df$toxin
+Strain <- killer.df$strain_name
+killer.df[,9:20] <- lapply(killer.df[,9:20], as.integer)
+killerMatrix <- as.matrix(killer.df[, 9:20])
+rownames(killerMatrix) <- Toxin
+```
+
+```{r, eval=FALSE}
+## save heat map to file
+img_file = paste0(img_dir, "Fig1B_canonical_heatmap.svg") # filename
+svglite(filename=img_file, 
+    width=9, 
+    height=5)
+# create heat map (ignore error- it still prints to file anyway)
+myColors = c('oldlace','steelblue')
+canonical_heatmap = heatmap.2( 
+  killerMatrix, 
+  dendrogram = 'none', Rowv = TRUE, Colv = FALSE,
+  trace = 'none', margins = c(8, 6), lwid = c(0.2,5),
+  lhei = c(0.2,5), key = FALSE, col = myColors,
+  xlab='Lawns', ylab="Killers", colsep = 0:ncol(killerMatrix), 
+  rowsep=0:nrow(killerMatrix),
+  sepcolor='white', sepwidth=c(0.02, 0.02), 
+  main="Toxin Controls")
+```
+
+This figure contains the killing patterns of all *S. cerevisiae* strains we screened in the collections which killed at least one lawn that was not Y2046 (because that lawn is hypersusceptible) or ATCC2001 (a lawn we screened but did not include since is not S. cerevisiae). 
+
+```{r fig1d}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove Y2046 as a lawn (Y2046 column) because it is hypersusceptible
+killer.df = subset(killer.df, select = -c(Y2046) )
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y1088!=0 |  
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+# create matrix to use for heat map
+Toxin <- killer.df$toxin
+Strain <- killer.df$strain_name
+killer.df$num_strains = 1
+killer.df.collapsed = aggregate(num_strains ~ Y1088+DSM70459+CYC1058+Y27106+NCYC1006+NCYC777+NBRC1802+NBRC1815+Y5509+MS300c+BY4741, 
+                      data=killer.df, FUN=sum)
+killer.df.agg.strain = aggregate(strain_name ~ Y1088+DSM70459+CYC1058+Y27106+NCYC1006+NCYC777+NBRC1802+NBRC1815+Y5509+MS300c+BY4741, 
+                      data=killer.df, paste, collapse=",")
+killer.df.collapsed$strain_name = killer.df.agg.strain$strain_name
+killer.df.collapsed$group = seq(1:nrow(killer.df.collapsed))
+K1 = as.numeric(grep('BJH001', killer.df.collapsed$strain_name))
+K2 = as.numeric(grep('NCYC1001', killer.df.collapsed$strain_name))
+K28 = as.numeric(grep('MS300c', killer.df.collapsed$strain_name))
+Klus = as.numeric(grep('DSM 70459', killer.df.collapsed$strain_name))
+K21 = as.numeric(grep('T21.4 OS40', killer.df.collapsed$strain_name))
+K45 = as.numeric(grep('N-45 OS78', killer.df.collapsed$strain_name))
+K62 = as.numeric(grep('Q62.5 OS169', killer.df.collapsed$strain_name))
+K74a = as.numeric(grep('Q74.4 OS294', killer.df.collapsed$strain_name))
+K74b = as.numeric(grep('Y8.5 OS299', killer.df.collapsed$strain_name))
+# rename groups according to previously identified toxin-containing strains
+killer.df.collapsed$group[K1]=paste(K1, "(K1)")
+killer.df.collapsed$group[K2]=paste(K2, "(K2)")
+killer.df.collapsed$group[K28]=paste(K28, "(K28)")
+killer.df.collapsed$group[Klus]=paste(Klus, "(Klus)")
+killer.df.collapsed$group[K21]=paste(K21, "(K21)")
+killer.df.collapsed$group[K45]=paste(K45, "(K45)")
+killer.df.collapsed$group[K62]=paste(K62, "(K62)")
+killer.df.collapsed$group[K74a]=paste(K74a, "(K74)")
+killer.df.collapsed$group[K74b]=paste(K74b, "(K74)")
+killer.df.collapsed$group = paste("Group ", killer.df.collapsed$group, 
+                                  ", ", killer.df.collapsed$num_strains, " strains", sep="")
+# collapse killer strains that killed the exact same strains (consolodates into groups)
+nlawns = ncol(killer.df.collapsed)-3
+killer.df.collapsed[,1:nlawns] <- lapply(killer.df.collapsed[,1:nlawns], as.integer)
+killerMatrix <- as.matrix(killer.df.collapsed[,1:nlawns])
+rownames(killerMatrix) <- killer.df.collapsed$group
+```
+
+```{r, eval=FALSE}
+## save heat map to file
+img_file = paste0(img_dir, "Fig1D_collapsed_heatmap.svg") # filename
+svglite(filename=img_file, 
+    width=6, 
+    height=18)
+# create heat map (ignore error- it still prints to file anyway)
+myColors = c('oldlace','steelblue')
+heatmap.2(
+  killerMatrix, 
+  dendrogram = 'row', Rowv = TRUE, Colv = FALSE,
+  trace = 'none', margins = c(8, 10), lwid = c(0.2,5),
+  lhei = c(0.2,5), key = FALSE, col = myColors,
+  xlab='Lawns', ylab="Killer Groups", colsep = 0:ncol(killerMatrix), 
+  rowsep=0:nrow(killerMatrix),
+  sepcolor='white', sepwidth=c(0.01, 0.01), 
+  main="Collapsed Heatmap")
+```
+
+This table does include Y2046 as a killer and only uses strains that we have gel data for from the collections, so we can say whether the strain appears to have dsRNAs. "NGS" strains are not included here. If bands on gels were considered to be narnavirus, they did not count as dsRNA since they are ssRNA and only transiently become dsRNA during replication. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df.stats=killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# Limit query to only those strains that have agarose gel data
+killer.df.stats = killer.df.stats[which(killer.df.stats$tv!="NA"),]
+# print names of collections included in dataset
+print("Names of included collections:")
+unique(killer.df.stats$Collection)
+# ensure total number of strains in collection subsets adds up correctly
+print(paste("Number of qualified strains:", nrow(killer.df.stats))) 
+```
+
+```{r tbl1}
+#######################################################################
+# Calculate numbers of strains in each prevalence category
+category = c("No dsRNAs", "dsRNAs", "    Totivirus only", 
+             "    Totivirus and satellite(s)", "    Satellites only")
+#######################################################################
+## KILLERS
+killer.df = killer.df.stats
+killer.df <- killer.df[which(
+  killer.df$Y2046!=0 |
+    killer.df$Y1088!=0 |  
+    killer.df$DSM70459!=0 |
+    killer.df$CYC1058!=0 |  
+    killer.df$Y27106!=0 | 
+    killer.df$NCYC1006!=0 |
+    killer.df$NCYC777!=0 | 
+    killer.df$NBRC1802!=0 | 
+    killer.df$NBRC1815!=0 |
+    killer.df$Y5509!=0 | 
+    killer.df$MS300c!=0 |
+    killer.df$BY4741!=0),]
+# killer, no dsRNAs
+kill_ndsrna = killer.df[which(
+  killer.df$tv==0 & 
+    killer.df$sat==0 &
+    killer.df$pv==0),]
+# killer, containing any dsRNAs
+kill_dsrna = killer.df[which(
+  killer.df$tv!=0 | 
+    killer.df$sat!=0 |
+    killer.df$pv!=0),]
+# killer, containing only totivirus
+kill_onlytoti = killer.df[which(
+  killer.df$tv!=0 & 
+    killer.df$sat==0 &
+    killer.df$pv==0),]
+# killer, containing totivirus & satellite dsRNA
+kill_totisat = killer.df[which(
+  killer.df$tv!=0 & 
+    (killer.df$sat!=0 |
+    killer.df$pv!=0)),]
+# killer, containing only satellite dsRNA
+kill_onlysat = killer.df[which(
+  killer.df$tv==0 & 
+    (killer.df$sat!=0 |
+    killer.df$pv!=0)),]
+# combine all killer numbers into list 
+killers = as.numeric(c(
+  nrow(kill_ndsrna), nrow(kill_dsrna), nrow(kill_onlytoti), nrow(kill_totisat),
+  nrow(kill_onlysat)))
+#######################################################################
+## NON-KILLERS
+nonkiller.df = killer.df.stats
+nonkiller.df <- nonkiller.df[which(
+  nonkiller.df$Y2046==0 &
+    nonkiller.df$Y1088==0 &
+    nonkiller.df$DSM70459==0 &
+    nonkiller.df$CYC1058==0 &
+    nonkiller.df$Y27106==0 &
+    nonkiller.df$NCYC1006==0 &
+    nonkiller.df$NCYC777==0 &
+    nonkiller.df$NBRC1802==0 &
+    nonkiller.df$NBRC1815==0 &
+    nonkiller.df$Y5509==0 &
+    nonkiller.df$MS300c==0 &
+    nonkiller.df$BY4741==0),]
+# non-killer, no dsRNAs
+nokill_ndsrna = nonkiller.df[which(
+  nonkiller.df$tv==0 & 
+    nonkiller.df$sat==0 &
+    nonkiller.df$pv==0),]
+# killer, containing any dsRNAs
+nokill_dsrna = nonkiller.df[which(
+  nonkiller.df$tv!=0 | 
+    nonkiller.df$sat!=0 |
+    nonkiller.df$pv!=0),]
+# killer, containing only totivirus
+nokill_onlytoti = nonkiller.df[which(
+  nonkiller.df$tv!=0 & 
+    nonkiller.df$sat==0 &
+    nonkiller.df$pv==0),]
+# killer, containing totivirus & satellite dsRNA
+nokill_totisat = nonkiller.df[which(
+  nonkiller.df$tv!=0 & 
+    (nonkiller.df$sat!=0 |
+    nonkiller.df$pv!=0)),]
+# killer, containing only satellite dsRNA
+nokill_onlysat = nonkiller.df[which(
+  nonkiller.df$tv==0 & 
+    (nonkiller.df$sat!=0 |
+    nonkiller.df$pv!=0)),]
+# combine all killer numbers into list 
+nonkillers = as.numeric(c(
+  nrow(nokill_ndsrna), nrow(nokill_dsrna), nrow(nokill_onlytoti), 
+  nrow(nokill_totisat), nrow(nokill_onlysat)))
+#######################################################################
+# Create prevalence data frame
+prevalence <- data.frame(category, killers, nonkillers)
+prevalence$totals = prevalence$killers + prevalence$nonkillers
+# print table
+prevalence %>% 
+  rename(c(` `=category, `Killer yeast`=killers, 
+           `Non-killer yeast`=nonkillers, Total=totals)) %>% 
+  kbl(caption = "Table 1. The prevalence of dsRNAs in killer and non-killer yeasts in S. cerevisiae") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+## Results: Part 2
+
+#### **Identification of unknown toxins**
+
+The table shows a numerical comparison between the de novo assembled sequences from NGS with those of the canonical reference sequences. 
+
+```{r data_pt2}
+
+```
+
+```{r tbl2}
+# Create empty data frame
+ngs_summary <- data.frame( 
+  strain = character(),    
+  toxin = character(),
+  ident = character(),
+  cov = character(), 
+  pcr = character(),
+  stringsAsFactors = FALSE)
+# Append row for each NGS strain
+ngs_summary[1, ] <- list("YJM1077","K1", ">99%", "97%", "-") 
+ngs_summary[2, ] <- list("YJM1287","K1", ">99%", "91%", "-") 
+ngs_summary[3, ] <- list("YJM1307","K1", ">99%", "90%", "-") 
+ngs_summary[4, ] <- list("YJM1077","K1", "98%", "97%", "yes") 
+ngs_summary[5, ] <- list("YJM1482","K1", "99%", ">99%", "yes") 
+ngs_summary[6, ] <- list("YJM1490","K1", "98%", "97%", "-") 
+ngs_summary[7, ] <- list("YJM1621","K1", "99%", "98%", "yes") 
+ngs_summary[8, ] <- list("YJM1619","K28", "92%", "97%", "yes") 
+ngs_summary[9, ] <- list("YJM145","Klus", ">99%", "94%", "-") 
+# print table
+ngs_summary %>% 
+  rename(c(`S. cerevisiae`=strain, `Toxin type`=toxin, 
+           `Identity (nt)`=ident, Coverage=cov, `Rt-PCR confirmed`=pcr)) %>% 
+  kbl(caption = "Table 2. Identification of dsRNA elements from NGS assembly") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+The bubble plot compares PCA when excluding or including Y-2046, a hypersuceptible strain. There are 357 strains that kill this lawn and no others (largest bubble in panel A). 
+
+```{r fig3a_data}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y2046!=0 |
+                               killer.df$Y1088!=0 |  
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+# create matrix for PCA
+Toxin <- killer.df$toxin
+Strain <- killer.df$strain_name
+Collection <- killer.df$Collection
+identifiers <- as.data.frame(cbind(Toxin,Strain,Collection))
+killer.df[,9:20] <- lapply(killer.df[,9:20], as.integer)
+killerMatrix <- as.matrix(killer.df[,9:20])
+rownames(killerMatrix) <- Strain
+# calculate PCA
+set.seed(123) # set seed so values remain constant each time
+killerPCA <- prcomp(killerMatrix)
+# create a PCA dataframe for graphing
+pcaDF <- as.data.frame(cbind(identifiers, killerPCA$x))
+pcaDF$num_strains = 1
+pcaDF.agg = aggregate(num_strains ~ PC1+PC2+Toxin, data=pcaDF, FUN=sum)
+pcaDF.agg.strain = aggregate(Strain ~ PC1+PC2+Toxin, 
+                                 data=pcaDF, paste, collapse=",")
+pcaDF.agg$Strain = pcaDF.agg.strain$Strain
+pcaDF.agg$group = seq(1:nrow(pcaDF.agg.strain))
+# combine unknowns into known toxin bubbles if PC1&PC2 values are identical
+pcaDF.agg.combo.toxin = aggregate(Toxin ~ PC1+PC2, 
+                                 data=pcaDF.agg, paste, collapse=",")
+Toxin = gsub("(\\w+),unknown", "\\1", pcaDF.agg.combo.toxin$Toxin)
+pcaDF.agg.combo.numstrain = aggregate(num_strains ~ PC1+PC2, 
+                                 data=pcaDF.agg, sum)
+pcaDF.agg.combo.strain = aggregate(Strain ~ PC1+PC2, 
+                                 data=pcaDF.agg, paste, collapse=",")
+# make new dataframe with combos
+pcaDF.agg.combo = data.frame(
+  PC1=pcaDF.agg.combo.toxin$PC1, 
+  PC2=pcaDF.agg.combo.toxin$PC2, 
+  Toxin=Toxin, 
+  num_strains=pcaDF.agg.combo.numstrain$num_strains, 
+  Strain=pcaDF.agg.combo.strain$Strain)
+```
+
+```{r fig3a_plot}
+## make bubble plot
+propVar <- summary(killerPCA)
+firstVar <- round(propVar$importance[2, 1] * 100, 2) # contribution of PC1
+secondVar <- round(propVar$importance[2, 2] * 100, 2) # contribution of PC2
+# load colors
+myPalette =  c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", 
+               "#FFFF33", "#A65628", "#F781BF", "#b5b3b3")
+set.seed(123) # set seed so geom_text_repel label positions remain constant 
+# plot
+p1 = ggplot(data=pcaDF.agg.combo, aes(x=PC1, y=PC2, size=num_strains, color=Toxin)) +
+  geom_point(alpha=0.5) + 
+  scale_colour_manual(values=myPalette) +
+  #scale_size_continuous(name="# yeast strains", range=c(2,20), 
+                        #breaks=c(1,5,30,max(pcaDF.agg.combo$num_strains))) +
+  scale_size_identity(name="# yeast strains", trans="sqrt", guide="legend") +
+  theme_classic() +
+  labs(title="All strains", 
+       x=paste('PC1', ' (',
+             as.character(firstVar),
+             '%', ')', sep = ''), 
+       y=paste('PC2', ' (',
+               as.character(secondVar),
+               '%', ')', sep = '')) +
+  geom_text_repel(data = pcaDF.agg.combo[pcaDF.agg.combo$Toxin!="unknown",], 
+                  aes(PC1, PC2, label = Toxin), 
+                  color="black", size=3.0, 
+                  segment.color = 'grey', show.legend = F) + 
+  guides(col = FALSE) + 
+  scale_x_continuous(expand = c(0.1, 0))
+```
+
+```{r fig3b_data}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# remove Y2046 as a lawn (Y2046 column) because it is hypersuceptible
+killer.df = subset(killer.df, select = -c(Y2046) )
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y1088!=0 |  
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+# create matrix for PCA
+Toxin <- killer.df$toxin
+Strain <- killer.df$strain_name
+Collection <- killer.df$Collection
+identifiers <- as.data.frame(cbind(Toxin,Strain,Collection))
+killer.df[,9:19] <- lapply(killer.df[,9:19], as.integer)
+killerMatrix <- as.matrix(killer.df[,9:19])
+rownames(killerMatrix) <- Strain
+# calculate PCA
+set.seed(123) # set seed so values remain constant each time
+killerPCA <- prcomp(killerMatrix)
+# create a PCA dataframe for graphing
+pcaDF <- as.data.frame(cbind(identifiers, killerPCA$x))
+pcaDF$num_strains = 1
+pcaDF.agg = aggregate(num_strains ~ PC1+PC2+Toxin, data=pcaDF, FUN=sum)
+pcaDF.agg.strain = aggregate(Strain ~ PC1+PC2+Toxin, 
+                                 data=pcaDF, paste, collapse=",")
+pcaDF.agg$Strain = pcaDF.agg.strain$Strain
+pcaDF.agg$group = seq(1:nrow(pcaDF.agg.strain))
+# combine unknowns into known toxin bubbles if PC1&PC2 values are identical
+pcaDF.agg.combo.toxin = aggregate(Toxin ~ PC1+PC2, 
+                                 data=pcaDF.agg, paste, collapse=",")
+Toxin = gsub("(\\w+),unknown", "\\1", pcaDF.agg.combo.toxin$Toxin)
+pcaDF.agg.combo.numstrain = aggregate(num_strains ~ PC1+PC2, 
+                                 data=pcaDF.agg, sum)
+pcaDF.agg.combo.strain = aggregate(Strain ~ PC1+PC2, 
+                                 data=pcaDF.agg, paste, collapse=",")
+# make new dataframe with combos
+pcaDF.agg.combo = data.frame(
+  PC1=pcaDF.agg.combo.toxin$PC1, 
+  PC2=pcaDF.agg.combo.toxin$PC2, 
+  Toxin=Toxin, 
+  num_strains=pcaDF.agg.combo.numstrain$num_strains, 
+  Strain=pcaDF.agg.combo.strain$Strain)
+```
+
+```{r fig3b_plot}
+## make bubble plot
+propVar <- summary(killerPCA)
+firstVar <- round(propVar$importance[2, 1] * 100, 2) # contribution of PC1
+secondVar <- round(propVar$importance[2, 2] * 100, 2) # contribution of PC2
+# load colors
+myPalette =  c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", 
+               "#FFFF33", "#A65628", "#F781BF", "#b5b3b3")
+set.seed(123) # set seed so geom_text_repel label positions remain constant 
+# plot
+p2 = ggplot(data=pcaDF.agg.combo, aes(x=PC1, y=PC2, size=num_strains, color=Toxin)) +
+  geom_point(alpha=0.5) + 
+  scale_colour_manual(values=myPalette) +
+  #scale_size_continuous(name="# yeast strains", range=c(2,20), 
+                        #breaks=c(1,5,30,max(pcaDF.agg.combo$num_strains))) +
+  scale_size_identity(name="# yeast strains", trans="sqrt", guide="legend") +
+  theme_classic() +
+  labs(title="No Y-2046", 
+       x=paste('PC1', ' (',
+             as.character(firstVar),
+             '%', ')', sep = ''), 
+       y=paste('PC2', ' (',
+               as.character(secondVar),
+               '%', ')', sep = '')) +
+  geom_text_repel(data = pcaDF.agg.combo[pcaDF.agg.combo$Toxin!="unknown",], 
+                  aes(PC1, PC2, label = Toxin), 
+                  color="black", size=3.0, 
+                  segment.color = 'grey', show.legend = F) + 
+  guides(col = FALSE) + 
+  scale_x_continuous(expand = c(0.1, 0))
+```
+
+```{r fig3ab_final_fig}
+p = plot_grid(p1, p2, labels = c("A", "B"), ncol=2)
+## save plot as SVG file
+img_file = paste0(img_dir, "Fig3ab_bubble_plots.svg") # filename
+ggsave(
+  img_file,
+  plot = p,
+  width = 12, height = 4)
+```
+
+## Results: Part 2
+
+#### **Genome-encoded toxins**
+
+```{r genomic_toxin_data}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections 
+# (note that we only have KHR/KHS data for FGSC and Liti)
+killer.df.stats=killer.df[which(killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"),]
+# Limit query to only those strains that have KHR or KHS data
+killer.df.stats = killer.df.stats[which(
+  killer.df.stats$khr_type!="NA" |
+    killer.df.stats$khs_type!="NA"),]
+# print names of collections included in dataset
+print("Names of included collections:")
+unique(killer.df.stats$Collection)
+# ensure total number of strains in collection subsets adds up correctly
+print(paste("Number of qualified strains:", nrow(killer.df.stats))) 
+```
+
+This table summarizes the prevalence of KHR and KHS in relation to killing phenotype. 
+
+```{r tbl3}
+## KILLERS
+killer.df = killer.df.stats
+killer.df <- killer.df[which(
+  killer.df$Y2046!=0 |
+    killer.df$Y1088!=0 |  
+    killer.df$DSM70459!=0 |
+    killer.df$CYC1058!=0 |  
+    killer.df$Y27106!=0 | 
+    killer.df$NCYC1006!=0 |
+    killer.df$NCYC777!=0 | 
+    killer.df$NBRC1802!=0 | 
+    killer.df$NBRC1815!=0 |
+    killer.df$Y5509!=0 | 
+    killer.df$MS300c!=0 |
+    killer.df$BY4741!=0),]
+# killer, containing canonical or mutant (not truncated) KHR
+kill_khrP = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# killer, containing canonical or mutant (not truncated) KHS
+kill_khsP = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# killer, NOT containing canonical or mutant KHR
+kill_khrN = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical"),]
+# killer, NOT containing canonical or mutant KHS
+kill_khsN = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all killer numbers into list 
+killers = c("Killer yeast", 
+  nrow(kill_khrP), nrow(kill_khsP), nrow(kill_khrN), nrow(kill_khsN))
+#######################################################################
+## KILLERS of Y-2046 ONLY
+killer.df = killer.df.stats
+killer.df <- killer.df[which(
+  killer.df$Y2046!=0 &
+    killer.df$Y1088==0 &
+    killer.df$DSM70459==0 &
+    killer.df$CYC1058==0 &
+    killer.df$Y27106==0 &
+    killer.df$NCYC1006==0 &
+    killer.df$NCYC777==0 &
+    killer.df$NBRC1802==0 &
+    killer.df$NBRC1815==0 &
+    killer.df$Y5509==0 &
+    killer.df$MS300c==0 &
+    killer.df$BY4741==0),]
+# Y-2046 killer, containing canonical or mutant (not truncated) KHR
+kill_khrP_y2046 = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# Y-2046 killer, containing canonical or mutant (not truncated) KHS
+kill_khsP_y2046 = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# Y-2046 killer, NOT containing canonical or mutant KHR
+kill_khrN_y2046 = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical" ),]
+# Y-2046 killer, NOT containing canonical or mutant KHS
+kill_khsN_y2046 = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all killer numbers into list 
+killers_y2046 = c("Killer yeast (Y-2046 only)", 
+  nrow(kill_khrP_y2046), nrow(kill_khsP_y2046), nrow(kill_khrN_y2046), 
+  nrow(kill_khsN_y2046))
+#######################################################################
+## NON-KILLERS
+killer.df = killer.df.stats
+killer.df <- killer.df[which(
+  killer.df$Y2046==0 &
+    killer.df$Y1088==0 &
+    killer.df$DSM70459==0 &
+    killer.df$CYC1058==0 &
+    killer.df$Y27106==0 &
+    killer.df$NCYC1006==0 &
+    killer.df$NCYC777==0 &
+    killer.df$NBRC1802==0 &
+    killer.df$NBRC1815==0 &
+    killer.df$Y5509==0 &
+    killer.df$MS300c==0 &
+    killer.df$BY4741==0),]
+# non-killer, containing canonical or mutant (not truncated) KHR
+nokill_khrP = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# non-killer, containing canonical or mutant (not truncated) KHS
+nokill_khsP = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# non-killer, NOT containing canonical or mutant KHR
+nokill_khrN = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical" ),]
+# non-killer, NOT containing canonical or mutant KHS
+nokill_khsN = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all non-killer numbers into list 
+nonkillers = c("Non-killer yeast", 
+  nrow(nokill_khrP), nrow(nokill_khsP), nrow(nokill_khrN), nrow(nokill_khsN))
+
+#######################################################################
+# Create prevalence data frame
+prevalence <- data.frame( 
+  category = character(), 
+  khr_pos = numeric(),    
+  khs_pos = numeric(),
+  khr_neg = numeric(),    
+  khs_neg = numeric())
+
+# Append row for each killer category
+prevalence[1, ] <- killers
+prevalence[2, ] <- killers_y2046
+prevalence[3, ] <- nonkillers
+
+# print table
+prevalence %>% 
+  rename(c(` `=category, 
+           `+KHR1`=khr_pos, `+KHS1`=khs_pos, 
+           `-KHR1`=khr_neg, `-KHS1`=khs_neg)) %>% 
+  kbl(caption = "Table 3. The prevalence of KHR1 and KHS1 in S. cerevisiae") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+```{r tbl4}
+# Limit query to only those strains that have agarose gel data
+killer.df.stats = killer.df.stats[which(killer.df.stats$tv!="NA"),]
+# ensure total number of strains in collection subsets adds up correctly
+print(paste("Number of qualified strains:", nrow(killer.df.stats))) 
+#######################################################################
+
+## KILLERS WITH SATELLITES
+killer.df = killer.df.stats
+killer.df <- killer.df[which( # satellite+ only
+    killer.df$sat!=0 |
+    killer.df$pv!=0),]
+killer.df <- killer.df[which( # killers only
+  killer.df$Y2046!=0 |
+    killer.df$Y1088!=0 |  
+    killer.df$DSM70459!=0 |
+    killer.df$CYC1058!=0 |  
+    killer.df$Y27106!=0 | 
+    killer.df$NCYC1006!=0 |
+    killer.df$NCYC777!=0 | 
+    killer.df$NBRC1802!=0 | 
+    killer.df$NBRC1815!=0 |
+    killer.df$Y5509!=0 | 
+    killer.df$MS300c!=0 |
+    killer.df$BY4741!=0),]
+# killer, containing canonical or mutant (not truncated) KHR
+kill_khrP_satP = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# killer, containing canonical or mutant (not truncated) KHS
+kill_khsP_satP = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# killer, NOT containing canonical or mutant KHR
+kill_khrN_satP = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical"),]
+# killer, NOT containing canonical or mutant KHS
+kill_khsN_satP = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all killer numbers into list 
+killers_satP = c("+satellite", 
+  nrow(kill_khrP_satP), nrow(kill_khsP_satP), nrow(kill_khrN_satP), 
+  nrow(kill_khsN_satP))
+#######################################################################
+
+## KILLERS NO SATELLITES
+killer.df = killer.df.stats
+killer.df <- killer.df[which( # satellite neg only
+    killer.df$sat==0 &
+    killer.df$pv==0),]
+killer.df <- killer.df[which( # killers only
+  killer.df$Y2046!=0 |
+    killer.df$Y1088!=0 |  
+    killer.df$DSM70459!=0 |
+    killer.df$CYC1058!=0 |  
+    killer.df$Y27106!=0 | 
+    killer.df$NCYC1006!=0 |
+    killer.df$NCYC777!=0 | 
+    killer.df$NBRC1802!=0 | 
+    killer.df$NBRC1815!=0 |
+    killer.df$Y5509!=0 | 
+    killer.df$MS300c!=0 |
+    killer.df$BY4741!=0),]
+# killer, containing canonical or mutant (not truncated) KHR
+kill_khrP_satN = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# killer, containing canonical or mutant (not truncated) KHS
+kill_khsP_satN = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# killer, NOT containing canonical or mutant KHR
+kill_khrN_satN = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical"),]
+# killer, NOT containing canonical or mutant KHS
+kill_khsN_satN = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all killer numbers into list 
+killers_satN = c("-satellite", 
+  nrow(kill_khrP_satN), nrow(kill_khsP_satN), nrow(kill_khrN_satN), 
+  nrow(kill_khsN_satN))
+#######################################################################
+
+## NON-KILLERS WITH SATELLITES
+killer.df = killer.df.stats
+killer.df <- killer.df[which( # satellite+ only
+    killer.df$sat!=0 |
+    killer.df$pv!=0),]
+killer.df <- killer.df[which(
+  killer.df$Y2046==0 &
+    killer.df$Y1088==0 &
+    killer.df$DSM70459==0 &
+    killer.df$CYC1058==0 &
+    killer.df$Y27106==0 &
+    killer.df$NCYC1006==0 &
+    killer.df$NCYC777==0 &
+    killer.df$NBRC1802==0 &
+    killer.df$NBRC1815==0 &
+    killer.df$Y5509==0 &
+    killer.df$MS300c==0 &
+    killer.df$BY4741==0),]
+# non-killer, containing canonical or mutant (not truncated) KHR
+nokill_khrP_satP = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# non-killer, containing canonical or mutant (not truncated) KHS
+nokill_khsP_satP = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# non-killer, NOT containing canonical or mutant KHR
+nokill_khrN_satP = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical" ),]
+# non-killer, NOT containing canonical or mutant KHS
+nokill_khsN_satP = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all non-killer numbers into list 
+nonkillers_satP = c("+satellite", 
+  nrow(nokill_khrP_satP), nrow(nokill_khsP_satP), nrow(nokill_khrN_satP),
+  nrow(nokill_khsN_satP))
+#######################################################################
+
+## NON-KILLERS NO SATELLITES
+killer.df = killer.df.stats
+killer.df <- killer.df[which( # satellite neg only
+    killer.df$sat==0 &
+    killer.df$pv==0),]
+killer.df <- killer.df[which(
+  killer.df$Y2046==0 &
+    killer.df$Y1088==0 &
+    killer.df$DSM70459==0 &
+    killer.df$CYC1058==0 &
+    killer.df$Y27106==0 &
+    killer.df$NCYC1006==0 &
+    killer.df$NCYC777==0 &
+    killer.df$NBRC1802==0 &
+    killer.df$NBRC1815==0 &
+    killer.df$Y5509==0 &
+    killer.df$MS300c==0 &
+    killer.df$BY4741==0),]
+# non-killer, containing canonical or mutant (not truncated) KHR
+nokill_khrP_satN = killer.df[which(
+  killer.df$khr_type=="mutant" | 
+    killer.df$khr_type=="canonical"),]
+# non-killer, containing canonical or mutant (not truncated) KHS
+nokill_khsP_satN = killer.df[which(
+  killer.df$khs_type=="mutant" | 
+    killer.df$khs_type=="canonical"),]
+# non-killer, NOT containing canonical or mutant KHR
+nokill_khrN_satN = killer.df[which(
+  killer.df$khr_type!="mutant" & 
+    killer.df$khr_type!="canonical" ),]
+# non-killer, NOT containing canonical or mutant KHS
+nokill_khsN_satN = killer.df[which(
+  killer.df$khs_type!="mutant" & 
+    killer.df$khs_type!="canonical" ),]
+# combine all non-killer numbers into list 
+nonkillers_satN = c("-satellite", 
+  nrow(nokill_khrP_satN), nrow(nokill_khsP_satN), nrow(nokill_khrN_satN),
+  nrow(nokill_khsN_satN))
+#######################################################################
+
+# Create prevalence data frame
+prevalence <- data.frame( 
+  category = character(), 
+  khr_pos = numeric(),    
+  khs_pos = numeric(),
+  khr_neg = numeric(),    
+  khs_neg = numeric())
+
+# Append row for each killer category
+prevalence[1, ] <- c("Killer yeast", "", "", "", "")
+prevalence[2, ] <- killers_satP
+prevalence[3, ] <- killers_satN
+prevalence[4, ] <- c("Non-killer yeast", "", "", "", "")
+prevalence[5, ] <- nonkillers_satP
+prevalence[6, ] <- nonkillers_satN
+
+# print table
+prevalence %>% 
+  rename(c(` `=category, 
+           `+KHR1`=khr_pos, `+KHS1`=khs_pos, 
+           `-KHR1`=khr_neg, `-KHS1`=khs_neg)) %>% 
+  kbl(caption = "Table 4. The prevalence of KHR1 and KHS1 in killer and non-killer S. cerevisiae lacking satellite dsRNAs") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+## Supplement
+
+```{r data_supplement}
+
+```
+
+```{r figS1}
+
+```
+
+```{r figS4}
+
+```
+
+```{r figS5}
+
+```
+
+```{r figS6}
+
+```
+
+## R Session Info
+
+```{r}
+sessionInfo()
+```
+
