@@ -87,7 +87,13 @@ when Y-2046 is included. This is presumably strains that only kill Y-2046, since
 
 ???   Do we need to update our raw data sheet for public use? (if so, I need to redo Rmd)
 
+- ERROR: plot.new() margin error was resolved by removing the "lhei" argument from heatmap.2 plot. 
+Note that heatmap.2 plots must be manually run within R Studio in order to properly update the 
+SVG files. If they're ggplots, then everything works fine. Frickin heatmap.2 givin me grief. 
+
 >> Next time: work on supplementary figures
+
+
 
 
 
