@@ -31,11 +31,12 @@ source("dsrna-survey-functions.R")
 ```{r set_wd}
 ## set working directory
 script_dir=dirname(rstudioapi::getSourceEditorContext()$path)
-data_dir=paste0(unlist(strsplit(script_dir, "/scripts"))[1], "/data/")
-setwd(data_dir)
+main_dir=unlist(strsplit(script_dir, "/figures/scripts"))[1]
 ## set image output directory
 img_dir=paste0(unlist(strsplit(script_dir, "/scripts"))[1], "/img/")
 ## data files
+data_dir=paste0(main_dir, "/killer_assays/data/")
+setwd(data_dir)
 killer_data_file = paste0(data_dir, "killer_assays.csv")
 ```
 
