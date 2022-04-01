@@ -1,3 +1,4 @@
+*.Rhistory
 **_local/
 *.DS_Store
 *.fasta.*

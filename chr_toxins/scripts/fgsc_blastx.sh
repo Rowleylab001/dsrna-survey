@@ -53,10 +53,11 @@ for filename in "$fasta_dir"/*.fa; do
     temp_blast_output="${usroutdir}/${base_filename}.csv"
 
     ## run BLASTx to find KHR and KHS in FGSC collection chromosomes
+	## options here: https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/
 	blastx -db $blast_db \
 		-query $filename \
 		-max_target_seqs 1 \
-		-outfmt "10 qacc sacc stitle pident length qstart qend sstart send" \
+		-outfmt "10 qacc sacc stitle evalue pident length qstart qend sstart send qseq" \
 		-out "${temp_blast_output}"
 
 	# adds a column for the sample name
@@ -72,7 +73,7 @@ done
 
 # adds column headers (may not work on non-Mac OS)
 sed "1i\\
-filename,contig,match_acc,match_description,pident,length,qstart,qend,sstart,send
+strain,contig,match_acc,match_description,eval,pid,ntlen,qstart,qend,sstart,send,qseq_aa
 " "${blast_output}".tmp > "${blast_output}"
 # remove temp file
 rm "${blast_output}".tmp
