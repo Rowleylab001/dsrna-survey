@@ -1,0 +1,157 @@
+
+
+Building a new DB, current time: 04/01/2022 18:19:56
+New DB name:   /Users/angela/rowley/dsrna-survey/chr_toxins/data/reference_seqs/chromTox_nt_db.fasta
+New DB title:  /Users/angela/rowley/dsrna-survey/chr_toxins/data/reference_seqs/chromTox_nt_db.fasta
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /Users/angela/rowley/dsrna-survey/chr_toxins/data/reference_seqs/chromTox_nt_db.fasta
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 2 sequences in 0.099313 seconds.
+
+
+
+
+*** Performing BLASTn using local BLAST Database ***
+
+
+blasting AAA_6.re.fa
+
+
+blasting AAB_6.re.fa
+
+
+blasting AAC_6.re.fa
+
+
+blasting AAD_6.re.fa
+
+
+blasting AAE_6.re.fa
+
+
+blasting AAG_6.re.fa
+
+
+blasting AAH_6.re.fa
+
+
+blasting AAI_6.re.fa
+
+
+blasting AAK_6.re.fa
+
+
+blasting AAL_3.re.fa
+
+
+blasting AAM_3.re.fa
+
+
+blasting AAN_3.re.fa
+
+
+blasting AAP_3.re.fa
+
+
+blasting AAQ_3.re.fa
+
+
+blasting AAR_3.re.fa
+
+
+blasting CRK_2.re.fa
+
+
+blasting CRL_.re.fa
+
+
+blasting GAL.re.fa
+
+
+
+*** Translating and categorizing BLASTn output ***
+
+
+
+*** Expanding BLAST hit areas ***
+
+Opening:AAA_6.re.fa
+Opening:AAB_6.re.fa
+Opening:AAB_6.re.fa
+Opening:AAC_6.re.fa
+Opening:AAC_6.re.fa
+Opening:AAD_6.re.fa
+Opening:AAD_6.re.fa
+Opening:AAE_6.re.fa
+Opening:AAE_6.re.fa
+Opening:AAG_6.re.fa
+Opening:AAG_6.re.fa
+Opening:AAH_6.re.fa
+Opening:AAH_6.re.fa
+Opening:AAI_6.re.fa
+Opening:AAI_6.re.fa
+Opening:AAK_6.re.fa
+Opening:AAL_3.re.fa
+Opening:AAL_3.re.fa
+Opening:AAL_3.re.fa
+Opening:AAM_3.re.fa
+Opening:AAN_3.re.fa
+Opening:AAN_3.re.fa
+Opening:AAN_3.re.fa
+Opening:AAP_3.re.fa
+Opening:AAP_3.re.fa
+Opening:AAQ_3.re.fa
+Opening:AAQ_3.re.fa
+Opening:AAR_3.re.fa
+Opening:CRK_2.re.fa
+Opening:CRK_2.re.fa
+Opening:CRL_.re.fa
+Opening:CRL_.re.fa
+Opening:GAL.re.fa
+Opening:GAL.re.fa
+
+
+*** Checking for ORFs in expanded hits ***
+
+Finding KHR ORFs in: AAB_6.re.fa
+Finding KHR ORFs in: AAC_6.re.fa
+Finding KHR ORFs in: AAD_6.re.fa
+Finding KHR ORFs in: AAE_6.re.fa
+Finding KHR ORFs in: AAG_6.re.fa
+Finding KHR ORFs in: AAH_6.re.fa
+Finding KHR ORFs in: AAI_6.re.fa
+Finding KHR ORFs in: AAN_3.re.fa
+Finding KHR ORFs in: AAP_3.re.fa
+Finding KHR ORFs in: AAQ_3.re.fa
+Finding KHR ORFs in: CRK_2.re.fa
+Finding KHR ORFs in: CRL_.re.fa
+Finding KHR ORFs in: GAL.re.fa
+Finding KHS ORFs in: AAA_6.re.fa
+Finding KHS ORFs in: AAB_6.re.fa
+Finding KHS ORFs in: AAC_6.re.fa
+Finding KHS ORFs in: AAD_6.re.fa
+Finding KHS ORFs in: AAE_6.re.fa
+Finding KHS ORFs in: AAG_6.re.fa
+Finding KHS ORFs in: AAH_6.re.fa
+Finding KHS ORFs in: AAI_6.re.fa
+Finding KHS ORFs in: AAK_6.re.fa
+Finding KHS ORFs in: AAL_3.re.fa
+Finding KHS ORFs in: AAL_3.re.fa
+Finding KHS ORFs in: AAL_3.re.fa
+Finding KHS ORFs in: AAM_3.re.fa
+Finding KHS ORFs in: AAN_3.re.fa
+Finding KHS ORFs in: AAN_3.re.fa
+Finding KHS ORFs in: AAP_3.re.fa
+Finding KHS ORFs in: AAQ_3.re.fa
+Finding KHS ORFs in: AAR_3.re.fa
+Finding KHS ORFs in: CRK_2.re.fa
+Finding KHS ORFs in: CRL_.re.fa
+Finding KHS ORFs in: GAL.re.fa
+
+
+*** Checking the BLAST hit ORFs match largest expanded ORFs ***
+
+
+All done!
+

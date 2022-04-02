@@ -27,7 +27,10 @@ if header != None:
         hit_contig = i[1]
         hit_seq_start = i[7] 
         hit_seq_stop = i[8]
+        gene_start = i[9]
+        gene_stop = i[10]
         gene = i[14]
+        
         #Doublechecking strain is correct /w a print.
         print("Opening:" + strain)
         basepath = args.fasta_dir
@@ -47,6 +50,10 @@ if header != None:
                     stop = int(hit_seq_stop) + 50
                 #A second nested if statement needs to go above for STOP, where it compares to length of seq.
                 subseq = record.seq[start:stop]
+                # reverse sequence if gene is in reverse orientation
+                # determine orientation
+                if gene_start > gene_stop:
+                    subseq = subseq.reverse_complement()
                 subseq.id = record.id
                 seqdict = {
                         "strain":strain,
