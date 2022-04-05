@@ -68,8 +68,8 @@ main <- function() {
           legend.text=element_text(size=22),
           legend.background = element_rect(
             fill="white", size=0.5, linetype="solid", colour ="black")) +
-    scale_fill_manual("ORF Match?", values = myPalette) +
-    ylim(0, length(unique(mergedTbl$filename)))
+    scale_fill_manual("ORF Match?", values = myPalette) #+
+    #ylim(0, length(unique(mergedTbl$filename)))
   # save plot to SVG file
   img_file = paste0(data_dir, "/liti_chr_compare.svg") 
   ggsave(
