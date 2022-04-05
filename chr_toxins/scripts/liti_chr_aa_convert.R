@@ -124,8 +124,8 @@ main <- function() {
           legend.text=element_text(size=22),
           legend.background = element_rect(
             fill="white", size=0.5, linetype="solid", colour ="black")) +
-    scale_fill_manual("Protein Type", values = myPalette) +
-    ylim(0, length(unique(hits.df$filename)))
+    scale_fill_manual("Protein Type", values = myPalette) #+
+    #ylim(0, length(unique(hits.df$filename)))
   # save plot to SVG file
   img_file = paste0(data_dir, "/Liti_blastn_chr_hits.svg") # filename
   ggsave(

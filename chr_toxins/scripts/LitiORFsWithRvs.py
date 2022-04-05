@@ -16,10 +16,12 @@ args = parser.parse_args()
 
 def find_longest_orf(nt_seq: str) -> str:
     '''Find longest orf seq for input nt seq (input must be 5'->3').'''
-    # for each dict entry (strain), find longest orf
+    # find longest orf
+    longest_orf = "" # returns empty string if no orfs found
     orf_re_pattern = "(?=(ATG(?:(?!TAA|TAG|TGA)...)*(?:TAA|TAG|TGA)))"
     all_orfs = re.findall(orf_re_pattern, nt_seq.upper())
-    longest_orf = max(all_orfs, key=len)
+    if all_orfs != []: # if not empty list (i.e. no orfs found)
+        longest_orf = max(all_orfs, key=len)
     return longest_orf
 
 def store_gene_dict(filename: str, gene_name: str) -> list:
