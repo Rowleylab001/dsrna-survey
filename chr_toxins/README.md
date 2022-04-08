@@ -13,6 +13,8 @@ Analysis of KHR and KHS Toxins in Liti & FGSC Collections (WGS)
 
 		$ python3 fgsc_fasta_download.py
 
+If the above script produces an error, it is very likely that Biopython needs to be installed. 
+
 *Liti Collection*
 
 - `chr_toxins/data/Liti_contigs/Liti1000 std_name to sra accession.xlsx` - Matches strain names to SRA accession numbers (study id# ERP014555) for raw reads of all Liti strains sequenced by Peter et al. The de novo assembled contigs used in this analysis were downloaded from: http://1002genomes.u-strasbg.fr/files/ under the "1011Assemblies.tar.gz" file. Caution: the file is 3.7Gb zipped, >12Gb unzipped), which is VERY large. 
@@ -36,10 +38,10 @@ The KHR sequence, published by Goto et al., is the ORF within [D00905.1](https:/
 
 ## Workflow
 
-Josephine Boyer performed exploratory analysis of KHS & KHR toxins in FGSC collection WGS data using local BLASTx and manual filtering. The data was later analyzed in addition to the Liti collection using the `chrtox_blastn.sh` script. The scripts used therein were initially written by Mason Shipley and further developed by Angela Crabtree. 
+Josephine Boyer performed exploratory analysis of KHS & KHR toxins in FGSC collection WGS data using local BLASTx and manual filtering. The data was later analyzed in addition to the Liti collection using the `chrtox_pipeline.sh` script. The scripts used therein were initially written by Mason Shipley and further developed by Angela Crabtree. 
 
-	$ chmod a+x chrtox_blastn.sh
-	$ ./chrtox_blastn.sh -h
+	$ chmod a+x chrtox_pipeline.sh
+	$ ./chrtox_pipeline.sh -h
 
 	-------------------------------------------------------
 	options:
@@ -51,33 +53,40 @@ Josephine Boyer performed exploratory analysis of KHS & KHR toxins in FGSC colle
 	   -h		help
 	-------------------------------------------------------
 
-	$ ./chrtox_blastn.sh -f [fasta folder] -b [BLASTn database fasta file] -o [output folder]
+	$ ./chrtox_pipeline.sh -f [fasta folder] -b [BLASTn database fasta file] -o [output folder]
 
 
-The `chrtox_blastn.sh` script uses the following scripts and workflow:
+The `chrtox_pipeline.sh` script uses the following scripts and workflow:
 
-1. A local BLASTn was performed on contigs using a nucleotide database of KHR & KHS. 
+1. [**01_chrtox_blastn.sh**](scripts/01_chrtox_blastn.sh)
 
-> BLAST nucleotide database for KHR1 & KHS1: <button onclick="window.open('data/reference_seqs/chromTox_nt_db.fasta')">View</button> 
+	a. Script performs BLASTn using local BLAST database. 
 
-2. Resultant BLASTn hits were translated to protein sequences and give designations depending on if they were truncated, and whether the full-length proteins were canonical or mutated. These designations were listed in a column called "type" as "truncated", "canonical", or "mutant". Note that the "mutant" designation is given if the protein is the same length as the canonical protein and the protein sequence differs from canonical. KHS and KHR canonical proteins are translated from the nucleotide sequences in the blastn nucleotide database file `chr_toxins/data/reference_seqs/chromTox_nt_db.fasta`. 
+	b. A local BLASTn was performed on files using a [nucleotide database of KHR & KHS](data/reference_seqs/chromTox_nt_db.fasta). Note that the word "KHR" or "KHS" need to be included in the header for the downstream R scripts to work properly. 
 
-> `KHSKHR.R` script to translate and compare sequences from BLASTn output: <button onclick="window.open('scripts/Mason/KHSKHR.R')">View</button>
+2. [**02_chr_aa_convert.R**](scripts/02_chr_aa_convert.R)
 
-3. Obtain nucleotide sequences 50 bp to either side of the BLASTn hit and identify KHR/KHS-like ORFs from within the extended sequence. The purpose of this is to ensure that the BLASTn did not exclude nucleotide sequences on either end due to sequence dissimilarity. 
+	a. Script translates and categorizes BLASTn output. 
 
-> `LitiContigPull.py` script identifies potential ORFs within given BLASTn output. Note that the BLASTn output has been modified to only include the columns for strain name, contig name, blast hit start position, and blast hit end position. This script uses the location information of blast hit start & stop to find what positions to grab the extended nucleotide sequence from. This includes an exception for when the exted sequence positions have exceeded the perimeter of the contig sequence. The output csv contains 3 columns: strain name, contig name, and extended nucleotide sequence. 
+	b. Resultant BLASTn hits were translated to protein sequences and given designations depending on if the proteins were truncated, and whether the full-length proteins were canonical or mutated. These designations were listed in a column called "type" as "truncated", "canonical", or "mutant". The "mutant" designation was given if the protein was the same length as the canonical protein and the protein sequence differed from canonical. KHS and KHR canonical proteins are translated from the nucleotide sequences in the blastn nucleotide database file `chr_toxins/data/reference_seqs/chromTox_nt_db.fasta`. 
 
-> <button onclick="window.open('scripts/Mason/LitiContigPull.py')">View</button>
+3. [**03_extend_hits.py**](scripts/03_extend_hits.py)
 
-> `LitiORFsWithRvs.py` script identifies potential ORFs within the extended nucleotide sequences from `LitiContigPull.py` output. When an ATG codon is found within the extended sequence, the script scans downstream for a stop codon. If it finds one, it checks to see if it is in frame and, if so, it will translate it into a protein. It repeats this for the reverse complement of the extended sequence and returns a csv with 4 columns: strain name, contig name, ORF nucleotide sequence, and translated protein sequence. 
+	a. Script extends BLAST hit nucleotide sequences. 
 
-> <button onclick="window.open('scripts/Mason/LitiORFsWithRvs.py')">View</button>
+	b. Nucleotide sequences 50 bp to either side of the BLASTn hit were extracted from original sequence files. The purpose of this was to ensure that the BLASTn did not exclude nucleotide sequences on either end due to sequence dissimilarity. 
 
-4. Merge new list of extended sequences with original BLASTn results in order to compare protein sequences. We can then see if there was any KHR or KHS genes erroneously incomplete by the BLASTn. The R script merges the two lists and makes a new column to compare whether the two protein sequences match. Mismatches were filtered and delted using Excel. 
+4. [**04_identify_orfs.py**](scripts/04_identify_orfs.py)
 
-> `RLitiORFComparison.R` script merges the two lists compares whether the protein sequences match between BLASTn and extended search: <button onclick="window.open('scripts/Mason/RLitiORFComparison.R')">View</button>
+	a. Script identifies the longest ORFs within extended nucleotide sequences. 
 
+	b. The longest ORF within each extended hit sequence was found. 
+
+5. [**05_compare_orfs.R**](scripts/05_compare_orfs.R)
+
+	a. Script compares the blast hit protein sequences with the extended hit protein sequences. 
+
+	b. The protein sequences from the original blast and the extended orfs were compared and designated as "Match" if the two agreed and "Mismatch" if a different protein was found in the extended search. This determines whether there were any KHR or KHS genes erroneously incomplete by the BLASTn. 
 
 
 ## References
