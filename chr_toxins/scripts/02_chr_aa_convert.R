@@ -127,7 +127,7 @@ main <- function() {
     scale_fill_manual("Protein Type", values = myPalette) #+
     #ylim(0, length(unique(hits.df$filename)))
   # save plot to SVG file
-  img_file = paste0(data_dir, "/Liti_blastn_chr_hits.svg") # filename
+  img_file = paste0(data_dir, "/blastn_chr_hits.svg") # filename
   ggsave(
     img_file,
     plot = p,
@@ -141,10 +141,10 @@ main <- function() {
   
   ## write files for MSA to determine KHR/KHS protein functionality
   hits.df.msa.khs = hits.df.msa[which(hits.df.msa$gene=="KHS"),]
-  write.csv(hits.df.msa.khs, file=paste0(data_dir,"/Liti-KHS-msa.csv"), 
+  write.csv(hits.df.msa.khs, file=paste0(data_dir,"/KHS-msa.csv"), 
             row.names = FALSE)
   hits.df.msa.khr = hits.df.msa[which(hits.df.msa$gene=="KHR"),]
-  write.csv(hits.df.msa.khs, file=paste0(data_dir,"/Liti-KHR-msa.csv"), 
+  write.csv(hits.df.msa.khs, file=paste0(data_dir,"/KHR-msa.csv"), 
             row.names = FALSE)
   }
 main()

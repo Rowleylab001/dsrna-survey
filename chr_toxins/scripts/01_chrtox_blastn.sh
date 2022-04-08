@@ -89,7 +89,8 @@ rm ${blast_output}.tmp
 # on if they’re truncated, and whether the full-length proteins are canonical 
 # or mutated. 
 printf "\n\n*** Translating and categorizing BLASTn output ***\n\n"
-./liti_chr_aa_convert.R $blast_output $blast_db $chr_categories
+chmod a+x 02_chr_aa_convert.R
+./02_chr_aa_convert.R $blast_output $blast_db $chr_categories
 
 ###################### EXPAND HITS ######################
 # Obtain nucleotide sequences 50 bp to either side of the BLASTn hit and 
@@ -97,18 +98,21 @@ printf "\n\n*** Translating and categorizing BLASTn output ***\n\n"
 # This ensures BLASTn did not exclude nucleotide sequences on either end 
 # due to sequence dissimilarity.
 printf "\n\n*** Expanding BLAST hit areas ***\n\n"
-./LitiContigPull.py -f $fasta_dir -c $chr_categories -o $chr_extended
+chmod a+x 03_extend_hits.py
+./03_extend_hits.py -f $fasta_dir -c $chr_categories -o $chr_extended
 
-###################### REVISE ORFs ######################
-# Identifiy potential ORFs within the extended nucleotide sequences
-printf "\n\n*** Checking for ORFs in expanded hits ***\n\n"
-./LitiORFsWithRvs.py -c $chr_extended -o $chr_revised
+###################### IDENTIFY NEW ORFs ######################
+# Identifiy longest ORFs within the extended nucleotide sequences
+printf "\n\n*** Finding longest ORFs in expanded hits ***\n\n"
+chmod a+x 04_identify_orfs.py
+./04_identify_orfs.py -c $chr_extended -o $chr_revised
 
 ###################### CHECK RESULTS ######################
 # Merge new list of extended sequences with original BLASTn results to compare 
 # protein sequences. We can then see if there was any KHR or KHS genes erroneously 
 # incomplete by the BLASTn. 
 printf "\n\n*** Checking the BLAST hit ORFs match largest expanded ORFs ***\n\n"
-./RLitiORFComparison.R $chr_categories $chr_revised $chr_quality_check
+chmod a+x 05_compare_orfs.R
+./05_compare_orfs.R $chr_categories $chr_revised $chr_quality_check
 
 printf "\nAll done!\n\n" 
