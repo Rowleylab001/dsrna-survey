@@ -7,52 +7,60 @@ Analysis of KHR and KHS Toxins in Liti & FGSC Collections (WGS)
 
 *FGSC Collection*
 
-- `genomic_toxins/data/FGSC_chrom/Strope_Table_S19_AccNo.xlsx` - Contains accession numbers for all FGSC strains assembled by Strope et al. These accession numbers are available in the supplementary file "Table _S19". Strope assembled and submitted complete chromosomes under these accessions. 
+- `chr_toxins/data/FGSC_chrom/Strope_Table_S19_AccNo.xlsx` - Contains accession numbers for all FGSC strains assembled by Strope et al. These accession numbers are available in the supplementary file "Table _S19". Strope assembled and submitted complete chromosomes under these accessions. 
 
-- `genomic_toxins/scripts/fgsc_fasta_download.py` - Run script to automatically download Chromosomes 5 and 9 from FGSC collection for all strains in the collection. These are the chromosomes carrying KHR and KHS. There should be a total of 186 FASTA files after completion. You will prompted to enter your own email (so the Entrez database server can identify you) and you must have Biopython installed. The files will be deposited in your current working directory. To run script, use the following command: 
+- `chr_toxins/scripts/fgsc_fasta_download.py` - Run script to automatically download Chromosomes 5 and 9 from FGSC collection for all strains in the collection. These are the chromosomes carrying KHR and KHS. There should be a total of 186 FASTA files after completion. You will prompted to enter your own email (so the Entrez database server can identify you) and you must have Biopython installed. The files will be deposited in your current working directory. To run script, use the following command: 
 
 		$ python3 fgsc_fasta_download.py
 
 *Liti Collection*
 
-- `genomic_toxins/data/Liti_contigs/Liti1000 std_name to sra accession.xlsx` - Matches strain names to SRA accession numbers (study id# ERP014555) for raw reads of all Liti strains sequenced by Peter et al. The de novo assembled contigs used in this analysis were downloaded from: http://1002genomes.u-strasbg.fr/files/ under the "1011Assemblies.tar.gz" file. Caution: the file is 3.7Gb zipped, >12Gb unzipped), which is VERY large. 
+- `chr_toxins/data/Liti_contigs/Liti1000 std_name to sra accession.xlsx` - Matches strain names to SRA accession numbers (study id# ERP014555) for raw reads of all Liti strains sequenced by Peter et al. The de novo assembled contigs used in this analysis were downloaded from: http://1002genomes.u-strasbg.fr/files/ under the "1011Assemblies.tar.gz" file. Caution: the file is 3.7Gb zipped, >12Gb unzipped), which is VERY large. 
 
 *KHR & KHS Reference Sequences*
 
-- `genomic_toxins/data/reference_seqs/` - Contains KHR and KHS reference sequences downloaded from NCBI (
+The KHS toxin sequence published by Goto et al. on NCBI (GenBank: S77712.1) was refuted by a later paper by Frank and Wolf who published an updated sequence for KHS which should fix the problems in the Goto sequence. Hence, the correct [KHS sequence](https://www.ncbi.nlm.nih.gov/nuccore/AAFW02000048.1?report=fasta&log$=seqview&from=551404&to=552456) encodes protein SCY_1690 from strain YJM789. 
 
-| Gene       | Seq Type   | NCBI Accession           | Link                                            |
-| :--------- | :--------- | :----------------------- | :---------------------------------------------- |
-| KHS1       | Protein    | EDN63163.1               | https://www.ncbi.nlm.nih.gov/protein/EDN63163.1 |
-| KHR1       | Protein    | BAA00751.1 or EDN61464.1 | https://www.ncbi.nlm.nih.gov/protein/EDN61464.1 |
-| KHS1       | Nucleotide | ???                      |                                                 |
-| KHR1       | Nucleotide | D00905.1                 | https://www.ncbi.nlm.nih.gov/nuccore/D00905.1   |
+> *"We believe that there are errors in the original report of the sequence of KHS1, from *S. cerevisiae* strain no. 115 (17), because it differs from all other sequences by many frameshifts and by a 1.4-kb inversion that ends at a restriction site used in cloning."* (Frank & Wolf 2009)
+
+The KHR sequence, published by Goto et al., is the ORF within [D00905.1](https://www.ncbi.nlm.nih.gov/nuccore/D00905.1?report=fasta&log$=seqview&from=139&to=1029) as the published sequence included flanking sequences. 
+
+- `chr_toxins/data/reference_seqs/chromTox_nt_db.fasta` - Contains KHR and KHS reference sequences downloaded from NCBI:
+
+| Gene       | Seq Type   | NCBI Accession               | Link                                        |
+| :--------- | :--------- | :--------------------------- | :------------------------------------------ |
+| KHS1       | Nucleotide | AAFW02000048.1:551404-552456 | https://www.ncbi.nlm.nih.gov/nuccore/AAFW02000048.1?report=fasta&log$=seqview&from=551404&to=552456 |
+| KHR1       | Nucleotide | D00905.1:139-1029            | https://www.ncbi.nlm.nih.gov/nuccore/D00905.1?report=fasta&log$=seqview&from=139&to=1029                     | 
 
 
 
 ## Workflow
 
-#### Part 1: FGSC BLASTx
+Josephine Boyer performed exploratory analysis of KHS & KHR toxins in FGSC collection WGS data using local BLASTx and manual filtering. The data was later analyzed in addition to the Liti collection using the `chrtox_blastn.sh` script. The scripts used therein were initially written by Mason Shipley and further developed by Angela Crabtree. 
 
-Josephine Boyer performed preliminary analysis of KHS & KHR toxins in FGSC collection WGS data. 
+	$ chmod a+x chrtox_blastn.sh
+	$ ./chrtox_blastn.sh -h
 
-1. Download the FGSC chromosomes 5 and 9 using `fgsc_fasta_download.py` detailed above. 
+	-------------------------------------------------------
+	options:
 
-2. Perform a local BLASTx using the protein sequences as the database. BLASTx results were manually filtered based on sequence similarity to canonical sequences. 
+	   -f [arg]	directory containing fasta files (required)
+	   -b [arg]	BLASTn reference fasta file (required)
+	   -o [arg]	destination of output folder
+	   -t		test (ensures required CL apps are working)
+	   -h		help
+	-------------------------------------------------------
 
-#### Part 2: Liti BLASTn
+	$ ./chrtox_blastn.sh -f [fasta folder] -b [BLASTn database fasta file] -o [output folder]
 
-Analysis on the Liti collection was performed mainly by Mason Shipley and further developed/analyzed by Angela Crabtree. 
 
-1. BLASTn on Liti contigs using a nucleotide database of KHR & KHS. KHS was identified from some pre-existing publication and the KHR sequence was the ORF within [D00905.1](https://www.ncbi.nlm.nih.gov/nuccore/D00905.1)
+The `chrtox_blastn.sh` script uses the following scripts and workflow:
 
-> BLAST nucleotide database: <button onclick="window.open('seqs/chromTox_nt_db.fasta')">View</button> 
+1. A local BLASTn was performed on contigs using a nucleotide database of KHR & KHS. 
 
-> `liti_blastn.sh` script to perform BLASTn on single contig file: <button onclick="window.open('scripts/Mason/liti_blastn.sh')">View</button>
+> BLAST nucleotide database for KHR1 & KHS1: <button onclick="window.open('data/reference_seqs/chromTox_nt_db.fasta')">View</button> 
 
-> `Liti_runall.sh` script to run liti_blastn.sh script on all liti files: <button onclick="window.open('scripts/Mason/Liti_runall.sh')">View</button>
-
-2. Translate BLASTn hits to protein sequences and give designations depending on if they're truncated, and whether the full-length proteins are canonical or mutated. These designations are listed in a column called "type" as "truncated", "canonical", or "mutant". Note that the "mutant" designation is given only if the protein is the same length as the canonical protein. KHS and KHR canonical proteins are from [EDN63163.1](https://www.ncbi.nlm.nih.gov/protein/EDN63163.1) and [BAA00751.1](https://www.ncbi.nlm.nih.gov/protein/BAA00751.1) from NCBI, respectively. 
+2. Resultant BLASTn hits were translated to protein sequences and give designations depending on if they were truncated, and whether the full-length proteins were canonical or mutated. These designations were listed in a column called "type" as "truncated", "canonical", or "mutant". Note that the "mutant" designation is given if the protein is the same length as the canonical protein and the protein sequence differs from canonical. KHS and KHR canonical proteins are translated from the nucleotide sequences in the blastn nucleotide database file `chr_toxins/data/reference_seqs/chromTox_nt_db.fasta`. 
 
 > `KHSKHR.R` script to translate and compare sequences from BLASTn output: <button onclick="window.open('scripts/Mason/KHSKHR.R')">View</button>
 
@@ -74,7 +82,11 @@ Analysis on the Liti collection was performed mainly by Mason Shipley and furthe
 
 ## References
 
+Frank, A Carolin, and Kenneth H Wolfe. “Evolutionary capture of viral and plasmid DNA by yeast nuclear chromosomes.” *Eukaryotic cell* vol. 8,10 (2009): 1521-31. doi:10.1128/EC.00110-09
+
 Peter J, De Chiara M, Friedrich A, et al. Genome evolution across 1,011 Saccharomyces cerevisiae isolates. *Nature*. 2018;556(7701):339-344. doi:10.1038/s41586-018-0030-5
 
 Strope PK, Skelly DA, Kozmin SG, et al. The 100-genomes strains, an S. cerevisiae resource that illuminates its natural phenotypic and genotypic variation and emergence as an opportunistic pathogen. *Genome Res*. 2015;25(5):762-774. doi:10.1101/gr.185538.114
+
+
 
