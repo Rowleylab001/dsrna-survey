@@ -1,67 +1,37 @@
 #!/bin/bash
 
-## Liti BLASTn pipeline
-## Authors: Angela Crabtree, Mason Shipley
+########## SET FILENAME VARIABLES ############
 
-########## OPTIONS ############
-while getopts "f:b:o:th" opt; do
-	case ${opt} in
-		f) fasta_dir=$OPTARG ;;
-		b) blast_db=$OPTARG ;;
-		o) usroutdir=$OPTARG ;; 
-		t) mode="test" ;;
-		h)
-			printf "\n\n-------------------------------------------------------\n"
-			printf "\noptions:\n"
-			printf "\n"
-			printf "   -f [arg]	directory containing fasta files (required)\n"
-			printf "   -b [arg]	BLASTn reference fasta file (required)\n"
-			printf "   -o [arg]	destination of output folder\n"
-			printf "   -t		test (ensures required CL apps are working)\n"
-			printf "   -h		help\n"
-			printf "\n-------------------------------------------------------\n\n\n"
-			exit 0
-			;;
-	esac
-done
-
-########## ESTABLISH BACKGROUND LOGISTICS ############
-
-## Set filename variables
 	scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"   # location of this script file
-	if [ -n "$mode" ]; then # check if the $mode variable is an empty string
-		printf "\n\tOutput files will be saved to your current directory.\n"
-		usroutdir=$(pwd)
-		fasta_dir=${scriptdir}/../data/Liti_contigs/_local/GENOMES_ASSEMBLED
-		blast_db=${scriptdir}/../data/reference_seqs/chromTox_nt_db.fasta
-	fi	
-    blast_output=${usroutdir}/liti_blastn_output.csv
-    chr_categories=${usroutdir}/liti_chr_categories.csv
-    chr_extended=${usroutdir}/liti_chr_extended.csv
-    chr_revised=${usroutdir}/liti_chr_revised.csv
-    chr_quality_check=${usroutdir}/liti_chr_compare.csv
+	fasta_dir=$1
+	blast_db=$2
+	blast_output=$3
+	usroutdir="$(dirname ${blast_output})"
+	tmp_blast_db=${usroutdir}/blast_db_tmp.fasta
 
 ###################### BLASTn ######################
 
 # Make necessary database (only needs to be done once, but this way no one has to check)
+	# first, reformat headers if they contain commas (prevents downstream errors)
+	tr ',' ';' < $blast_db | tr ':' ' ' > $tmp_blast_db
+	# generate blast database index files
 	makeblastdb \
-        -in $blast_db \
+        -in $tmp_blast_db \
         -dbtype nucl \
         -parse_seqids
 
 # Perform blast on each file in specified directory
-printf "\n\n*** Performing BLASTn using local BLAST Database ***\n\n"
-for filename in ${fasta_dir}/*.fa; do
+for filename in ${fasta_dir}/*.fa*; do
     base_filename="$(basename ${filename})"
     sample="$(echo ${base_filename} | sed -e 's/_*[[:digit:]]*.re.fa$//')"
 	printf "\nblasting ${base_filename}\n\n"
-    temp_blast_output="${usroutdir}/${base_filename}.csv"
+    temp_blast_output=${blast_output}.txt
 
-    ## run BLASTn to find KHR and KHS in Liti collection contigs
+    ## run BLASTn to find KHR and KHS in contigs
     ## options here: https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/
 	blastn \
         -query $filename \
-        -db $blast_db \
+        -db $tmp_blast_db \
         -evalue 1e-1 \
 		-outfmt "10 qacc sacc stitle evalue pident length qstart qend sstart send qseq" \
 		-out $temp_blast_output
@@ -80,39 +50,9 @@ done
 # adds column headers (may not work on non-Mac OS)
 sed "1i\\
 filename,contig,match_acc,match_description,eval,pid,ntlen,qstart,qend,sstart,send,qseq_nt
-" ${blast_output}.tmp > ${blast_output}
-# remove temp file
+" ${blast_output}.tmp > $blast_output
+
+# remove temp files
 rm ${blast_output}.tmp
-
-###################### TRANSLATE & CATEGORIZE ######################
-# Translate BLASTn hits to protein sequences and give designations depending 
-# on if they’re truncated, and whether the full-length proteins are canonical 
-# or mutated. 
-printf "\n\n*** Translating and categorizing BLASTn output ***\n\n"
-chmod a+x 02_chr_aa_convert.R
-./02_chr_aa_convert.R $blast_output $blast_db $chr_categories
-
-###################### EXPAND HITS ######################
-# Obtain nucleotide sequences 50 bp to either side of the BLASTn hit and 
-# identify KHR/KHS-like ORFs from within the extended sequence. 
-# This ensures BLASTn did not exclude nucleotide sequences on either end 
-# due to sequence dissimilarity.
-printf "\n\n*** Expanding BLAST hit areas ***\n\n"
-chmod a+x 03_extend_hits.py
-./03_extend_hits.py -f $fasta_dir -c $chr_categories -o $chr_extended
-
-###################### IDENTIFY NEW ORFs ######################
-# Identifiy longest ORFs within the extended nucleotide sequences
-printf "\n\n*** Finding longest ORFs in expanded hits ***\n\n"
-chmod a+x 04_identify_orfs.py
-./04_identify_orfs.py -c $chr_extended -o $chr_revised
-
-###################### CHECK RESULTS ######################
-# Merge new list of extended sequences with original BLASTn results to compare 
-# protein sequences. We can then see if there was any KHR or KHS genes erroneously 
-# incomplete by the BLASTn. 
-printf "\n\n*** Checking the BLAST hit ORFs match largest expanded ORFs ***\n\n"
-chmod a+x 05_compare_orfs.R
-./05_compare_orfs.R $chr_categories $chr_revised $chr_quality_check
-
-printf "\nAll done!\n\n" 
+rm $tmp_blast_db
+rm ${tmp_blast_db}.*

@@ -71,7 +71,7 @@ main <- function() {
     scale_fill_manual("ORF Match?", values = myPalette) #+
     #ylim(0, length(unique(mergedTbl$filename)))
   # save plot to SVG file
-  img_file = paste0(data_dir, "/chr_compare.svg") 
+  img_file = paste0(data_dir, "/05_chr_compare.svg") 
   ggsave(
     img_file,
     plot = p,

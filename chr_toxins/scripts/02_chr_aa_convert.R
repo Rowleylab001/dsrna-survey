@@ -30,7 +30,7 @@ main <- function() {
   if (is.na(args[3])==FALSE){
     output_file <- args[3]
   } else {
-    output_file <- paste0(data_dir, '/liti_chr_categories.csv')
+    output_file <- paste0(data_dir, '/chr_categories.csv')
   }
   
   ###################### MAIN ###################### 
@@ -127,7 +127,7 @@ main <- function() {
     scale_fill_manual("Protein Type", values = myPalette) #+
     #ylim(0, length(unique(hits.df$filename)))
   # save plot to SVG file
-  img_file = paste0(data_dir, "/blastn_chr_hits.svg") # filename
+  img_file = paste0(data_dir, "/02_chr_categories.svg") # filename
   ggsave(
     img_file,
     plot = p,
