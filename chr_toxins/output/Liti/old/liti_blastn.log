@@ -1,0 +1,60 @@
+
+
+*** Performing BLASTn using local BLAST Database ***
+
+
+
+Building a new DB, current time: 05/28/2022 12:56:31
+New DB name:   /Users/angela/rowley/dsrna-survey/chr_toxins/output/Liti/blast_db_tmp.fasta
+New DB title:  /Users/angela/rowley/dsrna-survey/chr_toxins/output/Liti/blast_db_tmp.fasta
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 2 sequences in 0.103209 seconds.
+
+
+
+blasting AAA_6.re.fa
+
+
+blasting AAB_6.re.fa
+
+
+blasting AAC_6.re.fa
+
+
+blasting AAD_6.re.fa
+
+
+
+*** Translating and categorizing BLASTn output ***
+
+
+
+*** Expanding BLAST hit areas ***
+
+Opening:AAA_6.re.fa
+Opening:AAB_6.re.fa
+Opening:AAB_6.re.fa
+Opening:AAC_6.re.fa
+Opening:AAC_6.re.fa
+Opening:AAD_6.re.fa
+Opening:AAD_6.re.fa
+
+
+*** Finding longest ORFs in expanded hits ***
+
+Finding KHR ORFs in: AAB_6.re.fa
+Finding KHR ORFs in: AAC_6.re.fa
+Finding KHR ORFs in: AAD_6.re.fa
+Finding KHS ORFs in: AAA_6.re.fa
+Finding KHS ORFs in: AAB_6.re.fa
+Finding KHS ORFs in: AAC_6.re.fa
+Finding KHS ORFs in: AAD_6.re.fa
+
+
+*** Checking the BLAST hit ORFs match largest expanded ORFs ***
+
+
+All done!
+

@@ -1,0 +1,311 @@
+---
+title: "Context Stats for dsRNA Survey Paper"
+author: "Angela Crabtree"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, 
+                      root.dir=dirname(rstudioapi::getSourceEditorContext()$path))
+```
+
+```{r libraries}
+library(RColorBrewer)
+library(gplots)
+library (ggplot2)
+library(cowplot)
+library (ggfortify)
+library(ggrepel)
+library(dplyr)
+library(svglite)
+library(kableExtra)
+```
+
+```{r import_custom_functions, eval=FALSE}
+# import custom functions
+source("dsrna-survey-functions.R")
+```
+
+
+```{r set_wd}
+## set working directory
+script_dir=dirname(rstudioapi::getSourceEditorContext()$path)
+main_dir=unlist(strsplit(script_dir, "/figures/scripts"))[1]
+## set image output directory
+img_dir=paste0(unlist(strsplit(script_dir, "/scripts"))[1], "/img/")
+## data files
+data_dir=paste0(main_dir, "/killer_assays/data/")
+setwd(data_dir)
+killer_data_file = paste0(data_dir, "killer_assays.csv")
+```
+
+## Total strains in study
+
+These included yeast strains from the Dudley collection, FGSC, Liti1000, and NGS. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+```
+
+```{r}
+total_strains = nrow(killer.df)
+print(paste0("Total strains: ", total_strains))
+```
+
+## Total killers in collections
+
+From the above number, these are any killers from the 4 collections that killed any lawns, excluding C. glabrata lawn ATCC2001. C. glabrata lawn ATCC2001 information has been excluded in all downstream analyses. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y1088!=0 | 
+                               killer.df$Y2046!=0 |
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+```
+
+```{r}
+n_killers = nrow(killer.df)
+print(paste0("Total killer strains: ", n_killers))
+print(paste0("Total killer strains, ratio of total: ", n_killers/total_strains))
+```
+
+## Total killers in collections, without Y2046
+
+These are killers from the 4 collections excluding the Y2046 lawn since it is the hypersusceptible strain. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove Y2046 as a lawn (Y2046 column) because it is hypersusceptible
+killer.df = subset(killer.df, select = -c(Y2046) )
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y1088!=0 |  
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+```
+
+```{r}
+n_killers = nrow(killer.df)
+print(paste("Total killer strains:", n_killers))
+print(paste("Total killer strains, ratio of total:", n_killers/total_strains))
+```
+
+## Strains killing at least Y2046
+
+These are strains from the 4 collections which killed the hypersusceptible Y2046 lawn. These may have only killed Y2046 or other lawns. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# only keep strains that killed at least one lawn
+killer.df <- killer.df[which(killer.df$Y2046!=0),]
+```
+
+```{r}
+n_killers = nrow(killer.df)
+print(paste0("Total strains killing Y2046: ", n_killers))
+print(paste0("Total strains killing Y2046, ratio of total: ", n_killers/total_strains))
+```
+
+## Strains only killing Y2046
+
+These are strains from the 4 collections which killed only the hypersusceptible Y2046 lawn. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# only keep strains that killed Y2046
+killer.df <- killer.df[which(killer.df$Y2046!=0),]
+# only keep strains that didn't kill anything else
+killer.df <- killer.df[which(killer.df$Y1088==0 &  
+                               killer.df$DSM70459==0 &  
+                               killer.df$CYC1058==0 &  
+                               killer.df$Y27106==0 &  
+                               killer.df$NCYC1006==0 &  
+                               killer.df$NCYC777==0 &  
+                               killer.df$NBRC1802==0 &  
+                               killer.df$NBRC1815==0 &  
+                               killer.df$Y5509==0 &  
+                               killer.df$MS300c==0 &  
+                               killer.df$BY4741==0),]
+```
+
+```{r}
+n_killers = nrow(killer.df)
+print(paste0("Total strains killing only Y2046: ", n_killers))
+print(paste0("Total strains killing only Y2046, ratio of total: ", n_killers/total_strains))
+```
+
+## Strains containing dsRNAs and/or satellites
+
+These strains contain dsRNAs, and some specifically with satellites. 
+
+```{r}
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# Limit query to only those strains that have agarose gel data
+killer.df = killer.df[which(killer.df$tv!="NA"),]
+n_gels = nrow(killer.df)
+
+# number of strains containing dsRNA
+killer.df.dsrna = killer.df[which(killer.df$tv!=0 | 
+                                    killer.df$sat!=0 |
+                                    killer.df$pv!=0),]
+n_strains_dsrna = nrow(killer.df.dsrna)
+
+# only keep strains that killed at least one lawn
+killer.df.killers <- killer.df[which(killer.df$Y1088!=0 | 
+                              killer.df$Y2046!=0 |
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+n_killers = nrow(killer.df.killers)
+killer.df.killers = killer.df.killers[which(killer.df.killers$tv!=0 | 
+                                    killer.df.killers$sat!=0 |
+                                    killer.df.killers$pv!=0),]
+n_dsrna_killers = nrow(killer.df.killers)
+```
+
+```{r}
+print(paste("Number of strains tested for dsRNAs (gels):", n_gels))
+print(paste("Number of dsRNA+ strains out of those tested:", n_strains_dsrna))
+print(paste("Number of dsRNA+ strains out of those tested, ratio:", n_strains_dsrna/n_gels))
+print(paste("Number of dsRNA+ out of killer strains:", n_dsrna_killers))
+print(paste("Number of dsRNA+ out of killer strains, ratio:", n_dsrna_killers/n_killers))
+```
+
+## Strains containing dsRNAs and/or satellites, without Y2046
+
+These strains contain dsRNAs, and some specifically with satellites, excluding hypersusceptible strain Y2046. 
+
+```{r}
+# import data
+killer.df <- read.csv(killer_data_file, header = TRUE, na.strings = c('*'))
+# remove rows where yeast did not grow
+killer.df <- killer.df[which(killer.df$Y1088!="no yeast"),]
+# remove Y2046 as a lawn (Y2046 column) because it is hypersusceptible
+killer.df = subset(killer.df, select = -c(Y2046) )
+# remove ATCC2001 as a lawn (ATCC2001 column) because it is not S. cerevisiae
+killer.df = subset(killer.df, select = -c(ATCC2001) )
+# only include specified collections
+killer.df <- killer.df[which(killer.df$Collection=="Dudley" |
+                       killer.df$Collection=="FGSC" |
+                       killer.df$Collection=="Liti1000"|
+                       killer.df$Collection=="NGS"),]
+# Limit query to only those strains that have agarose gel data
+killer.df = killer.df[which(killer.df$tv!="NA"),]
+n_gels = nrow(killer.df)
+
+# number of strains containing dsRNA
+killer.df.dsrna = killer.df[which(killer.df$tv!=0 | 
+                                    killer.df$sat!=0 |
+                                    killer.df$pv!=0),]
+n_strains_dsrna = nrow(killer.df.dsrna)
+
+# only keep strains that killed at least one lawn
+killer.df.killers <- killer.df[which(killer.df$Y1088!=0 | 
+                               killer.df$DSM70459!=0 |
+                               killer.df$CYC1058!=0 |  
+                               killer.df$Y27106!=0 | 
+                               killer.df$NCYC1006!=0 |
+                               killer.df$NCYC777!=0 | 
+                               killer.df$NBRC1802!=0 | 
+                               killer.df$NBRC1815!=0 |
+                               killer.df$Y5509!=0 | 
+                               killer.df$MS300c!=0 |
+                               killer.df$BY4741!=0),]
+n_killers = nrow(killer.df.killers)
+killer.df.killers = killer.df.killers[which(killer.df.killers$tv!=0 | 
+                                    killer.df.killers$sat!=0 |
+                                    killer.df.killers$pv!=0),]
+n_dsrna_killers = nrow(killer.df.killers)
+```
+
+```{r}
+print(paste("Number of dsRNA+ out of killer strains:", n_dsrna_killers))
+print(paste("Number of dsRNA+ out of killer strains, ratio:", n_dsrna_killers/n_killers))
+```
+

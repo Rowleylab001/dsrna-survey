@@ -1,0 +1,5158 @@
+
+
+*** Performing BLASTn using local BLAST Database ***
+
+
+
+Building a new DB, current time: 05/28/2022 20:07:52
+New DB name:   /Users/angela/rowley/dsrna-survey/chr_toxins/output/Liti/blast_db_tmp.fasta
+New DB title:  /Users/angela/rowley/dsrna-survey/chr_toxins/output/Liti/blast_db_tmp.fasta
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 2 sequences in 0.1117 seconds.
+
+
+
+blasting AAA_6.re.fa
+
+
+blasting AAB_6.re.fa
+
+
+blasting AAC_6.re.fa
+
+
+blasting AAD_6.re.fa
+
+
+blasting AAE_6.re.fa
+
+
+blasting AAG_6.re.fa
+
+
+blasting AAH_6.re.fa
+
+
+blasting AAI_6.re.fa
+
+
+blasting AAK_6.re.fa
+
+
+blasting AAL_3.re.fa
+
+
+blasting AAM_3.re.fa
+
+
+blasting AAN_3.re.fa
+
+
+blasting AAP_3.re.fa
+
+
+blasting AAQ_3.re.fa
+
+
+blasting AAR_3.re.fa
+
+
+blasting AAS_3.re.fa
+
+
+blasting AAT_3.re.fa
+
+
+blasting AAV_3.re.fa
+
+
+blasting ABA_3.re.fa
+
+
+blasting ABB_5.re.fa
+
+
+blasting ABC_5.re.fa
+
+
+blasting ABD_5.re.fa
+
+
+blasting ABE_5.re.fa
+
+
+blasting ABF_6.re.fa
+
+
+blasting ABG_5.re.fa
+
+
+blasting ABH_5.re.fa
+
+
+blasting ABI_5.re.fa
+
+
+blasting ABK_5.re.fa
+
+
+blasting ABL_5.re.fa
+
+
+blasting ABM_5.re.fa
+
+
+blasting ABP_6.re.fa
+
+
+blasting ABQ_6.re.fa
+
+
+blasting ABR_6.re.fa
+
+
+blasting ABS_6.re.fa
+
+
+blasting ABT_6.re.fa
+
+
+blasting ABV_6.re.fa
+
+
+blasting ACA_6.re.fa
+
+
+blasting ACB_6.re.fa
+
+
+blasting ACC_7.re.fa
+
+
+blasting ACD_7.re.fa
+
+
+blasting ACF_7.re.fa
+
+
+blasting ACG_7.re.fa
+
+
+blasting ACH_7.re.fa
+
+
+blasting ACI_7.re.fa
+
+
+blasting ACK_7.re.fa
+
+
+blasting ACL_7.re.fa
+
+
+blasting ACM_7.re.fa
+
+
+blasting ACN_8.re.fa
+
+
+blasting ACP_8.re.fa
+
+
+blasting ACQ_8.re.fa
+
+
+blasting ACR_2.re.fa
+
+
+blasting ACS_2.re.fa
+
+
+blasting ACT_2.re.fa
+
+
+blasting ACV_2.re.fa
+
+
+blasting ADA_2.re.fa
+
+
+blasting ADB_2.re.fa
+
+
+blasting ADC_2.re.fa
+
+
+blasting ADD_2.re.fa
+
+
+blasting ADE_2.re.fa
+
+
+blasting ADF_4.re.fa
+
+
+blasting ADG_4.re.fa
+
+
+blasting ADH_4.re.fa
+
+
+blasting ADI_4.re.fa
+
+
+blasting ADK_8.re.fa
+
+
+blasting ADL_4.re.fa
+
+
+blasting ADM_2.re.fa
+
+
+blasting ADN_4.re.fa
+
+
+blasting ADP_3.re.fa
+
+
+blasting ADQ_4.re.fa
+
+
+blasting ADR_4.re.fa
+
+
+blasting ADS_4.re.fa
+
+
+blasting ADT_4.re.fa
+
+
+blasting ADV_4.re.fa
+
+
+blasting AEA_8.re.fa
+
+
+blasting AEB_8.re.fa
+
+
+blasting AEC_8.re.fa
+
+
+blasting AEE_3.re.fa
+
+
+blasting AEF_8.re.fa
+
+
+blasting AEG_8.re.fa
+
+
+blasting AEH_3.re.fa
+
+
+blasting AEI_3.re.fa
+
+
+blasting AEK_3.re.fa
+
+
+blasting AEL_3.re.fa
+
+
+blasting AEM_3.re.fa
+
+
+blasting AEN_3.re.fa
+
+
+blasting AEP_3.re.fa
+
+
+blasting AEQ_3.re.fa
+
+
+blasting AER_4.re.fa
+
+
+blasting AES_4.re.fa
+
+
+blasting AET_5.re.fa
+
+
+blasting AEV_5.re.fa
+
+
+blasting AFA_4.re.fa
+
+
+blasting AFB_4.re.fa
+
+
+blasting AFC_4.re.fa
+
+
+blasting AFD_4.re.fa
+
+
+blasting AFE_4.re.fa
+
+
+blasting AFF_4.re.fa
+
+
+blasting AFG_4.re.fa
+
+
+blasting AFH_4.re.fa
+
+
+blasting AFI_5.re.fa
+
+
+blasting AFK_5.re.fa
+
+
+blasting AFL_5.re.fa
+
+
+blasting AFM_5.re.fa
+
+
+blasting AFN_4.re.fa
+
+
+blasting AFP_1.re.fa
+
+
+blasting AFQ_1.re.fa
+
+
+blasting AFR_5.re.fa
+
+
+blasting AFS_5.re.fa
+
+
+blasting AFT_5.re.fa
+
+
+blasting AFV_1.re.fa
+
+
+blasting AGA_5.re.fa
+
+
+blasting AGB_1.re.fa
+
+
+blasting AGC_1.re.fa
+
+
+blasting AGE_1.re.fa
+
+
+blasting AGF_1.re.fa
+
+
+blasting AGG_1.re.fa
+
+
+blasting AGH_1.re.fa
+
+
+blasting AGI_1.re.fa
+
+
+blasting AGK_1.re.fa
+
+
+blasting AGL_2.re.fa
+
+
+blasting AGM_1.re.fa
+
+
+blasting AGN_2.re.fa
+
+
+blasting AGP_2.re.fa
+
+
+blasting AGR_2.re.fa
+
+
+blasting AGS_2.re.fa
+
+
+blasting AGT_2.re.fa
+
+
+blasting AGV_2.re.fa
+
+
+blasting AHA_2.re.fa
+
+
+blasting AHB_2.re.fa
+
+
+blasting AHC_2.re.fa
+
+
+blasting AHD_1.re.fa
+
+
+blasting AHE_3.re.fa
+
+
+blasting AHF_3.re.fa
+
+
+blasting AHG_3.re.fa
+
+
+blasting AHH_3.re.fa
+
+
+blasting AHI_3.re.fa
+
+
+blasting AHK_3.re.fa
+
+
+blasting AHL_3.re.fa
+
+
+blasting AHM_1.re.fa
+
+
+blasting AHN_3.re.fa
+
+
+blasting AHP_1.re.fa
+
+
+blasting AHQ_1.re.fa
+
+
+blasting AHR_1.re.fa
+
+
+blasting AHS_3.re.fa
+
+
+blasting AHT_3.re.fa
+
+
+blasting AHV_1.re.fa
+
+
+blasting AIA_1.re.fa
+
+
+blasting AIB_1.re.fa
+
+
+blasting AIC_1.re.fa
+
+
+blasting AID_2.re.fa
+
+
+blasting AIE_1.re.fa
+
+
+blasting AIF_1.re.fa
+
+
+blasting AIG_2.re.fa
+
+
+blasting AII_1.re.fa
+
+
+blasting AIK_2.re.fa
+
+
+blasting AIL_3.re.fa
+
+
+blasting AIM_2.re.fa
+
+
+blasting AIN_1.re.fa
+
+
+blasting AIP_2.re.fa
+
+
+blasting AIQ_1.re.fa
+
+
+blasting AIR_1.re.fa
+
+
+blasting AIT_2.re.fa
+
+
+blasting AKB_2.re.fa
+
+
+blasting AKC_4.re.fa
+
+
+blasting AKD_2.re.fa
+
+
+blasting AKE_3.re.fa
+
+
+blasting AKG_3.re.fa
+
+
+blasting AKH_3.re.fa
+
+
+blasting AKI_4.re.fa
+
+
+blasting AKL_3.re.fa
+
+
+blasting AKM_4.re.fa
+
+
+blasting AKN_3.re.fa
+
+
+blasting AKP_3.re.fa
+
+
+blasting AKQ_5.re.fa
+
+
+blasting AKR_3.re.fa
+
+
+blasting AKS_5.re.fa
+
+
+blasting AKT_4.re.fa
+
+
+blasting AKV_3.re.fa
+
+
+blasting ALA_5.re.fa
+
+
+blasting ALB_3.re.fa
+
+
+blasting ALC_4.re.fa
+
+
+blasting ALD_4.re.fa
+
+
+blasting ALE_4.re.fa
+
+
+blasting ALG_5.re.fa
+
+
+blasting ALH_4.re.fa
+
+
+blasting ALI_5.re.fa
+
+
+blasting ALK_4.re.fa
+
+
+blasting ALL_4.re.fa
+
+
+blasting ALM_4.re.fa
+
+
+blasting ALN_4.re.fa
+
+
+blasting ALP_4.re.fa
+
+
+blasting ALQ_4.re.fa
+
+
+blasting ALR_4.re.fa
+
+
+blasting ALS_5.re.fa
+
+
+blasting ALT_5.re.fa
+
+
+blasting ALV_2.re.fa
+
+
+blasting AMA_5.re.fa
+
+
+blasting AMB_5.re.fa
+
+
+blasting AMC_5.re.fa
+
+
+blasting AMD_5.re.fa
+
+
+blasting AMF_4.re.fa
+
+
+blasting AMG_4.re.fa
+
+
+blasting AMH_5.re.fa
+
+
+blasting AMI_4.re.fa
+
+
+blasting AMK_4.re.fa
+
+
+blasting AML_4.re.fa
+
+
+blasting AMM_4.re.fa
+
+
+blasting AMN_5.re.fa
+
+
+blasting AMP_5.re.fa
+
+
+blasting AMQ_5.re.fa
+
+
+blasting AMR_4.re.fa
+
+
+blasting AMS_5.re.fa
+
+
+blasting AMT_5.re.fa
+
+
+blasting ANA_5.re.fa
+
+
+blasting ANC_4.re.fa
+
+
+blasting AND_4.re.fa
+
+
+blasting ANE_4.re.fa
+
+
+blasting ANF_4.re.fa
+
+
+blasting ANG_4.re.fa
+
+
+blasting ANH_4.re.fa
+
+
+blasting ANI_4.re.fa
+
+
+blasting ANK_4.re.fa
+
+
+blasting ANL_2.re.fa
+
+
+blasting ANM_2.re.fa
+
+
+blasting ANN_4.re.fa
+
+
+blasting ANP_2.re.fa
+
+
+blasting ANQ_2.re.fa
+
+
+blasting ANR_2.re.fa
+
+
+blasting ANS_2.re.fa
+
+
+blasting ANT_2.re.fa
+
+
+blasting ANV_5.re.fa
+
+
+blasting APA_2.re.fa
+
+
+blasting APC_4.re.fa
+
+
+blasting APD_4.re.fa
+
+
+blasting APE_4.re.fa
+
+
+blasting APF_4.re.fa
+
+
+blasting APG_4.re.fa
+
+
+blasting APH_4.re.fa
+
+
+blasting API_4.re.fa
+
+
+blasting APK_4.re.fa
+
+
+blasting APL_4.re.fa
+
+
+blasting APM_4.re.fa
+
+
+blasting APN_4.re.fa
+
+
+blasting APP_4.re.fa
+
+
+blasting APQ_4.re.fa
+
+
+blasting APR_4.re.fa
+
+
+blasting APS_4.re.fa
+
+
+blasting APT_7.re.fa
+
+
+blasting APV_4.re.fa
+
+
+blasting AQA_4.re.fa
+
+
+blasting AQB_7.re.fa
+
+
+blasting AQC_4.re.fa
+
+
+blasting AQD_4.re.fa
+
+
+blasting AQE_5.re.fa
+
+
+blasting AQG_4.re.fa
+
+
+blasting AQH_2.re.fa
+
+
+blasting AQI_4.re.fa
+
+
+blasting AQM_4.re.fa
+
+
+blasting AQN_7.re.fa
+
+
+blasting AQP_4.re.fa
+
+
+blasting AQQ_4.re.fa
+
+
+blasting AQR_4.re.fa
+
+
+blasting AQS_4.re.fa
+
+
+blasting AQT_4.re.fa
+
+
+blasting ARA_4.re.fa
+
+
+blasting ARB_2.re.fa
+
+
+blasting ARC_5.re.fa
+
+
+blasting ARE_5.re.fa
+
+
+blasting ARG_5.re.fa
+
+
+blasting ARH_5.re.fa
+
+
+blasting ARI_5.re.fa
+
+
+blasting ARK_5.re.fa
+
+
+blasting ARL_2.re.fa
+
+
+blasting ARM_6.re.fa
+
+
+blasting ARN_6.re.fa
+
+
+blasting ARP_2.re.fa
+
+
+blasting ARQ_6.re.fa
+
+
+blasting ARR_6.re.fa
+
+
+blasting ARS_1.re.fa
+
+
+blasting ART_6.re.fa
+
+
+blasting ARV_6.re.fa
+
+
+blasting ASA_6.re.fa
+
+
+blasting ASB_2.re.fa
+
+
+blasting ASC_6.re.fa
+
+
+blasting ASD_2.re.fa
+
+
+blasting ASE_2.re.fa
+
+
+blasting ASG_3.re.fa
+
+
+blasting ASH_3.re.fa
+
+
+blasting ASL_8.re.fa
+
+
+blasting ASM_8.re.fa
+
+
+blasting ASN_8.re.fa
+
+
+blasting ASP_8.re.fa
+
+
+blasting ASR_1.re.fa
+
+
+blasting ASS_1.re.fa
+
+
+blasting AST_1.re.fa
+
+
+blasting ASV_1.re.fa
+
+
+blasting ATA_8.re.fa
+
+
+blasting ATB_1.re.fa
+
+
+blasting ATC_1.re.fa
+
+
+blasting ATD_1.re.fa
+
+
+blasting ATE_1.re.fa
+
+
+blasting ATH_3.re.fa
+
+
+blasting ATM_4.re.fa
+
+
+blasting ATN_4.re.fa
+
+
+blasting ATP_4.re.fa
+
+
+blasting ATQ_7.re.fa
+
+
+blasting ATR_4.re.fa
+
+
+blasting ATS_3.re.fa
+
+
+blasting ATV_5.re.fa
+
+
+blasting AVB_8.re.fa
+
+
+blasting AVC_3.re.fa
+
+
+blasting AVD_3.re.fa
+
+
+blasting AVH_5.re.fa
+
+
+blasting AVI_5.re.fa
+
+
+blasting AVK_6.re.fa
+
+
+blasting AVL_6.re.fa
+
+
+blasting AVM_5.re.fa
+
+
+blasting AVN_5.re.fa
+
+
+blasting AVP_5.re.fa
+
+
+blasting AVQ_5.re.fa
+
+
+blasting AVR_6.re.fa
+
+
+blasting AVS_5.re.fa
+
+
+blasting AVT_6.re.fa
+
+
+blasting AVV_8.re.fa
+
+
+blasting BAA_6.re.fa
+
+
+blasting BAB_8.re.fa
+
+
+blasting BAC_8.re.fa
+
+
+blasting BAD_8.re.fa
+
+
+blasting BAE_6.re.fa
+
+
+blasting BAF_6.re.fa
+
+
+blasting BAG_6.re.fa
+
+
+blasting BAH_6.re.fa
+
+
+blasting BAI_7.re.fa
+
+
+blasting BAK_7.re.fa
+
+
+blasting BAL_7.re.fa
+
+
+blasting BAM_7.re.fa
+
+
+blasting BAN_7.re.fa
+
+
+blasting BAP_7.re.fa
+
+
+blasting BAQ_7.re.fa
+
+
+blasting BAR_7.re.fa
+
+
+blasting BAS_8.re.fa
+
+
+blasting BAT_8.re.fa
+
+
+blasting BAV_7.re.fa
+
+
+blasting BBA_8.re.fa
+
+
+blasting BBB_6.re.fa
+
+
+blasting BBC_8.re.fa
+
+
+blasting BBD_8.re.fa
+
+
+blasting BBE_6.re.fa
+
+
+blasting BBF_6.re.fa
+
+
+blasting BBG_6.re.fa
+
+
+blasting BBH_6.re.fa
+
+
+blasting BBI_6.re.fa
+
+
+blasting BBK_6.re.fa
+
+
+blasting BBL_6.re.fa
+
+
+blasting BBM_6.re.fa
+
+
+blasting BBP_3.re.fa
+
+
+blasting BBQ_3.re.fa
+
+
+blasting BBR_3.re.fa
+
+
+blasting BBS_3.re.fa
+
+
+blasting BBT_3.re.fa
+
+
+blasting BBV_3.re.fa
+
+
+blasting BCA_3.re.fa
+
+
+blasting BCB_3.re.fa
+
+
+blasting BCC_3.re.fa
+
+
+blasting BCD_8.re.fa
+
+
+blasting BCE_8.re.fa
+
+
+blasting BCF_8.re.fa
+
+
+blasting BCG_8.re.fa
+
+
+blasting BCH_5.re.fa
+
+
+blasting BCI_8.re.fa
+
+
+blasting BCK_8.re.fa
+
+
+blasting BCL_5.re.fa
+
+
+blasting BCM_8.re.fa
+
+
+blasting BCN_8.re.fa
+
+
+blasting BCP_8.re.fa
+
+
+blasting BCQ_8.re.fa
+
+
+blasting BCR_8.re.fa
+
+
+blasting BCS_8.re.fa
+
+
+blasting BCT_8.re.fa
+
+
+blasting BCV_8.re.fa
+
+
+blasting BDA_8.re.fa
+
+
+blasting BDB_8.re.fa
+
+
+blasting BDC_8.re.fa
+
+
+blasting BDD_8.re.fa
+
+
+blasting BDE_8.re.fa
+
+
+blasting BDF_8.re.fa
+
+
+blasting BDG_5.re.fa
+
+
+blasting BDH_5.re.fa
+
+
+blasting BDI_5.re.fa
+
+
+blasting BDK_5.re.fa
+
+
+blasting BDL_5.re.fa
+
+
+blasting BDM_5.re.fa
+
+
+blasting BDN_5.re.fa
+
+
+blasting BDP_5.re.fa
+
+
+blasting BDQ_6.re.fa
+
+
+blasting BDR_6.re.fa
+
+
+blasting BDS_6.re.fa
+
+
+blasting BDT_6.re.fa
+
+
+blasting BDV_6.re.fa
+
+
+blasting BEA_6.re.fa
+
+
+blasting BEB_6.re.fa
+
+
+blasting BEC_6.re.fa
+
+
+blasting BED_6.re.fa
+
+
+blasting BEE_6.re.fa
+
+
+blasting BEF_7.re.fa
+
+
+blasting BEG_7.re.fa
+
+
+blasting BEH_7.re.fa
+
+
+blasting BEI_7.re.fa
+
+
+blasting BEK_7.re.fa
+
+
+blasting BEM_7.re.fa
+
+
+blasting BEN_7.re.fa
+
+
+blasting BEP_4.re.fa
+
+
+blasting BEQ_4.re.fa
+
+
+blasting BER_2.re.fa
+
+
+blasting BES_2.re.fa
+
+
+blasting BET_1.re.fa
+
+
+blasting BEV_3.re.fa
+
+
+blasting BFA_3.re.fa
+
+
+blasting BFB_4.re.fa
+
+
+blasting BFC_3.re.fa
+
+
+blasting BFD_1.re.fa
+
+
+blasting BFE_4.re.fa
+
+
+blasting BFG_4.re.fa
+
+
+blasting BFH_3.re.fa
+
+
+blasting BFK_2.re.fa
+
+
+blasting BFL_4.re.fa
+
+
+blasting BFM_3.re.fa
+
+
+blasting BFN_4.re.fa
+
+
+blasting BFP_3.re.fa
+
+
+blasting BFQ_8.re.fa
+
+
+blasting BFR_8.re.fa
+
+
+blasting BFS_8.re.fa
+
+
+blasting BFT_8.re.fa
+
+
+blasting BFV_8.re.fa
+
+
+blasting BGA_7.re.fa
+
+
+blasting BGB_7.re.fa
+
+
+blasting BGC_8.re.fa
+
+
+blasting BGD_8.re.fa
+
+
+blasting BGE_8.re.fa
+
+
+blasting BGF_8.re.fa
+
+
+blasting BGG_8.re.fa
+
+
+blasting BGH_1.re.fa
+
+
+blasting BGI_1.re.fa
+
+
+blasting BGK_1.re.fa
+
+
+blasting BGL_1.re.fa
+
+
+blasting BGM_1.re.fa
+
+
+blasting BGN_1.re.fa
+
+
+blasting BGP_1.re.fa
+
+
+blasting BGQ_1.re.fa
+
+
+blasting BGR_1.re.fa
+
+
+blasting BGS_1.re.fa
+
+
+blasting BGT_2.re.fa
+
+
+blasting BGV_2.re.fa
+
+
+blasting BHA_2.re.fa
+
+
+blasting BHB_2.re.fa
+
+
+blasting BHC_2.re.fa
+
+
+blasting BHD_2.re.fa
+
+
+blasting BHE_2.re.fa
+
+
+blasting BHF_2.re.fa
+
+
+blasting BHG_2.re.fa
+
+
+blasting BHH_2.re.fa
+
+
+blasting BHI_4.re.fa
+
+
+blasting BHK_4.re.fa
+
+
+blasting BHL_4.re.fa
+
+
+blasting BHM_4.re.fa
+
+
+blasting BHN_4.re.fa
+
+
+blasting BHP_4.re.fa
+
+
+blasting BHQ_4.re.fa
+
+
+blasting BHR_4.re.fa
+
+
+blasting BHS_1.re.fa
+
+
+blasting BHT_1.re.fa
+
+
+blasting BHV_1.re.fa
+
+
+blasting BIA_1.re.fa
+
+
+blasting BIB_1.re.fa
+
+
+blasting BIC_1.re.fa
+
+
+blasting BID_1.re.fa
+
+
+blasting BIE_1.re.fa
+
+
+blasting BIF_1.re.fa
+
+
+blasting BIG_1.re.fa
+
+
+blasting BIH_4.re.fa
+
+
+blasting BII_4.re.fa
+
+
+blasting BIK_3.re.fa
+
+
+blasting BIL_3.re.fa
+
+
+blasting BIM_3.re.fa
+
+
+blasting BIN_3.re.fa
+
+
+blasting BIP_3.re.fa
+
+
+blasting BIQ_3.re.fa
+
+
+blasting BIR_2.re.fa
+
+
+blasting BIS_2.re.fa
+
+
+blasting BIT_2.re.fa
+
+
+blasting BKA_2.re.fa
+
+
+blasting BKC_1.re.fa
+
+
+blasting BKD_1.re.fa
+
+
+blasting BKE_1.re.fa
+
+
+blasting BKF_3.re.fa
+
+
+blasting BKG_3.re.fa
+
+
+blasting BKH_1.re.fa
+
+
+blasting BKI_2.re.fa
+
+
+blasting BKK_2.re.fa
+
+
+blasting BKL_1.re.fa
+
+
+blasting BKM_1.re.fa
+
+
+blasting BKN_2.re.fa
+
+
+blasting BKP_1.re.fa
+
+
+blasting BKQ_2.re.fa
+
+
+blasting BKR_1.re.fa
+
+
+blasting BKS_1.re.fa
+
+
+blasting BKT_2.re.fa
+
+
+blasting BLA_4.re.fa
+
+
+blasting BLB_4.re.fa
+
+
+blasting BLC_4.re.fa
+
+
+blasting BLD_3.re.fa
+
+
+blasting BLE_2.re.fa
+
+
+blasting BLF_2.re.fa
+
+
+blasting BLG_1.re.fa
+
+
+blasting BLH_1.re.fa
+
+
+blasting BLI_3.re.fa
+
+
+blasting BLK_2.re.fa
+
+
+blasting BLL_1.re.fa
+
+
+blasting BLM_3.re.fa
+
+
+blasting BLN_2.re.fa
+
+
+blasting BLP_5.re.fa
+
+
+blasting BLQ_1.re.fa
+
+
+blasting BLR_3.re.fa
+
+
+blasting BLS_5.re.fa
+
+
+blasting BLT_2.re.fa
+
+
+blasting BLV_3.re.fa
+
+
+blasting BMA_2.re.fa
+
+
+blasting BMB_1.re.fa
+
+
+blasting BMC_1.re.fa
+
+
+blasting BMD_5.re.fa
+
+
+blasting BME_1.re.fa
+
+
+blasting BMF_1.re.fa
+
+
+blasting BMG_2.re.fa
+
+
+blasting BMH_5.re.fa
+
+
+blasting BMI_4.re.fa
+
+
+blasting BMK_5.re.fa
+
+
+blasting BML_5.re.fa
+
+
+blasting BMM_3.re.fa
+
+
+blasting BMN_4.re.fa
+
+
+blasting BMQ_5.re.fa
+
+
+blasting BMR_2.re.fa
+
+
+blasting BMV_2.re.fa
+
+
+blasting BNA_4.re.fa
+
+
+blasting BNB_4.re.fa
+
+
+blasting BNC_4.re.fa
+
+
+blasting BND_3.re.fa
+
+
+blasting BNE_2.re.fa
+
+
+blasting BNF_4.re.fa
+
+
+blasting BNG_4.re.fa
+
+
+blasting BNH_3.re.fa
+
+
+blasting BNI_4.re.fa
+
+
+blasting BNK_4.re.fa
+
+
+blasting BNL_4.re.fa
+
+
+blasting BNM_4.re.fa
+
+
+blasting BNN_2.re.fa
+
+
+blasting BNP_4.re.fa
+
+
+blasting BNQ_4.re.fa
+
+
+blasting BNR_4.re.fa
+
+
+blasting BNT_4.re.fa
+
+
+blasting BNV_2.re.fa
+
+
+blasting BPA_4.re.fa
+
+
+blasting BPB_4.re.fa
+
+
+blasting BPC_4.re.fa
+
+
+blasting BPF_4.re.fa
+
+
+blasting BPG_4.re.fa
+
+
+blasting BPH_4.re.fa
+
+
+blasting BPI_4.re.fa
+
+
+blasting BPK_4.re.fa
+
+
+blasting BPL_2.re.fa
+
+
+blasting BPM_4.re.fa
+
+
+blasting BPN_2.re.fa
+
+
+blasting BPP_4.re.fa
+
+
+blasting BPQ_4.re.fa
+
+
+blasting BPR_4.re.fa
+
+
+blasting BPT_5.re.fa
+
+
+blasting BPV_4.re.fa
+
+
+blasting BQA_4.re.fa
+
+
+blasting BQB_4.re.fa
+
+
+blasting BQC_4.re.fa
+
+
+blasting BQE_4.re.fa
+
+
+blasting BQG_4.re.fa
+
+
+blasting BQH_4.re.fa
+
+
+blasting BQI_4.re.fa
+
+
+blasting BQM_4.re.fa
+
+
+blasting BQN_4.re.fa
+
+
+blasting BQP_4.re.fa
+
+
+blasting BQQ_4.re.fa
+
+
+blasting BQR_4.re.fa
+
+
+blasting BQS_4.re.fa
+
+
+blasting BQT_4.re.fa
+
+
+blasting BRA_4.re.fa
+
+
+blasting BRB_4.re.fa
+
+
+blasting BRC_4.re.fa
+
+
+blasting BRD_4.re.fa
+
+
+blasting BRE_4.re.fa
+
+
+blasting BRF_4.re.fa
+
+
+blasting BRG_4.re.fa
+
+
+blasting BRH_4.re.fa
+
+
+blasting BRK_4.re.fa
+
+
+blasting BRL_4.re.fa
+
+
+blasting BRM_4.re.fa
+
+
+blasting BRP_4.re.fa
+
+
+blasting BRQ_4.re.fa
+
+
+blasting BRV_4.re.fa
+
+
+blasting BSA_4.re.fa
+
+
+blasting BSB_4.re.fa
+
+
+blasting BSC_4.re.fa
+
+
+blasting BSD_4.re.fa
+
+
+blasting BSE_4.re.fa
+
+
+blasting BSG_4.re.fa
+
+
+blasting BSI_3.re.fa
+
+
+blasting BSK_4.re.fa
+
+
+blasting BSL_4.re.fa
+
+
+blasting BSM_3.re.fa
+
+
+blasting BSN_5.re.fa
+
+
+blasting BSP_3.re.fa
+
+
+blasting BSR_4.re.fa
+
+
+blasting BSS_4.re.fa
+
+
+blasting BST_3.re.fa
+
+
+blasting BTA_5.re.fa
+
+
+blasting BTB_3.re.fa
+
+
+blasting BTC_4.re.fa
+
+
+blasting BTD_1.re.fa
+
+
+blasting BTE_3.re.fa
+
+
+blasting BTF_4.re.fa
+
+
+blasting BTG_3.re.fa
+
+
+blasting BTH_3.re.fa
+
+
+blasting BTI_4.re.fa
+
+
+blasting BTL_3.re.fa
+
+
+blasting BTN_4.re.fa
+
+
+blasting BTP_5.re.fa
+
+
+blasting BTR_4.re.fa
+
+
+blasting BTS_3.re.fa
+
+
+blasting BTT_3.re.fa
+
+
+blasting BTV_5.re.fa
+
+
+blasting BVA_4.re.fa
+
+
+blasting BVB_6.re.fa
+
+
+blasting BVC_6.re.fa
+
+
+blasting BVD_5.re.fa
+
+
+blasting BVE_4.re.fa
+
+
+blasting BVF_5.re.fa
+
+
+blasting BVG_4.re.fa
+
+
+blasting BVH_1.re.fa
+
+
+blasting BVK_2.re.fa
+
+
+blasting BVM_3.re.fa
+
+
+blasting BVT_3.re.fa
+
+
+blasting BVV_4.re.fa
+
+
+blasting CAA_2.re.fa
+
+
+blasting CAB_4.re.fa
+
+
+blasting CAC_2.re.fa
+
+
+blasting CAD_4.re.fa
+
+
+blasting CAE_2.re.fa
+
+
+blasting CAF_2.re.fa
+
+
+blasting CAH_4.re.fa
+
+
+blasting CAI_2.re.fa
+
+
+blasting CAK_4.re.fa
+
+
+blasting CAL_3.re.fa
+
+
+blasting CAM_2.re.fa
+
+
+blasting CAN_4.re.fa
+
+
+blasting CAP_4.re.fa
+
+
+blasting CAQ_3.re.fa
+
+
+blasting CAR_3.re.fa
+
+
+blasting CAS_1.re.fa
+
+
+blasting CAT_6.re.fa
+
+
+blasting CAV_4.re.fa
+
+
+blasting CBA_3.re.fa
+
+
+blasting CBB_4.re.fa
+
+
+blasting CBC_6.re.fa
+
+
+blasting CBD_6.re.fa
+
+
+blasting CBE_5.re.fa
+
+
+blasting CBF_5.re.fa
+
+
+blasting CBG_3.re.fa
+
+
+blasting CBH_1.re.fa
+
+
+blasting CBI_2.re.fa
+
+
+blasting CBK_4.re.fa
+
+
+blasting CBL_2.re.fa
+
+
+blasting CBM_4.re.fa
+
+
+blasting CBN_5.re.fa
+
+
+blasting CBR_2.re.fa
+
+
+blasting CCC_3.re.fa
+
+
+blasting CCD_4.re.fa
+
+
+blasting CCE_6.re.fa
+
+
+blasting CCF_6.re.fa
+
+
+blasting CCG_4.re.fa
+
+
+blasting CCH_4.re.fa
+
+
+blasting CCI_4.re.fa
+
+
+blasting CCL_1.re.fa
+
+
+blasting CCM_1.re.fa
+
+
+blasting CCN_1.re.fa
+
+
+blasting CCP_1.re.fa
+
+
+blasting CCQ_1.re.fa
+
+
+blasting CCR_1.re.fa
+
+
+blasting CCS_1.re.fa
+
+
+blasting CCT_2.re.fa
+
+
+blasting CCV_1.re.fa
+
+
+blasting CDA_2.re.fa
+
+
+blasting CDB_2.re.fa
+
+
+blasting CDC_3.re.fa
+
+
+blasting CDD_2.re.fa
+
+
+blasting CDE_2.re.fa
+
+
+blasting CDF_1.re.fa
+
+
+blasting CDG_2.re.fa
+
+
+blasting CDH.re.fa
+
+
+blasting CDI_1.re.fa
+
+
+blasting CDK_4.re.fa
+
+
+blasting CDL_3.re.fa
+
+
+blasting CDM_4.re.fa
+
+
+blasting CDN_4.re.fa
+
+
+blasting CDP_3.re.fa
+
+
+blasting CDQ_3.re.fa
+
+
+blasting CDR_3.re.fa
+
+
+blasting CDS_4.re.fa
+
+
+blasting CDT_2.re.fa
+
+
+blasting CDV_4.re.fa
+
+
+blasting CEA_4.re.fa
+
+
+blasting CEB_3.re.fa
+
+
+blasting CEC_4.re.fa
+
+
+blasting CED_4.re.fa
+
+
+blasting CEE_4.re.fa
+
+
+blasting CEF_4.re.fa
+
+
+blasting CEG_4.re.fa
+
+
+blasting CEH_4.re.fa
+
+
+blasting CEI_2.re.fa
+
+
+blasting CEK_4.re.fa
+
+
+blasting CEL_4.re.fa
+
+
+blasting CEM_2.re.fa
+
+
+blasting CEN_4.re.fa
+
+
+blasting CEP_4.re.fa
+
+
+blasting CEQ_4.re.fa
+
+
+blasting CER_4.re.fa
+
+
+blasting CES_4.re.fa
+
+
+blasting CET_4.re.fa
+
+
+blasting CEV_2.re.fa
+
+
+blasting CFA_4.re.fa
+
+
+blasting CFB_4.re.fa
+
+
+blasting CFC_2.re.fa
+
+
+blasting CFD_4.re.fa
+
+
+blasting CFE_4.re.fa
+
+
+blasting CFF_4.re.fa
+
+
+blasting CFG_4.re.fa
+
+
+blasting CFH.re.fa
+
+
+blasting CFI_4.re.fa
+
+
+blasting CFM_4.re.fa
+
+
+blasting CFN_4.re.fa
+
+
+blasting CFP_4.re.fa
+
+
+blasting CFQ_4.re.fa
+
+
+blasting CFR_3.re.fa
+
+
+blasting CFS_4.re.fa
+
+
+blasting CFT_5.re.fa
+
+
+blasting CFV_4.re.fa
+
+
+blasting CGB_5.re.fa
+
+
+blasting CGC_4.re.fa
+
+
+blasting CGD_5.re.fa
+
+
+blasting CGE_5.re.fa
+
+
+blasting CGG_4.re.fa
+
+
+blasting CGH_5.re.fa
+
+
+blasting CGI_4.re.fa
+
+
+blasting CGK_4.re.fa
+
+
+blasting CGL_4.re.fa
+
+
+blasting CGN_5.re.fa
+
+
+blasting CGP_5.re.fa
+
+
+blasting CGQ_4.re.fa
+
+
+blasting CGR_5.re.fa
+
+
+blasting CGS_5.re.fa
+
+
+blasting CGT_5.re.fa
+
+
+blasting CGV_3.re.fa
+
+
+blasting CHA_4.re.fa
+
+
+blasting CHB_4.re.fa
+
+
+blasting CHC_4.re.fa
+
+
+blasting CHD_3.re.fa
+
+
+blasting CHE_4.re.fa
+
+
+blasting CHF_4.re.fa
+
+
+blasting CHG_4.re.fa
+
+
+blasting CHH_4.re.fa
+
+
+blasting CHI_4.re.fa
+
+
+blasting CHK_4.re.fa
+
+
+blasting CHL_4.re.fa
+
+
+blasting CHM_4.re.fa
+
+
+blasting CHN_4.re.fa
+
+
+blasting CHP_4.re.fa
+
+
+blasting CHQ_4.re.fa
+
+
+blasting CHR_4.re.fa
+
+
+blasting CHS_4.re.fa
+
+
+blasting CHT_4.re.fa
+
+
+blasting CHV_4.re.fa
+
+
+blasting CIA_4.re.fa
+
+
+blasting CIB_4.re.fa
+
+
+blasting CIC_4.re.fa
+
+
+blasting CID_4.re.fa
+
+
+blasting CIE_4.re.fa
+
+
+blasting CIF_2.re.fa
+
+
+blasting CIG_2.re.fa
+
+
+blasting CIH_2.re.fa
+
+
+blasting CII_2.re.fa
+
+
+blasting CIK_2.re.fa
+
+
+blasting CIL_2.re.fa
+
+
+blasting CIM_2.re.fa
+
+
+blasting CIN_2.re.fa
+
+
+blasting CIP_2.re.fa
+
+
+blasting CIQ_2.re.fa
+
+
+blasting CIR_3.re.fa
+
+
+blasting CIS_3.re.fa
+
+
+blasting CIT_3.re.fa
+
+
+blasting CIV_3.re.fa
+
+
+blasting CKA_3.re.fa
+
+
+blasting CKB_3.re.fa
+
+
+blasting CKC_3.re.fa
+
+
+blasting CKD_3.re.fa
+
+
+blasting CKE_3.re.fa
+
+
+blasting CKF_3.re.fa
+
+
+blasting CKG_4.re.fa
+
+
+blasting CKH_4.re.fa
+
+
+blasting CKI_4.re.fa
+
+
+blasting CKK_4.re.fa
+
+
+blasting CKL_4.re.fa
+
+
+blasting CKM_4.re.fa
+
+
+blasting CKN_4.re.fa
+
+
+blasting CKP_4.re.fa
+
+
+blasting CKQ_4.re.fa
+
+
+blasting CKR_1.re.fa
+
+
+blasting CKS_5.re.fa
+
+
+blasting CKT_5.re.fa
+
+
+blasting CKV_5.re.fa
+
+
+blasting CLA_5.re.fa
+
+
+blasting CLB_5.re.fa
+
+
+blasting CLC_4.re.fa
+
+
+blasting CLD_5.re.fa
+
+
+blasting CLG_4.re.fa
+
+
+blasting CLH_4.re.fa
+
+
+blasting CLI_4.re.fa
+
+
+blasting CLK_4.re.fa
+
+
+blasting CLL_4.re.fa
+
+
+blasting CLM_4.re.fa
+
+
+blasting CLN_4.re.fa
+
+
+blasting CLP_4.re.fa
+
+
+blasting CLQ_4.re.fa
+
+
+blasting CLR_4.re.fa
+
+
+blasting CLS_4.re.fa
+
+
+blasting CLT_5.re.fa
+
+
+blasting CLV_5.re.fa
+
+
+blasting CMB_6.re.fa
+
+
+blasting CMC_6.re.fa
+
+
+blasting CMD_6.re.fa
+
+
+blasting CME_6.re.fa
+
+
+blasting CMF_6.re.fa
+
+
+blasting CMG_6.re.fa
+
+
+blasting CMH_6.re.fa
+
+
+blasting CMI_6.re.fa
+
+
+blasting CMK_6.re.fa
+
+
+blasting CML_8.re.fa
+
+
+blasting CMM_8.re.fa
+
+
+blasting CMN_8.re.fa
+
+
+blasting CMP_8.re.fa
+
+
+blasting CMQ_8.re.fa
+
+
+blasting CMS_8.re.fa
+
+
+blasting CMT_8.re.fa
+
+
+blasting CNB_4.re.fa
+
+
+blasting CNC_4.re.fa
+
+
+blasting CNE_4.re.fa
+
+
+blasting CNF_4.re.fa
+
+
+blasting CNG_4.re.fa
+
+
+blasting CNH_4.re.fa
+
+
+blasting CNI_4.re.fa
+
+
+blasting CNK_4.re.fa
+
+
+blasting CNL_4.re.fa
+
+
+blasting CNM_1.re.fa
+
+
+blasting CNN_1.re.fa
+
+
+blasting CNP_1.re.fa
+
+
+blasting CNQ_1.re.fa
+
+
+blasting CNR_1.re.fa
+
+
+blasting CNS_4.re.fa
+
+
+blasting CNT_4.re.fa
+
+
+blasting CNV_4.re.fa
+
+
+blasting CPA_4.re.fa
+
+
+blasting CPB_4.re.fa
+
+
+blasting CPC_4.re.fa
+
+
+blasting CPD_4.re.fa
+
+
+blasting CPE_1.re.fa
+
+
+blasting CPF_1.re.fa
+
+
+blasting CPG_1.re.fa
+
+
+blasting CPI_4.re.fa
+
+
+blasting CPK_4.re.fa
+
+
+blasting CPL_4.re.fa
+
+
+blasting CPM_4.re.fa
+
+
+blasting CPN_4.re.fa
+
+
+blasting CPQ_4.re.fa
+
+
+blasting CPR_4.re.fa
+
+
+blasting CPS_4.re.fa
+
+
+blasting CPT_4.re.fa
+
+
+blasting CQA_6.re.fa
+
+
+blasting CQB_6.re.fa
+
+
+blasting CQC_6.re.fa
+
+
+blasting CQD_6.re.fa
+
+
+blasting CQE_6.re.fa
+
+
+blasting CQF_6.re.fa
+
+
+blasting CQG_6.re.fa
+
+
+blasting CQH_6.re.fa
+
+
+blasting CQI_6.re.fa
+
+
+blasting CQK_4.re.fa
+
+
+blasting CQL_4.re.fa
+
+
+blasting CQM_4.re.fa
+
+
+blasting CQN_4.re.fa
+
+
+blasting CQP_4.re.fa
+
+
+blasting CQQ_4.re.fa
+
+
+blasting CQR_4.re.fa
+
+
+blasting CQS_4.re.fa
+
+
+blasting CQT_4.re.fa
+
+
+blasting CQV_4.re.fa
+
+
+blasting CRA_2.re.fa
+
+
+blasting CRB_2.re.fa
+
+
+blasting CRC_2.re.fa
+
+
+blasting CRD_2.re.fa
+
+
+blasting CRE_2.re.fa
+
+
+blasting CRG_2.re.fa
+
+
+blasting CRH_2.re.fa
+
+
+blasting CRI_2.re.fa
+
+
+blasting CRK_2.re.fa
+
+
+blasting CRL_.re.fa
+
+
+blasting GAL.re.fa
+
+
+blasting GAP.re.fa
+
+
+blasting GAS.re.fa
+
+
+blasting GAT.re.fa
+
+
+blasting GAV.re.fa
+
+
+blasting MAA.re.fa
+
+
+blasting MAB.re.fa
+
+
+blasting MAL.re.fa
+
+
+blasting YAA.re.fa
+
+
+blasting YAB.re.fa
+
+
+blasting YAC.re.fa
+
+
+blasting YAD.re.fa
+
+
+blasting YAE.re.fa
+
+
+blasting YAF.re.fa
+
+
+blasting YAG.re.fa
+
+
+blasting YAK.re.fa
+
+
+blasting YAL.re.fa
+
+
+blasting YAM.re.fa
+
+
+blasting YAN.re.fa
+
+
+blasting YAP.re.fa
+
+
+blasting YAQ.re.fa
+
+
+blasting YAR.re.fa
+
+
+blasting YAT.re.fa
+
+
+blasting YAU.re.fa
+
+
+blasting YAV.re.fa
+
+
+blasting YAW.re.fa
+
+
+blasting YAX.re.fa
+
+
+blasting YAY.re.fa
+
+
+blasting YAZ.re.fa
+
+
+blasting YBA.re.fa
+
+
+blasting YBB.re.fa
+
+
+blasting YBE.re.fa
+
+
+blasting YBF.re.fa
+
+
+blasting YBG.re.fa
+
+
+blasting YBH.re.fa
+
+
+blasting YBJ.re.fa
+
+
+blasting YBK.re.fa
+
+
+blasting YBL.re.fa
+
+
+blasting YBM.re.fa
+
+
+blasting YBN.re.fa
+
+
+blasting YBO.re.fa
+
+
+blasting YBP.re.fa
+
+
+blasting YBQ.re.fa
+
+
+blasting YBR.re.fa
+
+
+blasting YBS.re.fa
+
+
+blasting YBT.re.fa
+
+
+blasting YBU.re.fa
+
+
+blasting YBV.re.fa
+
+
+blasting YBW.re.fa
+
+
+blasting YBX.re.fa
+
+
+blasting YBY.re.fa
+
+
+blasting YBZ.re.fa
+
+
+blasting YCA.re.fa
+
+
+blasting YCB.re.fa
+
+
+blasting YCC.re.fa
+
+
+blasting YCD.re.fa
+
+
+blasting YCE.re.fa
+
+
+blasting YCF.re.fa
+
+
+blasting YCG.re.fa
+
+
+blasting YCH.re.fa
+
+
+blasting YCI.re.fa
+
+
+blasting YCJ.re.fa
+
+
+blasting YCK.re.fa
+
+
+blasting YCL.re.fa
+
+
+blasting YCM.re.fa
+
+
+blasting YCN.re.fa
+
+
+blasting YCO.re.fa
+
+
+blasting YCP.re.fa
+
+
+blasting YCQ.re.fa
+
+
+blasting YCR.re.fa
+
+
+blasting YCS.re.fa
+
+
+blasting YCT.re.fa
+
+
+blasting YCU.re.fa
+
+
+blasting YCV.re.fa
+
+
+blasting YCW.re.fa
+
+
+blasting YCX.re.fa
+
+
+blasting YCY.re.fa
+
+
+blasting YCZ.re.fa
+
+
+blasting YDA.re.fa
+
+
+blasting YDB.re.fa
+
+
+blasting YDC.re.fa
+
+
+blasting YDD.re.fa
+
+
+blasting YDE.re.fa
+
+
+blasting YDF.re.fa
+
+
+blasting YDG.re.fa
+
+
+blasting YDH.re.fa
+
+
+blasting YDI.re.fa
+
+
+blasting YDJ.re.fa
+
+
+blasting YDK.re.fa
+
+
+blasting YDL.re.fa
+
+
+blasting YDM.re.fa
+
+
+blasting YDN.re.fa
+
+
+blasting YDO.re.fa
+
+
+
+*** Expanding BLASTn hits and categorizing mutations ***
+
+Opening: AAA_6.re.fa
+Opening: AAB_6.re.fa
+Opening: AAB_6.re.fa
+Opening: AAC_6.re.fa
+Opening: AAC_6.re.fa
+Opening: AAD_6.re.fa
+Opening: AAD_6.re.fa
+Opening: AAE_6.re.fa
+Opening: AAE_6.re.fa
+Opening: AAG_6.re.fa
+Opening: AAG_6.re.fa
+Opening: AAH_6.re.fa
+Opening: AAH_6.re.fa
+Opening: AAI_6.re.fa
+Opening: AAI_6.re.fa
+Opening: AAK_6.re.fa
+Opening: AAL_3.re.fa
+Opening: AAL_3.re.fa
+Opening: AAL_3.re.fa
+Opening: AAM_3.re.fa
+Opening: AAN_3.re.fa
+Opening: AAN_3.re.fa
+Opening: AAN_3.re.fa
+Opening: AAP_3.re.fa
+Opening: AAP_3.re.fa
+Opening: AAQ_3.re.fa
+Opening: AAQ_3.re.fa
+Opening: AAR_3.re.fa
+Opening: AAS_3.re.fa
+Opening: AAS_3.re.fa
+Opening: AAT_3.re.fa
+Opening: AAV_3.re.fa
+Opening: AAV_3.re.fa
+Opening: ABA_3.re.fa
+Opening: ABB_5.re.fa
+Opening: ABB_5.re.fa
+Opening: ABC_5.re.fa
+Opening: ABC_5.re.fa
+Opening: ABD_5.re.fa
+Opening: ABE_5.re.fa
+Opening: ABE_5.re.fa
+Opening: ABF_6.re.fa
+Opening: ABG_5.re.fa
+Opening: ABG_5.re.fa
+Opening: ABH_5.re.fa
+Opening: ABH_5.re.fa
+Opening: ABI_5.re.fa
+Opening: ABK_5.re.fa
+Opening: ABK_5.re.fa
+Opening: ABL_5.re.fa
+Opening: ABL_5.re.fa
+Opening: ABM_5.re.fa
+Opening: ABM_5.re.fa
+Opening: ABP_6.re.fa
+Opening: ABP_6.re.fa
+Opening: ABQ_6.re.fa
+Opening: ABQ_6.re.fa
+Opening: ABR_6.re.fa
+Opening: ABR_6.re.fa
+Opening: ABS_6.re.fa
+Opening: ABS_6.re.fa
+Opening: ABT_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ABV_6.re.fa
+Opening: ACA_6.re.fa
+Opening: ACB_6.re.fa
+Opening: ACC_7.re.fa
+Opening: ACD_7.re.fa
+Opening: ACD_7.re.fa
+Opening: ACF_7.re.fa
+Opening: ACF_7.re.fa
+Opening: ACG_7.re.fa
+Opening: ACG_7.re.fa
+Opening: ACH_7.re.fa
+Opening: ACH_7.re.fa
+Opening: ACI_7.re.fa
+Opening: ACK_7.re.fa
+Opening: ACK_7.re.fa
+Opening: ACL_7.re.fa
+Opening: ACL_7.re.fa
+Opening: ACM_7.re.fa
+Opening: ACM_7.re.fa
+Opening: ACN_8.re.fa
+Opening: ACP_8.re.fa
+Opening: ACQ_8.re.fa
+Opening: ACQ_8.re.fa
+Opening: ACR_2.re.fa
+Opening: ACS_2.re.fa
+Opening: ACT_2.re.fa
+Opening: ACV_2.re.fa
+Opening: ADA_2.re.fa
+Opening: ADA_2.re.fa
+Opening: ADB_2.re.fa
+Opening: ADB_2.re.fa
+Opening: ADC_2.re.fa
+Opening: ADC_2.re.fa
+Opening: ADD_2.re.fa
+Opening: ADD_2.re.fa
+Opening: ADE_2.re.fa
+Opening: ADE_2.re.fa
+Opening: ADF_4.re.fa
+Opening: ADF_4.re.fa
+Opening: ADG_4.re.fa
+Opening: ADG_4.re.fa
+Opening: ADH_4.re.fa
+Opening: ADH_4.re.fa
+Opening: ADI_4.re.fa
+Opening: ADI_4.re.fa
+Opening: ADK_8.re.fa
+Opening: ADK_8.re.fa
+Opening: ADK_8.re.fa
+Opening: ADK_8.re.fa
+Opening: ADL_4.re.fa
+Opening: ADL_4.re.fa
+Opening: ADM_2.re.fa
+Opening: ADM_2.re.fa
+Opening: ADN_4.re.fa
+Opening: ADN_4.re.fa
+Opening: ADP_3.re.fa
+Opening: ADP_3.re.fa
+Opening: ADQ_4.re.fa
+Opening: ADQ_4.re.fa
+Opening: ADR_4.re.fa
+Opening: ADS_4.re.fa
+Opening: ADS_4.re.fa
+Opening: ADT_4.re.fa
+Opening: ADV_4.re.fa
+Opening: ADV_4.re.fa
+Opening: AEA_8.re.fa
+Opening: AEA_8.re.fa
+Opening: AEB_8.re.fa
+Opening: AEB_8.re.fa
+Opening: AEC_8.re.fa
+Opening: AEC_8.re.fa
+Opening: AEC_8.re.fa
+Opening: AEE_3.re.fa
+Opening: AEE_3.re.fa
+Opening: AEF_8.re.fa
+Opening: AEF_8.re.fa
+Opening: AEG_8.re.fa
+Opening: AEG_8.re.fa
+Opening: AEH_3.re.fa
+Opening: AEI_3.re.fa
+Opening: AEI_3.re.fa
+Opening: AEK_3.re.fa
+Opening: AEK_3.re.fa
+Opening: AEL_3.re.fa
+Opening: AEL_3.re.fa
+Opening: AEM_3.re.fa
+Opening: AEM_3.re.fa
+Opening: AEN_3.re.fa
+Opening: AEN_3.re.fa
+Opening: AEP_3.re.fa
+Opening: AEP_3.re.fa
+Opening: AEQ_3.re.fa
+Opening: AER_4.re.fa
+Opening: AER_4.re.fa
+Opening: AES_4.re.fa
+Opening: AET_5.re.fa
+Opening: AET_5.re.fa
+Opening: AEV_5.re.fa
+Opening: AEV_5.re.fa
+Opening: AFA_4.re.fa
+Opening: AFA_4.re.fa
+Opening: AFB_4.re.fa
+Opening: AFB_4.re.fa
+Opening: AFC_4.re.fa
+Opening: AFC_4.re.fa
+Opening: AFC_4.re.fa
+Opening: AFD_4.re.fa
+Opening: AFE_4.re.fa
+Opening: AFE_4.re.fa
+Opening: AFF_4.re.fa
+Opening: AFF_4.re.fa
+Opening: AFG_4.re.fa
+Opening: AFG_4.re.fa
+Opening: AFH_4.re.fa
+Opening: AFH_4.re.fa
+Opening: AFI_5.re.fa
+Opening: AFK_5.re.fa
+Opening: AFK_5.re.fa
+Opening: AFL_5.re.fa
+Opening: AFL_5.re.fa
+Opening: AFM_5.re.fa
+Opening: AFM_5.re.fa
+Opening: AFN_4.re.fa
+Opening: AFN_4.re.fa
+Opening: AFP_1.re.fa
+Opening: AFP_1.re.fa
+Opening: AFQ_1.re.fa
+Opening: AFQ_1.re.fa
+Opening: AFR_5.re.fa
+Opening: AFS_5.re.fa
+Opening: AFS_5.re.fa
+Opening: AFT_5.re.fa
+Opening: AFT_5.re.fa
+Opening: AFV_1.re.fa
+Opening: AGA_5.re.fa
+Opening: AGB_1.re.fa
+Opening: AGB_1.re.fa
+Opening: AGB_1.re.fa
+Opening: AGC_1.re.fa
+Opening: AGC_1.re.fa
+Opening: AGE_1.re.fa
+Opening: AGE_1.re.fa
+Opening: AGF_1.re.fa
+Opening: AGF_1.re.fa
+Opening: AGG_1.re.fa
+Opening: AGG_1.re.fa
+Opening: AGH_1.re.fa
+Opening: AGH_1.re.fa
+Opening: AGI_1.re.fa
+Opening: AGK_1.re.fa
+Opening: AGK_1.re.fa
+Opening: AGL_2.re.fa
+Opening: AGL_2.re.fa
+Opening: AGM_1.re.fa
+Opening: AGN_2.re.fa
+Opening: AGP_2.re.fa
+Opening: AGR_2.re.fa
+Opening: AGR_2.re.fa
+Opening: AGS_2.re.fa
+Opening: AGT_2.re.fa
+Opening: AGT_2.re.fa
+Opening: AGV_2.re.fa
+Opening: AGV_2.re.fa
+Opening: AGV_2.re.fa
+Opening: AHA_2.re.fa
+Opening: AHB_2.re.fa
+Opening: AHC_2.re.fa
+Opening: AHD_1.re.fa
+Opening: AHD_1.re.fa
+Opening: AHE_3.re.fa
+Opening: AHE_3.re.fa
+Opening: AHF_3.re.fa
+Opening: AHF_3.re.fa
+Opening: AHG_3.re.fa
+Opening: AHG_3.re.fa
+Opening: AHH_3.re.fa
+Opening: AHH_3.re.fa
+Opening: AHI_3.re.fa
+Opening: AHK_3.re.fa
+Opening: AHL_3.re.fa
+Opening: AHM_1.re.fa
+Opening: AHM_1.re.fa
+Opening: AHN_3.re.fa
+Opening: AHN_3.re.fa
+Opening: AHP_1.re.fa
+Opening: AHP_1.re.fa
+Opening: AHQ_1.re.fa
+Opening: AHQ_1.re.fa
+Opening: AHR_1.re.fa
+Opening: AHR_1.re.fa
+Opening: AHS_3.re.fa
+Opening: AHS_3.re.fa
+Opening: AHT_3.re.fa
+Opening: AHV_1.re.fa
+Opening: AHV_1.re.fa
+Opening: AIA_1.re.fa
+Opening: AIB_1.re.fa
+Opening: AIB_1.re.fa
+Opening: AIC_1.re.fa
+Opening: AID_2.re.fa
+Opening: AID_2.re.fa
+Opening: AIE_1.re.fa
+Opening: AIF_1.re.fa
+Opening: AIF_1.re.fa
+Opening: AIG_2.re.fa
+Opening: AIG_2.re.fa
+Opening: AII_1.re.fa
+Opening: AII_1.re.fa
+Opening: AIK_2.re.fa
+Opening: AIK_2.re.fa
+Opening: AIL_3.re.fa
+Opening: AIL_3.re.fa
+Opening: AIM_2.re.fa
+Opening: AIN_1.re.fa
+Opening: AIP_2.re.fa
+Opening: AIQ_1.re.fa
+Opening: AIQ_1.re.fa
+Opening: AIR_1.re.fa
+Opening: AIR_1.re.fa
+Opening: AIT_2.re.fa
+Opening: AIT_2.re.fa
+Opening: AKB_2.re.fa
+Opening: AKB_2.re.fa
+Opening: AKB_2.re.fa
+Opening: AKB_2.re.fa
+Opening: AKC_4.re.fa
+Opening: AKC_4.re.fa
+Opening: AKC_4.re.fa
+Opening: AKD_2.re.fa
+Opening: AKD_2.re.fa
+Opening: AKE_3.re.fa
+Opening: AKE_3.re.fa
+Opening: AKG_3.re.fa
+Opening: AKG_3.re.fa
+Opening: AKH_3.re.fa
+Opening: AKH_3.re.fa
+Opening: AKI_4.re.fa
+Opening: AKI_4.re.fa
+Opening: AKL_3.re.fa
+Opening: AKL_3.re.fa
+Opening: AKM_4.re.fa
+Opening: AKN_3.re.fa
+Opening: AKN_3.re.fa
+Opening: AKP_3.re.fa
+Opening: AKQ_5.re.fa
+Opening: AKQ_5.re.fa
+Opening: AKR_3.re.fa
+Opening: AKR_3.re.fa
+Opening: AKR_3.re.fa
+Opening: AKR_3.re.fa
+Opening: AKS_5.re.fa
+Opening: AKS_5.re.fa
+Opening: AKT_4.re.fa
+Opening: AKV_3.re.fa
+Opening: ALA_5.re.fa
+Opening: ALA_5.re.fa
+Opening: ALA_5.re.fa
+Opening: ALA_5.re.fa
+Opening: ALB_3.re.fa
+Opening: ALB_3.re.fa
+Opening: ALB_3.re.fa
+Opening: ALB_3.re.fa
+Opening: ALC_4.re.fa
+Opening: ALC_4.re.fa
+Opening: ALD_4.re.fa
+Opening: ALD_4.re.fa
+Opening: ALE_4.re.fa
+Opening: ALG_5.re.fa
+Opening: ALG_5.re.fa
+Opening: ALH_4.re.fa
+Opening: ALH_4.re.fa
+Opening: ALH_4.re.fa
+Opening: ALH_4.re.fa
+Opening: ALI_5.re.fa
+Opening: ALI_5.re.fa
+Opening: ALK_4.re.fa
+Opening: ALK_4.re.fa
+Opening: ALL_4.re.fa
+Opening: ALL_4.re.fa
+Opening: ALM_4.re.fa
+Opening: ALM_4.re.fa
+Opening: ALN_4.re.fa
+Opening: ALN_4.re.fa
+Opening: ALN_4.re.fa
+Opening: ALN_4.re.fa
+Opening: ALN_4.re.fa
+Opening: ALP_4.re.fa
+Opening: ALP_4.re.fa
+Opening: ALQ_4.re.fa
+Opening: ALQ_4.re.fa
+Opening: ALR_4.re.fa
+Opening: ALR_4.re.fa
+Opening: ALS_5.re.fa
+Opening: ALS_5.re.fa
+Opening: ALT_5.re.fa
+Opening: ALT_5.re.fa
+Opening: ALV_2.re.fa
+Opening: ALV_2.re.fa
+Opening: AMA_5.re.fa
+Opening: AMB_5.re.fa
+Opening: AMB_5.re.fa
+Opening: AMC_5.re.fa
+Opening: AMC_5.re.fa
+Opening: AMD_5.re.fa
+Opening: AMF_4.re.fa
+Opening: AMF_4.re.fa
+Opening: AMG_4.re.fa
+Opening: AMG_4.re.fa
+Opening: AMH_5.re.fa
+Opening: AMI_4.re.fa
+Opening: AMI_4.re.fa
+Opening: AMK_4.re.fa
+Opening: AMK_4.re.fa
+Opening: AML_4.re.fa
+Opening: AML_4.re.fa
+Opening: AMM_4.re.fa
+Opening: AMN_5.re.fa
+Opening: AMN_5.re.fa
+Opening: AMN_5.re.fa
+Opening: AMN_5.re.fa
+Opening: AMN_5.re.fa
+Opening: AMN_5.re.fa
+Opening: AMP_5.re.fa
+Opening: AMP_5.re.fa
+Opening: AMQ_5.re.fa
+Opening: AMQ_5.re.fa
+Opening: AMR_4.re.fa
+Opening: AMS_5.re.fa
+Opening: AMS_5.re.fa
+Opening: AMT_5.re.fa
+Opening: ANA_5.re.fa
+Opening: ANA_5.re.fa
+Opening: ANC_4.re.fa
+Opening: ANC_4.re.fa
+Opening: AND_4.re.fa
+Opening: AND_4.re.fa
+Opening: ANE_4.re.fa
+Opening: ANE_4.re.fa
+Opening: ANF_4.re.fa
+Opening: ANF_4.re.fa
+Opening: ANG_4.re.fa
+Opening: ANG_4.re.fa
+Opening: ANH_4.re.fa
+Opening: ANH_4.re.fa
+Opening: ANI_4.re.fa
+Opening: ANI_4.re.fa
+Opening: ANK_4.re.fa
+Opening: ANK_4.re.fa
+Opening: ANL_2.re.fa
+Opening: ANM_2.re.fa
+Opening: ANN_4.re.fa
+Opening: ANN_4.re.fa
+Opening: ANP_2.re.fa
+Opening: ANP_2.re.fa
+Opening: ANQ_2.re.fa
+Opening: ANQ_2.re.fa
+Opening: ANR_2.re.fa
+Opening: ANR_2.re.fa
+Opening: ANS_2.re.fa
+Opening: ANS_2.re.fa
+Opening: ANT_2.re.fa
+Opening: ANT_2.re.fa
+Opening: ANV_5.re.fa
+Opening: ANV_5.re.fa
+Opening: APA_2.re.fa
+Opening: APA_2.re.fa
+Opening: APC_4.re.fa
+Opening: APC_4.re.fa
+Opening: APD_4.re.fa
+Opening: APD_4.re.fa
+Opening: APE_4.re.fa
+Opening: APE_4.re.fa
+Opening: APF_4.re.fa
+Opening: APF_4.re.fa
+Opening: APG_4.re.fa
+Opening: APH_4.re.fa
+Opening: API_4.re.fa
+Opening: API_4.re.fa
+Opening: APK_4.re.fa
+Opening: APK_4.re.fa
+Opening: APL_4.re.fa
+Opening: APL_4.re.fa
+Opening: APM_4.re.fa
+Opening: APM_4.re.fa
+Opening: APN_4.re.fa
+Opening: APN_4.re.fa
+Opening: APP_4.re.fa
+Opening: APP_4.re.fa
+Opening: APQ_4.re.fa
+Opening: APQ_4.re.fa
+Opening: APR_4.re.fa
+Opening: APR_4.re.fa
+Opening: APS_4.re.fa
+Opening: APS_4.re.fa
+Opening: APT_7.re.fa
+Opening: APT_7.re.fa
+Opening: APV_4.re.fa
+Opening: APV_4.re.fa
+Opening: AQA_4.re.fa
+Opening: AQB_7.re.fa
+Opening: AQB_7.re.fa
+Opening: AQC_4.re.fa
+Opening: AQC_4.re.fa
+Opening: AQD_4.re.fa
+Opening: AQE_5.re.fa
+Opening: AQE_5.re.fa
+Opening: AQG_4.re.fa
+Opening: AQG_4.re.fa
+Opening: AQH_2.re.fa
+Opening: AQH_2.re.fa
+Opening: AQH_2.re.fa
+Opening: AQH_2.re.fa
+Opening: AQH_2.re.fa
+Opening: AQI_4.re.fa
+Opening: AQI_4.re.fa
+Opening: AQI_4.re.fa
+Opening: AQI_4.re.fa
+Opening: AQM_4.re.fa
+Opening: AQM_4.re.fa
+Opening: AQN_7.re.fa
+Opening: AQN_7.re.fa
+Opening: AQP_4.re.fa
+Opening: AQP_4.re.fa
+Opening: AQQ_4.re.fa
+Opening: AQQ_4.re.fa
+Opening: AQR_4.re.fa
+Opening: AQR_4.re.fa
+Opening: AQS_4.re.fa
+Opening: AQS_4.re.fa
+Opening: AQS_4.re.fa
+Opening: AQS_4.re.fa
+Opening: AQT_4.re.fa
+Opening: AQT_4.re.fa
+Opening: AQT_4.re.fa
+Opening: ARA_4.re.fa
+Opening: ARA_4.re.fa
+Opening: ARA_4.re.fa
+Opening: ARA_4.re.fa
+Opening: ARB_2.re.fa
+Opening: ARB_2.re.fa
+Opening: ARC_5.re.fa
+Opening: ARC_5.re.fa
+Opening: ARC_5.re.fa
+Opening: ARC_5.re.fa
+Opening: ARE_5.re.fa
+Opening: ARE_5.re.fa
+Opening: ARG_5.re.fa
+Opening: ARG_5.re.fa
+Opening: ARH_5.re.fa
+Opening: ARH_5.re.fa
+Opening: ARI_5.re.fa
+Opening: ARI_5.re.fa
+Opening: ARK_5.re.fa
+Opening: ARK_5.re.fa
+Opening: ARL_2.re.fa
+Opening: ARM_6.re.fa
+Opening: ARM_6.re.fa
+Opening: ARN_6.re.fa
+Opening: ARN_6.re.fa
+Opening: ARP_2.re.fa
+Opening: ARP_2.re.fa
+Opening: ARQ_6.re.fa
+Opening: ARQ_6.re.fa
+Opening: ARR_6.re.fa
+Opening: ARR_6.re.fa
+Opening: ARS_1.re.fa
+Opening: ARS_1.re.fa
+Opening: ART_6.re.fa
+Opening: ART_6.re.fa
+Opening: ARV_6.re.fa
+Opening: ARV_6.re.fa
+Opening: ASA_6.re.fa
+Opening: ASA_6.re.fa
+Opening: ASB_2.re.fa
+Opening: ASB_2.re.fa
+Opening: ASC_6.re.fa
+Opening: ASC_6.re.fa
+Opening: ASD_2.re.fa
+Opening: ASD_2.re.fa
+Opening: ASD_2.re.fa
+Opening: ASD_2.re.fa
+Opening: ASE_2.re.fa
+Opening: ASE_2.re.fa
+Opening: ASE_2.re.fa
+Opening: ASE_2.re.fa
+Opening: ASG_3.re.fa
+Opening: ASG_3.re.fa
+Opening: ASH_3.re.fa
+Opening: ASH_3.re.fa
+Opening: ASH_3.re.fa
+Opening: ASH_3.re.fa
+Opening: ASL_8.re.fa
+Opening: ASL_8.re.fa
+Opening: ASL_8.re.fa
+Opening: ASM_8.re.fa
+Opening: ASM_8.re.fa
+Opening: ASN_8.re.fa
+Opening: ASN_8.re.fa
+Opening: ASN_8.re.fa
+Opening: ASN_8.re.fa
+Opening: ASN_8.re.fa
+Opening: ASP_8.re.fa
+Opening: ASP_8.re.fa
+Opening: ASR_1.re.fa
+Opening: ASR_1.re.fa
+Opening: ASR_1.re.fa
+Opening: ASS_1.re.fa
+Opening: ASS_1.re.fa
+Opening: AST_1.re.fa
+Opening: AST_1.re.fa
+Opening: ASV_1.re.fa
+Opening: ASV_1.re.fa
+Opening: ATA_8.re.fa
+Opening: ATA_8.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATB_1.re.fa
+Opening: ATC_1.re.fa
+Opening: ATC_1.re.fa
+Opening: ATC_1.re.fa
+Opening: ATD_1.re.fa
+Opening: ATD_1.re.fa
+Opening: ATE_1.re.fa
+Opening: ATE_1.re.fa
+Opening: ATH_3.re.fa
+Opening: ATH_3.re.fa
+Opening: ATM_4.re.fa
+Opening: ATM_4.re.fa
+Opening: ATN_4.re.fa
+Opening: ATP_4.re.fa
+Opening: ATP_4.re.fa
+Opening: ATQ_7.re.fa
+Opening: ATR_4.re.fa
+Opening: ATR_4.re.fa
+Opening: ATS_3.re.fa
+Opening: ATS_3.re.fa
+Opening: ATV_5.re.fa
+Opening: ATV_5.re.fa
+Opening: ATV_5.re.fa
+Opening: AVB_8.re.fa
+Opening: AVC_3.re.fa
+Opening: AVC_3.re.fa
+Opening: AVD_3.re.fa
+Opening: AVD_3.re.fa
+Opening: AVH_5.re.fa
+Opening: AVH_5.re.fa
+Opening: AVI_5.re.fa
+Opening: AVI_5.re.fa
+Opening: AVK_6.re.fa
+Opening: AVK_6.re.fa
+Opening: AVL_6.re.fa
+Opening: AVL_6.re.fa
+Opening: AVM_5.re.fa
+Opening: AVM_5.re.fa
+Opening: AVN_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVP_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVQ_5.re.fa
+Opening: AVR_6.re.fa
+Opening: AVS_5.re.fa
+Opening: AVS_5.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVT_6.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: AVV_8.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAA_6.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAB_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAC_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAD_8.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAE_6.re.fa
+Opening: BAF_6.re.fa
+Opening: BAF_6.re.fa
+Opening: BAG_6.re.fa
+Opening: BAG_6.re.fa
+Opening: BAH_6.re.fa
+Opening: BAH_6.re.fa
+Opening: BAI_7.re.fa
+Opening: BAI_7.re.fa
+Opening: BAK_7.re.fa
+Opening: BAL_7.re.fa
+Opening: BAM_7.re.fa
+Opening: BAN_7.re.fa
+Opening: BAP_7.re.fa
+Opening: BAP_7.re.fa
+Opening: BAQ_7.re.fa
+Opening: BAR_7.re.fa
+Opening: BAR_7.re.fa
+Opening: BAS_8.re.fa
+Opening: BAS_8.re.fa
+Opening: BAT_8.re.fa
+Opening: BAT_8.re.fa
+Opening: BAV_7.re.fa
+Opening: BAV_7.re.fa
+Opening: BBA_8.re.fa
+Opening: BBB_6.re.fa
+Opening: BBB_6.re.fa
+Opening: BBC_8.re.fa
+Opening: BBC_8.re.fa
+Opening: BBC_8.re.fa
+Opening: BBD_8.re.fa
+Opening: BBD_8.re.fa
+Opening: BBD_8.re.fa
+Opening: BBE_6.re.fa
+Opening: BBE_6.re.fa
+Opening: BBE_6.re.fa
+Opening: BBF_6.re.fa
+Opening: BBF_6.re.fa
+Opening: BBF_6.re.fa
+Opening: BBG_6.re.fa
+Opening: BBG_6.re.fa
+Opening: BBG_6.re.fa
+Opening: BBG_6.re.fa
+Opening: BBH_6.re.fa
+Opening: BBH_6.re.fa
+Opening: BBI_6.re.fa
+Opening: BBK_6.re.fa
+Opening: BBK_6.re.fa
+Opening: BBL_6.re.fa
+Opening: BBL_6.re.fa
+Opening: BBM_6.re.fa
+Opening: BBM_6.re.fa
+Opening: BBP_3.re.fa
+Opening: BBP_3.re.fa
+Opening: BBQ_3.re.fa
+Opening: BBQ_3.re.fa
+Opening: BBR_3.re.fa
+Opening: BBS_3.re.fa
+Opening: BBS_3.re.fa
+Opening: BBT_3.re.fa
+Opening: BBT_3.re.fa
+Opening: BBT_3.re.fa
+Opening: BBT_3.re.fa
+Opening: BBT_3.re.fa
+Opening: BBV_3.re.fa
+Opening: BBV_3.re.fa
+Opening: BCA_3.re.fa
+Opening: BCB_3.re.fa
+Opening: BCB_3.re.fa
+Opening: BCC_3.re.fa
+Opening: BCC_3.re.fa
+Opening: BCD_8.re.fa
+Opening: BCD_8.re.fa
+Opening: BCE_8.re.fa
+Opening: BCE_8.re.fa
+Opening: BCF_8.re.fa
+Opening: BCF_8.re.fa
+Opening: BCG_8.re.fa
+Opening: BCG_8.re.fa
+Opening: BCH_5.re.fa
+Opening: BCH_5.re.fa
+Opening: BCI_8.re.fa
+Opening: BCI_8.re.fa
+Opening: BCK_8.re.fa
+Opening: BCK_8.re.fa
+Opening: BCL_5.re.fa
+Opening: BCL_5.re.fa
+Opening: BCM_8.re.fa
+Opening: BCM_8.re.fa
+Opening: BCN_8.re.fa
+Opening: BCN_8.re.fa
+Opening: BCP_8.re.fa
+Opening: BCP_8.re.fa
+Opening: BCQ_8.re.fa
+Opening: BCQ_8.re.fa
+Opening: BCR_8.re.fa
+Opening: BCR_8.re.fa
+Opening: BCS_8.re.fa
+Opening: BCS_8.re.fa
+Opening: BCT_8.re.fa
+Opening: BCT_8.re.fa
+Opening: BCV_8.re.fa
+Opening: BCV_8.re.fa
+Opening: BDA_8.re.fa
+Opening: BDA_8.re.fa
+Opening: BDB_8.re.fa
+Opening: BDB_8.re.fa
+Opening: BDC_8.re.fa
+Opening: BDC_8.re.fa
+Opening: BDC_8.re.fa
+Opening: BDC_8.re.fa
+Opening: BDD_8.re.fa
+Opening: BDD_8.re.fa
+Opening: BDE_8.re.fa
+Opening: BDE_8.re.fa
+Opening: BDF_8.re.fa
+Opening: BDF_8.re.fa
+Opening: BDF_8.re.fa
+Opening: BDF_8.re.fa
+Opening: BDF_8.re.fa
+Opening: BDG_5.re.fa
+Opening: BDG_5.re.fa
+Opening: BDG_5.re.fa
+Opening: BDG_5.re.fa
+Opening: BDH_5.re.fa
+Opening: BDH_5.re.fa
+Opening: BDI_5.re.fa
+Opening: BDI_5.re.fa
+Opening: BDK_5.re.fa
+Opening: BDL_5.re.fa
+Opening: BDL_5.re.fa
+Opening: BDM_5.re.fa
+Opening: BDN_5.re.fa
+Opening: BDP_5.re.fa
+Opening: BDP_5.re.fa
+Opening: BDQ_6.re.fa
+Opening: BDQ_6.re.fa
+Opening: BDR_6.re.fa
+Opening: BDR_6.re.fa
+Opening: BDS_6.re.fa
+Opening: BDS_6.re.fa
+Opening: BDT_6.re.fa
+Opening: BDT_6.re.fa
+Opening: BDV_6.re.fa
+Opening: BDV_6.re.fa
+Opening: BEA_6.re.fa
+Opening: BEA_6.re.fa
+Opening: BEB_6.re.fa
+Opening: BEB_6.re.fa
+Opening: BEC_6.re.fa
+Opening: BEC_6.re.fa
+Opening: BED_6.re.fa
+Opening: BED_6.re.fa
+Opening: BEE_6.re.fa
+Opening: BEE_6.re.fa
+Opening: BEF_7.re.fa
+Opening: BEG_7.re.fa
+Opening: BEG_7.re.fa
+Opening: BEH_7.re.fa
+Opening: BEH_7.re.fa
+Opening: BEI_7.re.fa
+Opening: BEK_7.re.fa
+Opening: BEM_7.re.fa
+Opening: BEN_7.re.fa
+Opening: BEP_4.re.fa
+Opening: BEP_4.re.fa
+Opening: BEQ_4.re.fa
+Opening: BEQ_4.re.fa
+Opening: BER_2.re.fa
+Opening: BES_2.re.fa
+Opening: BES_2.re.fa
+Opening: BET_1.re.fa
+Opening: BEV_3.re.fa
+Opening: BFA_3.re.fa
+Opening: BFB_4.re.fa
+Opening: BFB_4.re.fa
+Opening: BFC_3.re.fa
+Opening: BFC_3.re.fa
+Opening: BFD_1.re.fa
+Opening: BFD_1.re.fa
+Opening: BFE_4.re.fa
+Opening: BFE_4.re.fa
+Opening: BFG_4.re.fa
+Opening: BFG_4.re.fa
+Opening: BFH_3.re.fa
+Opening: BFH_3.re.fa
+Opening: BFH_3.re.fa
+Opening: BFH_3.re.fa
+Opening: BFK_2.re.fa
+Opening: BFL_4.re.fa
+Opening: BFM_3.re.fa
+Opening: BFM_3.re.fa
+Opening: BFN_4.re.fa
+Opening: BFN_4.re.fa
+Opening: BFN_4.re.fa
+Opening: BFP_3.re.fa
+Opening: BFP_3.re.fa
+Opening: BFQ_8.re.fa
+Opening: BFQ_8.re.fa
+Opening: BFR_8.re.fa
+Opening: BFR_8.re.fa
+Opening: BFS_8.re.fa
+Opening: BFS_8.re.fa
+Opening: BFS_8.re.fa
+Opening: BFS_8.re.fa
+Opening: BFS_8.re.fa
+Opening: BFT_8.re.fa
+Opening: BFT_8.re.fa
+Opening: BFV_8.re.fa
+Opening: BFV_8.re.fa
+Opening: BGA_7.re.fa
+Opening: BGA_7.re.fa
+Opening: BGB_7.re.fa
+Opening: BGB_7.re.fa
+Opening: BGC_8.re.fa
+Opening: BGC_8.re.fa
+Opening: BGD_8.re.fa
+Opening: BGD_8.re.fa
+Opening: BGE_8.re.fa
+Opening: BGE_8.re.fa
+Opening: BGF_8.re.fa
+Opening: BGF_8.re.fa
+Opening: BGF_8.re.fa
+Opening: BGF_8.re.fa
+Opening: BGF_8.re.fa
+Opening: BGG_8.re.fa
+Opening: BGG_8.re.fa
+Opening: BGG_8.re.fa
+Opening: BGG_8.re.fa
+Opening: BGG_8.re.fa
+Opening: BGH_1.re.fa
+Opening: BGH_1.re.fa
+Opening: BGI_1.re.fa
+Opening: BGI_1.re.fa
+Opening: BGI_1.re.fa
+Opening: BGI_1.re.fa
+Opening: BGK_1.re.fa
+Opening: BGK_1.re.fa
+Opening: BGK_1.re.fa
+Opening: BGL_1.re.fa
+Opening: BGL_1.re.fa
+Opening: BGM_1.re.fa
+Opening: BGM_1.re.fa
+Opening: BGM_1.re.fa
+Opening: BGN_1.re.fa
+Opening: BGN_1.re.fa
+Opening: BGP_1.re.fa
+Opening: BGP_1.re.fa
+Opening: BGP_1.re.fa
+Opening: BGP_1.re.fa
+Opening: BGP_1.re.fa
+Opening: BGQ_1.re.fa
+Opening: BGQ_1.re.fa
+Opening: BGR_1.re.fa
+Opening: BGR_1.re.fa
+Opening: BGS_1.re.fa
+Opening: BGS_1.re.fa
+Opening: BGT_2.re.fa
+Opening: BGT_2.re.fa
+Opening: BGV_2.re.fa
+Opening: BGV_2.re.fa
+Opening: BHA_2.re.fa
+Opening: BHB_2.re.fa
+Opening: BHB_2.re.fa
+Opening: BHC_2.re.fa
+Opening: BHC_2.re.fa
+Opening: BHD_2.re.fa
+Opening: BHD_2.re.fa
+Opening: BHE_2.re.fa
+Opening: BHE_2.re.fa
+Opening: BHF_2.re.fa
+Opening: BHF_2.re.fa
+Opening: BHG_2.re.fa
+Opening: BHG_2.re.fa
+Opening: BHH_2.re.fa
+Opening: BHH_2.re.fa
+Opening: BHI_4.re.fa
+Opening: BHI_4.re.fa
+Opening: BHK_4.re.fa
+Opening: BHK_4.re.fa
+Opening: BHK_4.re.fa
+Opening: BHK_4.re.fa
+Opening: BHK_4.re.fa
+Opening: BHL_4.re.fa
+Opening: BHL_4.re.fa
+Opening: BHM_4.re.fa
+Opening: BHM_4.re.fa
+Opening: BHN_4.re.fa
+Opening: BHP_4.re.fa
+Opening: BHP_4.re.fa
+Opening: BHQ_4.re.fa
+Opening: BHQ_4.re.fa
+Opening: BHR_4.re.fa
+Opening: BHR_4.re.fa
+Opening: BHS_1.re.fa
+Opening: BHS_1.re.fa
+Opening: BHT_1.re.fa
+Opening: BHT_1.re.fa
+Opening: BHV_1.re.fa
+Opening: BIA_1.re.fa
+Opening: BIA_1.re.fa
+Opening: BIB_1.re.fa
+Opening: BIB_1.re.fa
+Opening: BIC_1.re.fa
+Opening: BIC_1.re.fa
+Opening: BID_1.re.fa
+Opening: BIE_1.re.fa
+Opening: BIE_1.re.fa
+Opening: BIE_1.re.fa
+Opening: BIE_1.re.fa
+Opening: BIF_1.re.fa
+Opening: BIG_1.re.fa
+Opening: BIG_1.re.fa
+Opening: BIH_4.re.fa
+Opening: BII_4.re.fa
+Opening: BII_4.re.fa
+Opening: BIK_3.re.fa
+Opening: BIL_3.re.fa
+Opening: BIM_3.re.fa
+Opening: BIN_3.re.fa
+Opening: BIP_3.re.fa
+Opening: BIP_3.re.fa
+Opening: BIQ_3.re.fa
+Opening: BIQ_3.re.fa
+Opening: BIR_2.re.fa
+Opening: BIR_2.re.fa
+Opening: BIS_2.re.fa
+Opening: BIS_2.re.fa
+Opening: BIT_2.re.fa
+Opening: BIT_2.re.fa
+Opening: BKA_2.re.fa
+Opening: BKC_1.re.fa
+Opening: BKD_1.re.fa
+Opening: BKD_1.re.fa
+Opening: BKE_1.re.fa
+Opening: BKE_1.re.fa
+Opening: BKF_3.re.fa
+Opening: BKF_3.re.fa
+Opening: BKG_3.re.fa
+Opening: BKG_3.re.fa
+Opening: BKH_1.re.fa
+Opening: BKH_1.re.fa
+Opening: BKI_2.re.fa
+Opening: BKI_2.re.fa
+Opening: BKK_2.re.fa
+Opening: BKK_2.re.fa
+Opening: BKL_1.re.fa
+Opening: BKL_1.re.fa
+Opening: BKM_1.re.fa
+Opening: BKM_1.re.fa
+Opening: BKN_2.re.fa
+Opening: BKN_2.re.fa
+Opening: BKP_1.re.fa
+Opening: BKP_1.re.fa
+Opening: BKQ_2.re.fa
+Opening: BKQ_2.re.fa
+Opening: BKR_1.re.fa
+Opening: BKS_1.re.fa
+Opening: BKS_1.re.fa
+Opening: BKT_2.re.fa
+Opening: BKT_2.re.fa
+Opening: BLA_4.re.fa
+Opening: BLA_4.re.fa
+Opening: BLB_4.re.fa
+Opening: BLB_4.re.fa
+Opening: BLC_4.re.fa
+Opening: BLD_3.re.fa
+Opening: BLE_2.re.fa
+Opening: BLF_2.re.fa
+Opening: BLF_2.re.fa
+Opening: BLG_1.re.fa
+Opening: BLG_1.re.fa
+Opening: BLH_1.re.fa
+Opening: BLI_3.re.fa
+Opening: BLI_3.re.fa
+Opening: BLK_2.re.fa
+Opening: BLK_2.re.fa
+Opening: BLL_1.re.fa
+Opening: BLL_1.re.fa
+Opening: BLM_3.re.fa
+Opening: BLM_3.re.fa
+Opening: BLN_2.re.fa
+Opening: BLN_2.re.fa
+Opening: BLP_5.re.fa
+Opening: BLP_5.re.fa
+Opening: BLQ_1.re.fa
+Opening: BLQ_1.re.fa
+Opening: BLR_3.re.fa
+Opening: BLR_3.re.fa
+Opening: BLS_5.re.fa
+Opening: BLT_2.re.fa
+Opening: BLT_2.re.fa
+Opening: BLV_3.re.fa
+Opening: BLV_3.re.fa
+Opening: BMA_2.re.fa
+Opening: BMB_1.re.fa
+Opening: BMC_1.re.fa
+Opening: BMD_5.re.fa
+Opening: BMD_5.re.fa
+Opening: BMD_5.re.fa
+Opening: BME_1.re.fa
+Opening: BME_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMF_1.re.fa
+Opening: BMG_2.re.fa
+Opening: BMG_2.re.fa
+Opening: BMH_5.re.fa
+Opening: BMH_5.re.fa
+Opening: BMI_4.re.fa
+Opening: BMI_4.re.fa
+Opening: BMK_5.re.fa
+Opening: BMK_5.re.fa
+Opening: BML_5.re.fa
+Opening: BML_5.re.fa
+Opening: BML_5.re.fa
+Opening: BMM_3.re.fa
+Opening: BMM_3.re.fa
+Opening: BMM_3.re.fa
+Opening: BMN_4.re.fa
+Opening: BMQ_5.re.fa
+Opening: BMQ_5.re.fa
+Opening: BMQ_5.re.fa
+Opening: BMR_2.re.fa
+Opening: BMR_2.re.fa
+Opening: BMV_2.re.fa
+Opening: BMV_2.re.fa
+Opening: BNA_4.re.fa
+Opening: BNA_4.re.fa
+Opening: BNB_4.re.fa
+Opening: BNB_4.re.fa
+Opening: BNC_4.re.fa
+Opening: BNC_4.re.fa
+Opening: BND_3.re.fa
+Opening: BND_3.re.fa
+Opening: BNE_2.re.fa
+Opening: BNE_2.re.fa
+Opening: BNF_4.re.fa
+Opening: BNF_4.re.fa
+Opening: BNG_4.re.fa
+Opening: BNH_3.re.fa
+Opening: BNI_4.re.fa
+Opening: BNI_4.re.fa
+Opening: BNK_4.re.fa
+Opening: BNK_4.re.fa
+Opening: BNL_4.re.fa
+Opening: BNL_4.re.fa
+Opening: BNM_4.re.fa
+Opening: BNM_4.re.fa
+Opening: BNN_2.re.fa
+Opening: BNP_4.re.fa
+Opening: BNP_4.re.fa
+Opening: BNQ_4.re.fa
+Opening: BNQ_4.re.fa
+Opening: BNR_4.re.fa
+Opening: BNR_4.re.fa
+Opening: BNT_4.re.fa
+Opening: BNT_4.re.fa
+Opening: BNV_2.re.fa
+Opening: BNV_2.re.fa
+Opening: BPA_4.re.fa
+Opening: BPA_4.re.fa
+Opening: BPA_4.re.fa
+Opening: BPB_4.re.fa
+Opening: BPB_4.re.fa
+Opening: BPC_4.re.fa
+Opening: BPF_4.re.fa
+Opening: BPF_4.re.fa
+Opening: BPG_4.re.fa
+Opening: BPG_4.re.fa
+Opening: BPH_4.re.fa
+Opening: BPH_4.re.fa
+Opening: BPI_4.re.fa
+Opening: BPI_4.re.fa
+Opening: BPK_4.re.fa
+Opening: BPK_4.re.fa
+Opening: BPL_2.re.fa
+Opening: BPM_4.re.fa
+Opening: BPM_4.re.fa
+Opening: BPN_2.re.fa
+Opening: BPN_2.re.fa
+Opening: BPP_4.re.fa
+Opening: BPQ_4.re.fa
+Opening: BPQ_4.re.fa
+Opening: BPR_4.re.fa
+Opening: BPR_4.re.fa
+Opening: BPT_5.re.fa
+Opening: BPT_5.re.fa
+Opening: BPV_4.re.fa
+Opening: BQA_4.re.fa
+Opening: BQB_4.re.fa
+Opening: BQB_4.re.fa
+Opening: BQB_4.re.fa
+Opening: BQC_4.re.fa
+Opening: BQC_4.re.fa
+Opening: BQE_4.re.fa
+Opening: BQE_4.re.fa
+Opening: BQG_4.re.fa
+Opening: BQG_4.re.fa
+Opening: BQH_4.re.fa
+Opening: BQH_4.re.fa
+Opening: BQI_4.re.fa
+Opening: BQI_4.re.fa
+Opening: BQM_4.re.fa
+Opening: BQM_4.re.fa
+Opening: BQN_4.re.fa
+Opening: BQP_4.re.fa
+Opening: BQQ_4.re.fa
+Opening: BQQ_4.re.fa
+Opening: BQR_4.re.fa
+Opening: BQR_4.re.fa
+Opening: BQS_4.re.fa
+Opening: BQS_4.re.fa
+Opening: BQT_4.re.fa
+Opening: BRA_4.re.fa
+Opening: BRB_4.re.fa
+Opening: BRB_4.re.fa
+Opening: BRC_4.re.fa
+Opening: BRC_4.re.fa
+Opening: BRD_4.re.fa
+Opening: BRD_4.re.fa
+Opening: BRE_4.re.fa
+Opening: BRF_4.re.fa
+Opening: BRF_4.re.fa
+Opening: BRG_4.re.fa
+Opening: BRG_4.re.fa
+Opening: BRG_4.re.fa
+Opening: BRG_4.re.fa
+Opening: BRH_4.re.fa
+Opening: BRH_4.re.fa
+Opening: BRK_4.re.fa
+Opening: BRL_4.re.fa
+Opening: BRM_4.re.fa
+Opening: BRM_4.re.fa
+Opening: BRP_4.re.fa
+Opening: BRP_4.re.fa
+Opening: BRP_4.re.fa
+Opening: BRQ_4.re.fa
+Opening: BRQ_4.re.fa
+Opening: BRV_4.re.fa
+Opening: BRV_4.re.fa
+Opening: BSA_4.re.fa
+Opening: BSA_4.re.fa
+Opening: BSB_4.re.fa
+Opening: BSC_4.re.fa
+Opening: BSC_4.re.fa
+Opening: BSD_4.re.fa
+Opening: BSE_4.re.fa
+Opening: BSG_4.re.fa
+Opening: BSG_4.re.fa
+Opening: BSI_3.re.fa
+Opening: BSI_3.re.fa
+Opening: BSI_3.re.fa
+Opening: BSI_3.re.fa
+Opening: BSK_4.re.fa
+Opening: BSK_4.re.fa
+Opening: BSL_4.re.fa
+Opening: BSL_4.re.fa
+Opening: BSM_3.re.fa
+Opening: BSM_3.re.fa
+Opening: BSM_3.re.fa
+Opening: BSM_3.re.fa
+Opening: BSM_3.re.fa
+Opening: BSN_5.re.fa
+Opening: BSN_5.re.fa
+Opening: BSN_5.re.fa
+Opening: BSN_5.re.fa
+Opening: BSP_3.re.fa
+Opening: BSR_4.re.fa
+Opening: BSR_4.re.fa
+Opening: BSR_4.re.fa
+Opening: BSS_4.re.fa
+Opening: BSS_4.re.fa
+Opening: BSS_4.re.fa
+Opening: BST_3.re.fa
+Opening: BTA_5.re.fa
+Opening: BTA_5.re.fa
+Opening: BTA_5.re.fa
+Opening: BTA_5.re.fa
+Opening: BTB_3.re.fa
+Opening: BTB_3.re.fa
+Opening: BTC_4.re.fa
+Opening: BTC_4.re.fa
+Opening: BTD_1.re.fa
+Opening: BTD_1.re.fa
+Opening: BTE_3.re.fa
+Opening: BTE_3.re.fa
+Opening: BTF_4.re.fa
+Opening: BTF_4.re.fa
+Opening: BTF_4.re.fa
+Opening: BTF_4.re.fa
+Opening: BTG_3.re.fa
+Opening: BTG_3.re.fa
+Opening: BTH_3.re.fa
+Opening: BTH_3.re.fa
+Opening: BTI_4.re.fa
+Opening: BTI_4.re.fa
+Opening: BTL_3.re.fa
+Opening: BTL_3.re.fa
+Opening: BTN_4.re.fa
+Opening: BTN_4.re.fa
+Opening: BTP_5.re.fa
+Opening: BTP_5.re.fa
+Opening: BTP_5.re.fa
+Opening: BTR_4.re.fa
+Opening: BTR_4.re.fa
+Opening: BTR_4.re.fa
+Opening: BTS_3.re.fa
+Opening: BTS_3.re.fa
+Opening: BTS_3.re.fa
+Opening: BTS_3.re.fa
+Opening: BTS_3.re.fa
+Opening: BTT_3.re.fa
+Opening: BTT_3.re.fa
+Opening: BTV_5.re.fa
+Opening: BTV_5.re.fa
+Opening: BVA_4.re.fa
+Opening: BVA_4.re.fa
+Opening: BVB_6.re.fa
+Opening: BVC_6.re.fa
+Opening: BVC_6.re.fa
+Opening: BVD_5.re.fa
+Opening: BVE_4.re.fa
+Opening: BVF_5.re.fa
+Opening: BVF_5.re.fa
+Opening: BVF_5.re.fa
+Opening: BVF_5.re.fa
+Opening: BVG_4.re.fa
+Opening: BVG_4.re.fa
+Opening: BVG_4.re.fa
+Opening: BVG_4.re.fa
+Opening: BVH_1.re.fa
+Opening: BVH_1.re.fa
+Opening: BVH_1.re.fa
+Opening: BVH_1.re.fa
+Opening: BVK_2.re.fa
+Opening: BVK_2.re.fa
+Opening: BVM_3.re.fa
+Opening: BVM_3.re.fa
+Opening: BVT_3.re.fa
+Opening: BVT_3.re.fa
+Opening: BVV_4.re.fa
+Opening: BVV_4.re.fa
+Opening: BVV_4.re.fa
+Opening: CAA_2.re.fa
+Opening: CAA_2.re.fa
+Opening: CAA_2.re.fa
+Opening: CAA_2.re.fa
+Opening: CAB_4.re.fa
+Opening: CAB_4.re.fa
+Opening: CAC_2.re.fa
+Opening: CAC_2.re.fa
+Opening: CAC_2.re.fa
+Opening: CAD_4.re.fa
+Opening: CAD_4.re.fa
+Opening: CAD_4.re.fa
+Opening: CAE_2.re.fa
+Opening: CAE_2.re.fa
+Opening: CAF_2.re.fa
+Opening: CAF_2.re.fa
+Opening: CAH_4.re.fa
+Opening: CAH_4.re.fa
+Opening: CAI_2.re.fa
+Opening: CAI_2.re.fa
+Opening: CAI_2.re.fa
+Opening: CAK_4.re.fa
+Opening: CAK_4.re.fa
+Opening: CAK_4.re.fa
+Opening: CAL_3.re.fa
+Opening: CAL_3.re.fa
+Opening: CAL_3.re.fa
+Opening: CAM_2.re.fa
+Opening: CAN_4.re.fa
+Opening: CAP_4.re.fa
+Opening: CAP_4.re.fa
+Opening: CAQ_3.re.fa
+Opening: CAR_3.re.fa
+Opening: CAR_3.re.fa
+Opening: CAS_1.re.fa
+Opening: CAS_1.re.fa
+Opening: CAT_6.re.fa
+Opening: CAT_6.re.fa
+Opening: CAV_4.re.fa
+Opening: CBA_3.re.fa
+Opening: CBA_3.re.fa
+Opening: CBB_4.re.fa
+Opening: CBC_6.re.fa
+Opening: CBD_6.re.fa
+Opening: CBE_5.re.fa
+Opening: CBF_5.re.fa
+Opening: CBF_5.re.fa
+Opening: CBF_5.re.fa
+Opening: CBF_5.re.fa
+Opening: CBG_3.re.fa
+Opening: CBG_3.re.fa
+Opening: CBH_1.re.fa
+Opening: CBI_2.re.fa
+Opening: CBK_4.re.fa
+Opening: CBK_4.re.fa
+Opening: CBL_2.re.fa
+Opening: CBL_2.re.fa
+Opening: CBL_2.re.fa
+Opening: CBL_2.re.fa
+Opening: CBL_2.re.fa
+Opening: CBM_4.re.fa
+Opening: CBM_4.re.fa
+Opening: CBM_4.re.fa
+Opening: CBM_4.re.fa
+Opening: CBM_4.re.fa
+Opening: CBN_5.re.fa
+Opening: CBN_5.re.fa
+Opening: CBR_2.re.fa
+Opening: CBR_2.re.fa
+Opening: CBR_2.re.fa
+Opening: CBR_2.re.fa
+Opening: CBR_2.re.fa
+Opening: CCC_3.re.fa
+Opening: CCD_4.re.fa
+Opening: CCE_6.re.fa
+Opening: CCF_6.re.fa
+Opening: CCG_4.re.fa
+Opening: CCH_4.re.fa
+Opening: CCI_4.re.fa
+Opening: CCL_1.re.fa
+Opening: CCL_1.re.fa
+Opening: CCM_1.re.fa
+Opening: CCM_1.re.fa
+Opening: CCN_1.re.fa
+Opening: CCN_1.re.fa
+Opening: CCP_1.re.fa
+Opening: CCP_1.re.fa
+Opening: CCQ_1.re.fa
+Opening: CCQ_1.re.fa
+Opening: CCR_1.re.fa
+Opening: CCS_1.re.fa
+Opening: CCT_2.re.fa
+Opening: CCT_2.re.fa
+Opening: CCT_2.re.fa
+Opening: CCV_1.re.fa
+Opening: CDA_2.re.fa
+Opening: CDA_2.re.fa
+Opening: CDB_2.re.fa
+Opening: CDB_2.re.fa
+Opening: CDB_2.re.fa
+Opening: CDC_3.re.fa
+Opening: CDC_3.re.fa
+Opening: CDD_2.re.fa
+Opening: CDD_2.re.fa
+Opening: CDE_2.re.fa
+Opening: CDE_2.re.fa
+Opening: CDF_1.re.fa
+Opening: CDF_1.re.fa
+Opening: CDG_2.re.fa
+Opening: CDG_2.re.fa
+Opening: CDH.re.fa
+Opening: CDH.re.fa
+Opening: CDI_1.re.fa
+Opening: CDI_1.re.fa
+Opening: CDK_4.re.fa
+Opening: CDK_4.re.fa
+Opening: CDL_3.re.fa
+Opening: CDL_3.re.fa
+Opening: CDM_4.re.fa
+Opening: CDM_4.re.fa
+Opening: CDN_4.re.fa
+Opening: CDP_3.re.fa
+Opening: CDP_3.re.fa
+Opening: CDQ_3.re.fa
+Opening: CDQ_3.re.fa
+Opening: CDR_3.re.fa
+Opening: CDR_3.re.fa
+Opening: CDS_4.re.fa
+Opening: CDS_4.re.fa
+Opening: CDT_2.re.fa
+Opening: CDV_4.re.fa
+Opening: CDV_4.re.fa
+Opening: CEA_4.re.fa
+Opening: CEB_3.re.fa
+Opening: CEB_3.re.fa
+Opening: CEC_4.re.fa
+Opening: CED_4.re.fa
+Opening: CED_4.re.fa
+Opening: CEE_4.re.fa
+Opening: CEF_4.re.fa
+Opening: CEF_4.re.fa
+Opening: CEG_4.re.fa
+Opening: CEH_4.re.fa
+Opening: CEH_4.re.fa
+Opening: CEI_2.re.fa
+Opening: CEK_4.re.fa
+Opening: CEL_4.re.fa
+Opening: CEM_2.re.fa
+Opening: CEN_4.re.fa
+Opening: CEN_4.re.fa
+Opening: CEP_4.re.fa
+Opening: CEQ_4.re.fa
+Opening: CEQ_4.re.fa
+Opening: CER_4.re.fa
+Opening: CES_4.re.fa
+Opening: CET_4.re.fa
+Opening: CEV_2.re.fa
+Opening: CEV_2.re.fa
+Opening: CFA_4.re.fa
+Opening: CFA_4.re.fa
+Opening: CFB_4.re.fa
+Opening: CFC_2.re.fa
+Opening: CFC_2.re.fa
+Opening: CFD_4.re.fa
+Opening: CFD_4.re.fa
+Opening: CFE_4.re.fa
+Opening: CFE_4.re.fa
+Opening: CFF_4.re.fa
+Opening: CFF_4.re.fa
+Opening: CFG_4.re.fa
+Opening: CFG_4.re.fa
+Opening: CFH.re.fa
+Opening: CFH.re.fa
+Opening: CFH.re.fa
+Opening: CFH.re.fa
+Opening: CFI_4.re.fa
+Opening: CFI_4.re.fa
+Opening: CFM_4.re.fa
+Opening: CFM_4.re.fa
+Opening: CFN_4.re.fa
+Opening: CFN_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFP_4.re.fa
+Opening: CFQ_4.re.fa
+Opening: CFQ_4.re.fa
+Opening: CFR_3.re.fa
+Opening: CFS_4.re.fa
+Opening: CFS_4.re.fa
+Opening: CFT_5.re.fa
+Opening: CFT_5.re.fa
+Opening: CFT_5.re.fa
+Opening: CFT_5.re.fa
+Opening: CFT_5.re.fa
+Opening: CFV_4.re.fa
+Opening: CFV_4.re.fa
+Opening: CGB_5.re.fa
+Opening: CGB_5.re.fa
+Opening: CGC_4.re.fa
+Opening: CGC_4.re.fa
+Opening: CGC_4.re.fa
+Opening: CGC_4.re.fa
+Opening: CGD_5.re.fa
+Opening: CGE_5.re.fa
+Opening: CGG_4.re.fa
+Opening: CGG_4.re.fa
+Opening: CGH_5.re.fa
+Opening: CGH_5.re.fa
+Opening: CGH_5.re.fa
+Opening: CGI_4.re.fa
+Opening: CGI_4.re.fa
+Opening: CGI_4.re.fa
+Opening: CGK_4.re.fa
+Opening: CGK_4.re.fa
+Opening: CGK_4.re.fa
+Opening: CGK_4.re.fa
+Opening: CGL_4.re.fa
+Opening: CGL_4.re.fa
+Opening: CGN_5.re.fa
+Opening: CGN_5.re.fa
+Opening: CGP_5.re.fa
+Opening: CGP_5.re.fa
+Opening: CGQ_4.re.fa
+Opening: CGQ_4.re.fa
+Opening: CGQ_4.re.fa
+Opening: CGQ_4.re.fa
+Opening: CGR_5.re.fa
+Opening: CGR_5.re.fa
+Opening: CGS_5.re.fa
+Opening: CGT_5.re.fa
+Opening: CGV_3.re.fa
+Opening: CGV_3.re.fa
+Opening: CHA_4.re.fa
+Opening: CHA_4.re.fa
+Opening: CHB_4.re.fa
+Opening: CHB_4.re.fa
+Opening: CHC_4.re.fa
+Opening: CHC_4.re.fa
+Opening: CHD_3.re.fa
+Opening: CHD_3.re.fa
+Opening: CHE_4.re.fa
+Opening: CHE_4.re.fa
+Opening: CHF_4.re.fa
+Opening: CHF_4.re.fa
+Opening: CHF_4.re.fa
+Opening: CHG_4.re.fa
+Opening: CHG_4.re.fa
+Opening: CHG_4.re.fa
+Opening: CHH_4.re.fa
+Opening: CHH_4.re.fa
+Opening: CHI_4.re.fa
+Opening: CHI_4.re.fa
+Opening: CHI_4.re.fa
+Opening: CHI_4.re.fa
+Opening: CHK_4.re.fa
+Opening: CHK_4.re.fa
+Opening: CHL_4.re.fa
+Opening: CHL_4.re.fa
+Opening: CHM_4.re.fa
+Opening: CHM_4.re.fa
+Opening: CHM_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHN_4.re.fa
+Opening: CHP_4.re.fa
+Opening: CHP_4.re.fa
+Opening: CHP_4.re.fa
+Opening: CHP_4.re.fa
+Opening: CHQ_4.re.fa
+Opening: CHQ_4.re.fa
+Opening: CHQ_4.re.fa
+Opening: CHR_4.re.fa
+Opening: CHR_4.re.fa
+Opening: CHS_4.re.fa
+Opening: CHS_4.re.fa
+Opening: CHT_4.re.fa
+Opening: CHT_4.re.fa
+Opening: CHV_4.re.fa
+Opening: CHV_4.re.fa
+Opening: CIA_4.re.fa
+Opening: CIA_4.re.fa
+Opening: CIB_4.re.fa
+Opening: CIB_4.re.fa
+Opening: CIC_4.re.fa
+Opening: CIC_4.re.fa
+Opening: CID_4.re.fa
+Opening: CID_4.re.fa
+Opening: CIE_4.re.fa
+Opening: CIE_4.re.fa
+Opening: CIF_2.re.fa
+Opening: CIF_2.re.fa
+Opening: CIF_2.re.fa
+Opening: CIF_2.re.fa
+Opening: CIF_2.re.fa
+Opening: CIG_2.re.fa
+Opening: CIG_2.re.fa
+Opening: CIH_2.re.fa
+Opening: CIH_2.re.fa
+Opening: CII_2.re.fa
+Opening: CII_2.re.fa
+Opening: CII_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIK_2.re.fa
+Opening: CIL_2.re.fa
+Opening: CIL_2.re.fa
+Opening: CIL_2.re.fa
+Opening: CIL_2.re.fa
+Opening: CIL_2.re.fa
+Opening: CIM_2.re.fa
+Opening: CIN_2.re.fa
+Opening: CIP_2.re.fa
+Opening: CIQ_2.re.fa
+Opening: CIR_3.re.fa
+Opening: CIS_3.re.fa
+Opening: CIT_3.re.fa
+Opening: CIV_3.re.fa
+Opening: CKA_3.re.fa
+Opening: CKA_3.re.fa
+Opening: CKA_3.re.fa
+Opening: CKA_3.re.fa
+Opening: CKA_3.re.fa
+Opening: CKB_3.re.fa
+Opening: CKC_3.re.fa
+Opening: CKD_3.re.fa
+Opening: CKE_3.re.fa
+Opening: CKF_3.re.fa
+Opening: CKG_4.re.fa
+Opening: CKH_4.re.fa
+Opening: CKI_4.re.fa
+Opening: CKK_4.re.fa
+Opening: CKK_4.re.fa
+Opening: CKK_4.re.fa
+Opening: CKL_4.re.fa
+Opening: CKM_4.re.fa
+Opening: CKN_4.re.fa
+Opening: CKN_4.re.fa
+Opening: CKN_4.re.fa
+Opening: CKN_4.re.fa
+Opening: CKP_4.re.fa
+Opening: CKQ_4.re.fa
+Opening: CKR_1.re.fa
+Opening: CKR_1.re.fa
+Opening: CKS_5.re.fa
+Opening: CKS_5.re.fa
+Opening: CKS_5.re.fa
+Opening: CKT_5.re.fa
+Opening: CKV_5.re.fa
+Opening: CKV_5.re.fa
+Opening: CLA_5.re.fa
+Opening: CLA_5.re.fa
+Opening: CLA_5.re.fa
+Opening: CLB_5.re.fa
+Opening: CLB_5.re.fa
+Opening: CLC_4.re.fa
+Opening: CLC_4.re.fa
+Opening: CLD_5.re.fa
+Opening: CLD_5.re.fa
+Opening: CLG_4.re.fa
+Opening: CLG_4.re.fa
+Opening: CLH_4.re.fa
+Opening: CLI_4.re.fa
+Opening: CLI_4.re.fa
+Opening: CLI_4.re.fa
+Opening: CLI_4.re.fa
+Opening: CLK_4.re.fa
+Opening: CLK_4.re.fa
+Opening: CLL_4.re.fa
+Opening: CLL_4.re.fa
+Opening: CLM_4.re.fa
+Opening: CLM_4.re.fa
+Opening: CLM_4.re.fa
+Opening: CLM_4.re.fa
+Opening: CLN_4.re.fa
+Opening: CLN_4.re.fa
+Opening: CLP_4.re.fa
+Opening: CLP_4.re.fa
+Opening: CLQ_4.re.fa
+Opening: CLQ_4.re.fa
+Opening: CLR_4.re.fa
+Opening: CLR_4.re.fa
+Opening: CLS_4.re.fa
+Opening: CLS_4.re.fa
+Opening: CLT_5.re.fa
+Opening: CLT_5.re.fa
+Opening: CLV_5.re.fa
+Opening: CLV_5.re.fa
+Opening: CMB_6.re.fa
+Opening: CMB_6.re.fa
+Opening: CMC_6.re.fa
+Opening: CMC_6.re.fa
+Opening: CMD_6.re.fa
+Opening: CMD_6.re.fa
+Opening: CME_6.re.fa
+Opening: CME_6.re.fa
+Opening: CMF_6.re.fa
+Opening: CMF_6.re.fa
+Opening: CMF_6.re.fa
+Opening: CMG_6.re.fa
+Opening: CMG_6.re.fa
+Opening: CMG_6.re.fa
+Opening: CMG_6.re.fa
+Opening: CMG_6.re.fa
+Opening: CMH_6.re.fa
+Opening: CMH_6.re.fa
+Opening: CMH_6.re.fa
+Opening: CMH_6.re.fa
+Opening: CMI_6.re.fa
+Opening: CMI_6.re.fa
+Opening: CMK_6.re.fa
+Opening: CMK_6.re.fa
+Opening: CMK_6.re.fa
+Opening: CMK_6.re.fa
+Opening: CML_8.re.fa
+Opening: CML_8.re.fa
+Opening: CMM_8.re.fa
+Opening: CMM_8.re.fa
+Opening: CMN_8.re.fa
+Opening: CMN_8.re.fa
+Opening: CMP_8.re.fa
+Opening: CMQ_8.re.fa
+Opening: CMS_8.re.fa
+Opening: CMS_8.re.fa
+Opening: CMT_8.re.fa
+Opening: CNB_4.re.fa
+Opening: CNB_4.re.fa
+Opening: CNB_4.re.fa
+Opening: CNB_4.re.fa
+Opening: CNC_4.re.fa
+Opening: CNC_4.re.fa
+Opening: CNC_4.re.fa
+Opening: CNC_4.re.fa
+Opening: CNE_4.re.fa
+Opening: CNE_4.re.fa
+Opening: CNE_4.re.fa
+Opening: CNE_4.re.fa
+Opening: CNF_4.re.fa
+Opening: CNF_4.re.fa
+Opening: CNF_4.re.fa
+Opening: CNF_4.re.fa
+Opening: CNG_4.re.fa
+Opening: CNG_4.re.fa
+Opening: CNH_4.re.fa
+Opening: CNI_4.re.fa
+Opening: CNK_4.re.fa
+Opening: CNL_4.re.fa
+Opening: CNL_4.re.fa
+Opening: CNL_4.re.fa
+Opening: CNL_4.re.fa
+Opening: CNM_1.re.fa
+Opening: CNN_1.re.fa
+Opening: CNN_1.re.fa
+Opening: CNN_1.re.fa
+Opening: CNP_1.re.fa
+Opening: CNQ_1.re.fa
+Opening: CNQ_1.re.fa
+Opening: CNQ_1.re.fa
+Opening: CNR_1.re.fa
+Opening: CNS_4.re.fa
+Opening: CNS_4.re.fa
+Opening: CNS_4.re.fa
+Opening: CNS_4.re.fa
+Opening: CNT_4.re.fa
+Opening: CNT_4.re.fa
+Opening: CNT_4.re.fa
+Opening: CNT_4.re.fa
+Opening: CNV_4.re.fa
+Opening: CPA_4.re.fa
+Opening: CPA_4.re.fa
+Opening: CPA_4.re.fa
+Opening: CPA_4.re.fa
+Opening: CPB_4.re.fa
+Opening: CPB_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPC_4.re.fa
+Opening: CPD_4.re.fa
+Opening: CPD_4.re.fa
+Opening: CPE_1.re.fa
+Opening: CPF_1.re.fa
+Opening: CPF_1.re.fa
+Opening: CPG_1.re.fa
+Opening: CPI_4.re.fa
+Opening: CPI_4.re.fa
+Opening: CPK_4.re.fa
+Opening: CPK_4.re.fa
+Opening: CPL_4.re.fa
+Opening: CPL_4.re.fa
+Opening: CPM_4.re.fa
+Opening: CPM_4.re.fa
+Opening: CPM_4.re.fa
+Opening: CPM_4.re.fa
+Opening: CPM_4.re.fa
+Opening: CPN_4.re.fa
+Opening: CPN_4.re.fa
+Opening: CPN_4.re.fa
+Opening: CPN_4.re.fa
+Opening: CPQ_4.re.fa
+Opening: CPQ_4.re.fa
+Opening: CPR_4.re.fa
+Opening: CPR_4.re.fa
+Opening: CPR_4.re.fa
+Opening: CPR_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPS_4.re.fa
+Opening: CPT_4.re.fa
+Opening: CPT_4.re.fa
+Opening: CQA_6.re.fa
+Opening: CQA_6.re.fa
+Opening: CQB_6.re.fa
+Opening: CQB_6.re.fa
+Opening: CQC_6.re.fa
+Opening: CQC_6.re.fa
+Opening: CQD_6.re.fa
+Opening: CQD_6.re.fa
+Opening: CQE_6.re.fa
+Opening: CQE_6.re.fa
+Opening: CQF_6.re.fa
+Opening: CQF_6.re.fa
+Opening: CQG_6.re.fa
+Opening: CQG_6.re.fa
+Opening: CQH_6.re.fa
+Opening: CQH_6.re.fa
+Opening: CQH_6.re.fa
+Opening: CQI_6.re.fa
+Opening: CQI_6.re.fa
+Opening: CQK_4.re.fa
+Opening: CQK_4.re.fa
+Opening: CQL_4.re.fa
+Opening: CQL_4.re.fa
+Opening: CQL_4.re.fa
+Opening: CQM_4.re.fa
+Opening: CQM_4.re.fa
+Opening: CQN_4.re.fa
+Opening: CQN_4.re.fa
+Opening: CQP_4.re.fa
+Opening: CQP_4.re.fa
+Opening: CQQ_4.re.fa
+Opening: CQQ_4.re.fa
+Opening: CQR_4.re.fa
+Opening: CQR_4.re.fa
+Opening: CQS_4.re.fa
+Opening: CQS_4.re.fa
+Opening: CQT_4.re.fa
+Opening: CQT_4.re.fa
+Opening: CQV_4.re.fa
+Opening: CQV_4.re.fa
+Opening: CRA_2.re.fa
+Opening: CRA_2.re.fa
+Opening: CRB_2.re.fa
+Opening: CRB_2.re.fa
+Opening: CRC_2.re.fa
+Opening: CRC_2.re.fa
+Opening: CRD_2.re.fa
+Opening: CRE_2.re.fa
+Opening: CRE_2.re.fa
+Opening: CRG_2.re.fa
+Opening: CRG_2.re.fa
+Opening: CRH_2.re.fa
+Opening: CRI_2.re.fa
+Opening: CRI_2.re.fa
+Opening: CRK_2.re.fa
+Opening: CRK_2.re.fa
+Opening: CRL_.re.fa
+Opening: CRL_.re.fa
+Opening: GAL.re.fa
+Opening: GAL.re.fa
+Opening: GAP.re.fa
+Opening: GAP.re.fa
+Opening: GAS.re.fa
+Opening: GAS.re.fa
+Opening: GAT.re.fa
+Opening: GAT.re.fa
+Opening: GAV.re.fa
+Opening: MAA.re.fa
+Opening: MAA.re.fa
+Opening: MAB.re.fa
+Opening: MAB.re.fa
+Opening: MAL.re.fa
+Opening: YAA.re.fa
+Opening: YAA.re.fa
+Opening: YAB.re.fa
+Opening: YAB.re.fa
+Opening: YAC.re.fa
+Opening: YAC.re.fa
+Opening: YAD.re.fa
+Opening: YAD.re.fa
+Opening: YAE.re.fa
+Opening: YAF.re.fa
+Opening: YAG.re.fa
+Opening: YAK.re.fa
+Opening: YAK.re.fa
+Opening: YAL.re.fa
+Opening: YAM.re.fa
+Opening: YAM.re.fa
+Opening: YAN.re.fa
+Opening: YAN.re.fa
+Opening: YAP.re.fa
+Opening: YAP.re.fa
+Opening: YAQ.re.fa
+Opening: YAQ.re.fa
+Opening: YAR.re.fa
+Opening: YAT.re.fa
+Opening: YAT.re.fa
+Opening: YAU.re.fa
+Opening: YAU.re.fa
+Opening: YAV.re.fa
+Opening: YAV.re.fa
+Opening: YAW.re.fa
+Opening: YAW.re.fa
+Opening: YAX.re.fa
+Opening: YAY.re.fa
+Opening: YAY.re.fa
+Opening: YAZ.re.fa
+Opening: YAZ.re.fa
+Opening: YBA.re.fa
+Opening: YBA.re.fa
+Opening: YBB.re.fa
+Opening: YBB.re.fa
+Opening: YBE.re.fa
+Opening: YBE.re.fa
+Opening: YBF.re.fa
+Opening: YBF.re.fa
+Opening: YBG.re.fa
+Opening: YBG.re.fa
+Opening: YBH.re.fa
+Opening: YBH.re.fa
+Opening: YBJ.re.fa
+Opening: YBJ.re.fa
+Opening: YBK.re.fa
+Opening: YBL.re.fa
+Opening: YBM.re.fa
+Opening: YBN.re.fa
+Opening: YBN.re.fa
+Opening: YBO.re.fa
+Opening: YBP.re.fa
+Opening: YBP.re.fa
+Opening: YBQ.re.fa
+Opening: YBR.re.fa
+Opening: YBS.re.fa
+Opening: YBS.re.fa
+Opening: YBT.re.fa
+Opening: YBT.re.fa
+Opening: YBU.re.fa
+Opening: YBU.re.fa
+Opening: YBV.re.fa
+Opening: YBW.re.fa
+Opening: YBW.re.fa
+Opening: YBX.re.fa
+Opening: YBX.re.fa
+Opening: YBY.re.fa
+Opening: YBY.re.fa
+Opening: YBZ.re.fa
+Opening: YBZ.re.fa
+Opening: YCA.re.fa
+Opening: YCA.re.fa
+Opening: YCB.re.fa
+Opening: YCB.re.fa
+Opening: YCC.re.fa
+Opening: YCD.re.fa
+Opening: YCD.re.fa
+Opening: YCE.re.fa
+Opening: YCF.re.fa
+Opening: YCG.re.fa
+Opening: YCG.re.fa
+Opening: YCH.re.fa
+Opening: YCH.re.fa
+Opening: YCI.re.fa
+Opening: YCI.re.fa
+Opening: YCJ.re.fa
+Opening: YCK.re.fa
+Opening: YCL.re.fa
+Opening: YCM.re.fa
+Opening: YCM.re.fa
+Opening: YCN.re.fa
+Opening: YCN.re.fa
+Opening: YCO.re.fa
+Opening: YCO.re.fa
+Opening: YCP.re.fa
+Opening: YCP.re.fa
+Opening: YCQ.re.fa
+Opening: YCQ.re.fa
+Opening: YCR.re.fa
+Opening: YCR.re.fa
+Opening: YCS.re.fa
+Opening: YCS.re.fa
+Opening: YCT.re.fa
+Opening: YCU.re.fa
+Opening: YCU.re.fa
+Opening: YCV.re.fa
+Opening: YCV.re.fa
+Opening: YCW.re.fa
+Opening: YCW.re.fa
+Opening: YCX.re.fa
+Opening: YCX.re.fa
+Opening: YCY.re.fa
+Opening: YCZ.re.fa
+Opening: YCZ.re.fa
+Opening: YDA.re.fa
+Opening: YDA.re.fa
+Opening: YDB.re.fa
+Opening: YDB.re.fa
+Opening: YDC.re.fa
+Opening: YDC.re.fa
+Opening: YDD.re.fa
+Opening: YDD.re.fa
+Opening: YDE.re.fa
+Opening: YDE.re.fa
+Opening: YDF.re.fa
+Opening: YDF.re.fa
+Opening: YDG.re.fa
+Opening: YDG.re.fa
+Opening: YDH.re.fa
+Opening: YDI.re.fa
+Opening: YDI.re.fa
+Opening: YDJ.re.fa
+Opening: YDK.re.fa
+Opening: YDL.re.fa
+Opening: YDL.re.fa
+Opening: YDM.re.fa
+Opening: YDN.re.fa
+Opening: YDN.re.fa
+Opening: YDO.re.fa
+Opening: YDO.re.fa
+
+
+*** Checking the BLAST hits match largest expanded ORFs ***
+
+
+All done!
+

@@ -1,0 +1,742 @@
+
+
+*** Performing BLASTn using local BLAST Database ***
+
+
+
+Building a new DB, current time: 05/28/2022 19:18:21
+New DB name:   /Users/angela/rowley/dsrna-survey/chr_toxins/output/FGSC/blast_db_tmp.fasta
+New DB title:  /Users/angela/rowley/dsrna-survey/chr_toxins/output/FGSC/blast_db_tmp.fasta
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 2 sequences in 0.110108 seconds.
+
+
+
+blasting CP004103.fasta
+
+
+blasting CP004107.fasta
+
+
+blasting CP004754.fasta
+
+
+blasting CP004755.fasta
+
+
+blasting CP004756.fasta
+
+
+blasting CP004757.fasta
+
+
+blasting CP004758.fasta
+
+
+blasting CP004759.fasta
+
+
+blasting CP004760.fasta
+
+
+blasting CP004761.fasta
+
+
+blasting CP004762.fasta
+
+
+blasting CP004763.fasta
+
+
+blasting CP004764.fasta
+
+
+blasting CP004765.fasta
+
+
+blasting CP004766.fasta
+
+
+blasting CP004767.fasta
+
+
+blasting CP004768.fasta
+
+
+blasting CP004769.fasta
+
+
+blasting CP004770.fasta
+
+
+blasting CP004771.fasta
+
+
+blasting CP004772.fasta
+
+
+blasting CP004773.fasta
+
+
+blasting CP004774.fasta
+
+
+blasting CP004775.fasta
+
+
+blasting CP004776.fasta
+
+
+blasting CP004777.fasta
+
+
+blasting CP004778.fasta
+
+
+blasting CP004779.fasta
+
+
+blasting CP004780.fasta
+
+
+blasting CP004781.fasta
+
+
+blasting CP004782.fasta
+
+
+blasting CP004783.fasta
+
+
+blasting CP004784.fasta
+
+
+blasting CP004785.fasta
+
+
+blasting CP004786.fasta
+
+
+blasting CP004787.fasta
+
+
+blasting CP004788.fasta
+
+
+blasting CP004789.fasta
+
+
+blasting CP004790.fasta
+
+
+blasting CP004791.fasta
+
+
+blasting CP004792.fasta
+
+
+blasting CP004793.fasta
+
+
+blasting CP004794.fasta
+
+
+blasting CP004795.fasta
+
+
+blasting CP004796.fasta
+
+
+blasting CP004797.fasta
+
+
+blasting CP004798.fasta
+
+
+blasting CP004799.fasta
+
+
+blasting CP004800.fasta
+
+
+blasting CP004801.fasta
+
+
+blasting CP004802.fasta
+
+
+blasting CP004803.fasta
+
+
+blasting CP004804.fasta
+
+
+blasting CP004805.fasta
+
+
+blasting CP004806.fasta
+
+
+blasting CP004807.fasta
+
+
+blasting CP004808.fasta
+
+
+blasting CP004809.fasta
+
+
+blasting CP004810.fasta
+
+
+blasting CP004811.fasta
+
+
+blasting CP004812.fasta
+
+
+blasting CP004813.fasta
+
+
+blasting CP004814.fasta
+
+
+blasting CP004815.fasta
+
+
+blasting CP004816.fasta
+
+
+blasting CP004817.fasta
+
+
+blasting CP004818.fasta
+
+
+blasting CP004819.fasta
+
+
+blasting CP004820.fasta
+
+
+blasting CP004821.fasta
+
+
+blasting CP004822.fasta
+
+
+blasting CP004823.fasta
+
+
+blasting CP004824.fasta
+
+
+blasting CP004825.fasta
+
+
+blasting CP004826.fasta
+
+
+blasting CP004827.fasta
+
+
+blasting CP004828.fasta
+
+
+blasting CP004829.fasta
+
+
+blasting CP004830.fasta
+
+
+blasting CP004831.fasta
+
+
+blasting CP004832.fasta
+
+
+blasting CP004833.fasta
+
+
+blasting CP004834.fasta
+
+
+blasting CP004835.fasta
+
+
+blasting CP004836.fasta
+
+
+blasting CP004837.fasta
+
+
+blasting CP004838.fasta
+
+
+blasting CP004839.fasta
+
+
+blasting CP004840.fasta
+
+
+blasting CP004841.fasta
+
+
+blasting CP004842.fasta
+
+
+blasting CP004843.fasta
+
+
+blasting CP004844.fasta
+
+
+blasting CP004845.fasta
+
+
+blasting CP004982.fasta
+
+
+blasting CP004983.fasta
+
+
+blasting CP004984.fasta
+
+
+blasting CP004985.fasta
+
+
+blasting CP004986.fasta
+
+
+blasting CP004987.fasta
+
+
+blasting CP004988.fasta
+
+
+blasting CP004989.fasta
+
+
+blasting CP004990.fasta
+
+
+blasting CP004991.fasta
+
+
+blasting CP004992.fasta
+
+
+blasting CP004993.fasta
+
+
+blasting CP004994.fasta
+
+
+blasting CP004995.fasta
+
+
+blasting CP004996.fasta
+
+
+blasting CP004997.fasta
+
+
+blasting CP004998.fasta
+
+
+blasting CP004999.fasta
+
+
+blasting CP005000.fasta
+
+
+blasting CP005001.fasta
+
+
+blasting CP005002.fasta
+
+
+blasting CP005003.fasta
+
+
+blasting CP005004.fasta
+
+
+blasting CP005005.fasta
+
+
+blasting CP005006.fasta
+
+
+blasting CP005007.fasta
+
+
+blasting CP005008.fasta
+
+
+blasting CP005009.fasta
+
+
+blasting CP005010.fasta
+
+
+blasting CP005011.fasta
+
+
+blasting CP005012.fasta
+
+
+blasting CP005013.fasta
+
+
+blasting CP005014.fasta
+
+
+blasting CP005015.fasta
+
+
+blasting CP005016.fasta
+
+
+blasting CP005017.fasta
+
+
+blasting CP005018.fasta
+
+
+blasting CP005019.fasta
+
+
+blasting CP005020.fasta
+
+
+blasting CP005021.fasta
+
+
+blasting CP005022.fasta
+
+
+blasting CP005023.fasta
+
+
+blasting CP005024.fasta
+
+
+blasting CP005025.fasta
+
+
+blasting CP005026.fasta
+
+
+blasting CP005027.fasta
+
+
+blasting CP005028.fasta
+
+
+blasting CP005029.fasta
+
+
+blasting CP005030.fasta
+
+
+blasting CP005031.fasta
+
+
+blasting CP005032.fasta
+
+
+blasting CP005033.fasta
+
+
+blasting CP005034.fasta
+
+
+blasting CP005035.fasta
+
+
+blasting CP005036.fasta
+
+
+blasting CP005037.fasta
+
+
+blasting CP005038.fasta
+
+
+blasting CP005039.fasta
+
+
+blasting CP005040.fasta
+
+
+blasting CP005041.fasta
+
+
+blasting CP005042.fasta
+
+
+blasting CP005043.fasta
+
+
+blasting CP005044.fasta
+
+
+blasting CP005045.fasta
+
+
+blasting CP005046.fasta
+
+
+blasting CP005047.fasta
+
+
+blasting CP005048.fasta
+
+
+blasting CP005049.fasta
+
+
+blasting CP005050.fasta
+
+
+blasting CP005051.fasta
+
+
+blasting CP005052.fasta
+
+
+blasting CP005053.fasta
+
+
+blasting CP005054.fasta
+
+
+blasting CP005055.fasta
+
+
+blasting CP005056.fasta
+
+
+blasting CP005057.fasta
+
+
+blasting CP005058.fasta
+
+
+blasting CP005059.fasta
+
+
+blasting CP005060.fasta
+
+
+blasting CP005061.fasta
+
+
+blasting CP005062.fasta
+
+
+blasting CP005063.fasta
+
+
+blasting CP005064.fasta
+
+
+blasting CP005065.fasta
+
+
+blasting CP005066.fasta
+
+
+blasting CP005067.fasta
+
+
+blasting CP005068.fasta
+
+
+blasting CP005069.fasta
+
+
+blasting CP005070.fasta
+
+
+blasting CP005071.fasta
+
+
+blasting CP005072.fasta
+
+
+blasting CP005073.fasta
+
+
+
+*** Expanding BLASTn hits and categorizing mutations ***
+
+Opening: CP004103.fasta
+Opening: CP004754.fasta
+Opening: CP004755.fasta
+Opening: CP004756.fasta
+Opening: CP004757.fasta
+Opening: CP004758.fasta
+Opening: CP004759.fasta
+Opening: CP004760.fasta
+Opening: CP004761.fasta
+Opening: CP004763.fasta
+Opening: CP004764.fasta
+Opening: CP004765.fasta
+Opening: CP004766.fasta
+Opening: CP004767.fasta
+Opening: CP004768.fasta
+Opening: CP004769.fasta
+Opening: CP004770.fasta
+Opening: CP004771.fasta
+Opening: CP004772.fasta
+Opening: CP004773.fasta
+Opening: CP004774.fasta
+Opening: CP004775.fasta
+Opening: CP004776.fasta
+Opening: CP004777.fasta
+Opening: CP004778.fasta
+Opening: CP004779.fasta
+Opening: CP004780.fasta
+Opening: CP004781.fasta
+Opening: CP004782.fasta
+Opening: CP004783.fasta
+Opening: CP004784.fasta
+Opening: CP004785.fasta
+Opening: CP004786.fasta
+Opening: CP004787.fasta
+Opening: CP004788.fasta
+Opening: CP004789.fasta
+Opening: CP004790.fasta
+Opening: CP004791.fasta
+Opening: CP004792.fasta
+Opening: CP004793.fasta
+Opening: CP004794.fasta
+Opening: CP004795.fasta
+Opening: CP004796.fasta
+Opening: CP004797.fasta
+Opening: CP004798.fasta
+Opening: CP004799.fasta
+Opening: CP004800.fasta
+Opening: CP004801.fasta
+Opening: CP004802.fasta
+Opening: CP004803.fasta
+Opening: CP004804.fasta
+Opening: CP004805.fasta
+Opening: CP004806.fasta
+Opening: CP004807.fasta
+Opening: CP004808.fasta
+Opening: CP004809.fasta
+Opening: CP004810.fasta
+Opening: CP004811.fasta
+Opening: CP004812.fasta
+Opening: CP004813.fasta
+Opening: CP004814.fasta
+Opening: CP004815.fasta
+Opening: CP004816.fasta
+Opening: CP004817.fasta
+Opening: CP004818.fasta
+Opening: CP004819.fasta
+Opening: CP004820.fasta
+Opening: CP004821.fasta
+Opening: CP004822.fasta
+Opening: CP004823.fasta
+Opening: CP004824.fasta
+Opening: CP004825.fasta
+Opening: CP004826.fasta
+Opening: CP004827.fasta
+Opening: CP004828.fasta
+Opening: CP004829.fasta
+Opening: CP004830.fasta
+Opening: CP004831.fasta
+Opening: CP004832.fasta
+Opening: CP004833.fasta
+Opening: CP004834.fasta
+Opening: CP004835.fasta
+Opening: CP004836.fasta
+Opening: CP004837.fasta
+Opening: CP004838.fasta
+Opening: CP004839.fasta
+Opening: CP004840.fasta
+Opening: CP004841.fasta
+Opening: CP004842.fasta
+Opening: CP004843.fasta
+Opening: CP004844.fasta
+Opening: CP004845.fasta
+Opening: CP004982.fasta
+Opening: CP004983.fasta
+Opening: CP004984.fasta
+Opening: CP004985.fasta
+Opening: CP004989.fasta
+Opening: CP004990.fasta
+Opening: CP004992.fasta
+Opening: CP004994.fasta
+Opening: CP004995.fasta
+Opening: CP004996.fasta
+Opening: CP004997.fasta
+Opening: CP004998.fasta
+Opening: CP005000.fasta
+Opening: CP005001.fasta
+Opening: CP005002.fasta
+Opening: CP005003.fasta
+Opening: CP005004.fasta
+Opening: CP005006.fasta
+Opening: CP005007.fasta
+Opening: CP005008.fasta
+Opening: CP005009.fasta
+Opening: CP005010.fasta
+Opening: CP005011.fasta
+Opening: CP005012.fasta
+Opening: CP005013.fasta
+Opening: CP005014.fasta
+Opening: CP005015.fasta
+Opening: CP005016.fasta
+Opening: CP005017.fasta
+Opening: CP005019.fasta
+Opening: CP005023.fasta
+Opening: CP005025.fasta
+Opening: CP005027.fasta
+Opening: CP005029.fasta
+Opening: CP005030.fasta
+Opening: CP005031.fasta
+Opening: CP005033.fasta
+Opening: CP005034.fasta
+Opening: CP005035.fasta
+Opening: CP005036.fasta
+Opening: CP005037.fasta
+Opening: CP005038.fasta
+Opening: CP005040.fasta
+Opening: CP005043.fasta
+Opening: CP005044.fasta
+Opening: CP005045.fasta
+Opening: CP005049.fasta
+Opening: CP005050.fasta
+Opening: CP005051.fasta
+Opening: CP005052.fasta
+Opening: CP005053.fasta
+Opening: CP005054.fasta
+Opening: CP005055.fasta
+Opening: CP005057.fasta
+Opening: CP005058.fasta
+Opening: CP005059.fasta
+Opening: CP005060.fasta
+Opening: CP005062.fasta
+Opening: CP005063.fasta
+Opening: CP005064.fasta
+Opening: CP005065.fasta
+Opening: CP005066.fasta
+Opening: CP005067.fasta
+Opening: CP005068.fasta
+Opening: CP005069.fasta
+Opening: CP005071.fasta
+
+
+*** Checking the BLAST hits match largest expanded ORFs ***
+
+
+All done!
+
